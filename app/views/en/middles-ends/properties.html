@@ -1,0 +1,306 @@
+{% extends "layouts/english-signed-in.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-third">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="./homepage">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Licences</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/en/levy/settings">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Properties</span>
+      <h1 class="govuk-heading-l">Registered properties (5)</h1>
+
+      <form action="./add-more/postcode" method="post" novalidate >
+        <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Add another property
+        </button>
+      </form>
+
+      <div class="govuk-form-group">
+        <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Search address">
+      </div>
+
+      <div class="govuk-summary-card" id="summary-card">
+        <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+          <h2 class="govuk-summary-card__title">                
+          71 Nunney Avenue, Swandiff, SD32 8AF
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#" id="summary-card__action">View<span class="govuk-visually-hidden"> property</span></a>
+            </li>
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="./select-property-change">Change<span class="govuk-visually-hidden"> property details</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Swandiff Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type of accommodation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card" id="summary-card">
+        <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+          <h2 class="govuk-summary-card__title">
+          35 Newport Road, Carmouth, CM62 5BN
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#" id="summary-card__action">View<span class="govuk-visually-hidden"> property</span></a>
+            </li>
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> property details</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Accommodation address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                35 Newport Road<br>
+                Carmouth<br>
+                CM62 5BN
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Carmouth Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type of accommodation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card" id="summary-card">
+        <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+          <h2 class="govuk-summary-card__title">41 Station Approach, Swandiff, SD70 4LF</h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#" id="summary-card__action">View<span class="govuk-visually-hidden"> property</span></a>
+            </li>
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> property details</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Swandiff Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type of accommodation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card" id="summary-card">
+        <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+          <h2 class="govuk-summary-card__title">12 Bay View, Carmonth, CM62 3AF</h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#" id="summary-card__action">View<span class="govuk-visually-hidden"> property</span></a>
+            </li>
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> property details</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Swandiff Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type of accommodation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card" id="summary-card">
+        <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+          <h2 class="govuk-summary-card__title">82 Kennel Drive, Carmouth, CM62 3AF</h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#" id="summary-card__action">View<span class="govuk-visually-hidden"> property</span></a>
+            </li>
+            <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> property details</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Council
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Carmouth Council
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type of accommodation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Self-catering
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Bluebird Holidays Limited
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies House number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">06617101</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

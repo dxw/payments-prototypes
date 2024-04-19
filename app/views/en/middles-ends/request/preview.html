@@ -1,0 +1,86 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner" style="padding-top: 0px;">
+    <p style="margin-bottom: 5px;">
+      <span class="govuk-!-font-weight-bold">Ceri Thomas</span>, Coast Getaways Limited
+      <span class="govuk-!-font-size-16" style="float: right; padding: 5px; boarder: 1px blue solid;"><a href="#">Sign out</span>   
+    </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Licences</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+
+        <form action="./confirm" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to tranfer liability for this property to Bluebird Holidays Limited?
+              </h1>
+            </legend>
+            <br>
+            <p id="call-out-gov-wales" style="background: #fff;">68 Blaneff Drive, Carmouth, CM32 4LF</p>
+            <br>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn">
+                  Yes, transfer liability
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn-2">
+                  No, do nothing
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <br><br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

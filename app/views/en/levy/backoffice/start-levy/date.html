@@ -1,0 +1,107 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <script src="/public/javascripts/govukMarkdownIt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Service users</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Local authorities</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#"></a>
+        </li>
+        <li>
+          <a class="govuk-link" href="./settings">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+
+        <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form action="./email-template" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  When will the visitor levy in Swandiff begin?
+                </h1>
+              </legend>
+              <div id="passport-issued-hint" class="govuk-hint">
+                For example, 27 3 2027
+              </div>
+
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+      const md = window.markdownit();
+      md.use(window.govukMarkdownIt)
+      const updateMd = () => {
+          const input = document.getElementById("input-consent-md").value;
+          document.getElementById("preview-md").innerHTML = md.render(input);
+      }
+      document.getElementById("input-consent-md").onchange = updateMd
+      updateMd()
+  </script>
+{% endblock %}

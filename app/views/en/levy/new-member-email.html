@@ -1,0 +1,61 @@
+{% extends "layouts/english-signed-in.html" %}
+{% set alternateLink = "/cy/levy/new-member-email"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="./homepage">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="./settings">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <form action="/en/levy/new-member-permissions" method="post" novalidate >
+
+          <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+          <h1 class="govuk-heading-l">Who do you want to add?</h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Email address
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              We’ll only use this to send you a receipt
+            </div>
+            <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          </div>
+
+          <br>
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

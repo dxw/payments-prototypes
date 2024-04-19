@@ -1,0 +1,95 @@
+{% extends "layouts/english-signed-in.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Tax and payments</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Licences</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Messages (2)</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/en/levy/settings">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+
+        <form action="./deregister/date" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What do you want to do with this property?
+              </h1>
+            </legend>
+            <br>
+            <p id="call-out-gov-wales" style="background: #fff;">
+              71 Nunney Avenue, Swandiff, CF62 3AF
+            </p>
+            <br>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn">
+                  De-register property
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  This property will not longer be registered as accommodation, will no longer be liable for any related rules and taxes. 
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint" style="background: #fff;">
+                <label class="govuk-label govuk-radios__label" for="signIn-2">
+                  Transfer property
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Make another person or organisation liable for this accommodation
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn-2">
+                  Edit details
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  For example what sort of accommodation is it
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

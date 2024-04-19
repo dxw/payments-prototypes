@@ -1,0 +1,46 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/email"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form action="./security-code" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your email address?
+              </h1>
+            </legend>
+            <label class="govuk-label" for="email">
+              Email address
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              We’ll use this to send you a security code
+            </div>
+            <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+          
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

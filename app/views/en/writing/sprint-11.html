@@ -1,0 +1,106 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Visitor levy prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Odds and ends</h1>
+
+    <p class="govuk-body">In sprint 11 most of our time was getting ready to tell the story of the last six months at an in-person event at the end of March 2024.</p>
+
+    <p class="govuk-body">However, there were bits of prototyping that needed finishing up before the next phase. 
+
+    <h2 class="govuk-heading-m">Where does the money go</h2>
+
+    <p class="govuk-body">Something that came through very clearly in user research was that being compliant wasn’t enough to motivate accommodation providers to use the service. The service myst be clear about the benefits. Considering this, we thought how we could do this.</p>
+
+    <p class="govuk-body">The obvious idea was a <a href="/en/levy/public-dashboard">public dashboard</a> showing how local authorities spend the money raised by a visitor levy. Detailing how money is spent on things visitors care about and help bring them back to an area. Which in turn someone running an accommodation business cares about, needing repeat custom.</p>
+
+    <img src="/public/images/sprint-11/spending.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Capturing tax liability</h2>
+
+    <p class="govuk-body">Liability is complicated from large hotel chains, to small family businesses with a single property. We got feedback from tax policy folk that in previous versions of the registration journey, how tax liability was captured was too vague.</p>
+
+    <p class="govuk-body">The main changes we made were:</p> 
+
+    <ol class="govuk-list govuk-list--bullet">
+      <li>Capture liability information before data about accommodation itsielf</li>
+      <li>Understand what entity owned the accommodation and the users relationship to it</li>
+    </ol>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-11/liability.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Accommodation type</h2>
+    
+    <p class="govuk-body">Beyond asking <a href="/en/register/property-type">what sort of accommodation</a> someone was registering, we needed to capture information about its capacity and facilities. As this would help council understand their tax based for introducing a visitor levy; how many people could be coming to the area. Plus what rate of visitor levy people would pay, assuming it will be determined by whether their were shared facilities like toilets and kitchens.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-11/accommodation-type.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <h2 class="govuk-heading-m">Making it clear what information will be public</h2>
+    
+    <p class="govuk-body">We got feedback in research that users want to know what information would be made public before their registered. In the previous version of the prototype, users only found this out from the confirmation email after this had registered.</p>
+
+    <p class="govuk-body">So we added to the registration journey someone would <a href="/en/register/preview-public-information">preview what information</a> about their accommodation and business would be public visible.</p>
+
+    <img src="/public/images/sprint-11/preview-public-register.png" id="writing-image">
+    
+    <h2 class="govuk-heading-m">Filtering out unnecessary registrations</h2>
+
+    <p class="govuk-body">We did some extra work to show how to filter out unnecessary registrations from outside Wales.</p>
+
+    <p class="govuk-body">Firstly <a href="/en/register/country">asking what country</a> people were registering accommodation in and as long as it included Wales, they could proceed. For example an accommodation business operating across Monmouthshire in Wales and Herefordshire in England.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-11/filter.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">Again with the cross-border example, if a user entered a postcode for accommodation addressed in another country, the service would give an error message that registration was unnecessary for that property.</p>
+
+    <img src="/public/images/sprint-11/english-postcode.png" id="writing-image">
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-10" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> post</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-12" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}

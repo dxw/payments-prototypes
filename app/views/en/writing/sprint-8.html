@@ -1,0 +1,145 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Visitor levy prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Registration revised</h1>
+
+    <p class="govuk-body">We picked up here from the work done in sprints 1-7 about how people would first register accommodation.</p> 
+
+    <p class="govuk-body">The two goals for prototype design were:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Iterate the design based on the latest research with people</li>
+      <li>Make the user interface clearer and more usable</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">accommodation.gov.wales - the public facing service</h2>
+
+    <p class="govuk-body">At first we were getting stuck prototyping an explicitly gov.wales service. Unsure we could deviate its components to meet our users' needs, without getting into length discussion with the central web team, who are custodians of the Welsh government’s online brand.</p>
+
+    <img src="/public/images/sprint-8/old-branding.png" id="writing-image">
+
+    <p class="govuk-body">Another issue was having either the Welsh government logo or the Welsh Revenue Authority’s logo in the header. While this might appear as a small detail, it keep spinning us in loops what institution would deliver parts of the service, who has legal basic for holding data, who had authority to make changes to the services design. All the while this distracted from actually exploring what functionality the service needed.</p>
+
+    <p class="govuk-body">To side step all this, we created a fictional URL, accommodation.gov.wales. A single, public facing service for people who provide accommodation in Wales to interact with the government. Creating this fictional service, meant we could both changed components without triggering lengthy discussions.</p>
+
+    <img src="/public/images/sprint-8/new-branding.png" id="writing-image">
+
+    <p class="govuk-body">Perhaps more importantly, it meant we could suspend out disbelief and begin to imagine a near-future for the service, who are getting bogged down in who does what, when.</p>
+
+    <h2 class="govuk-heading-m">Awareness through orgs people already know</h2>
+
+    <p class="govuk-body">This sprint, we introduce a <a href="/en/register/association-email">marketing email</a> from a fictional trade association, The Welsh Union of Cottages. The idea being the association would email all their members, making them aware a government registration scheme is to be introduced in 2026.</p>
+
+    <img src="/public/images/sprint-8/awareness-email.png" id="writing-image">
+
+    <p class="govuk-body">The idea came from the insight from user research, that people don’t know who the Welsh Revenue Authority is. As one person in research said, ‘If this email was coming from government department, I would have thought it was spam’.</p>
+
+    <p class="govuk-body">This highlights a key design principle for the service, ‘lean on trusted organisations’. Rather than expending much time and money marketing new organisation to people, contact them through ones they already know and trust. 
+    
+    <h2 class="govuk-heading-m">Simpler account creation</h2>
+
+    <p class="govuk-body">In user research users were getting confused with account creation. Partly because they didn’t think they were creating an account, but trying to register accommodation. So creating an account felt to users it was getting in the way of what they perceived to be a relatively simple task. Also it wasn’t clear why someone needed to create an account simply to register something.</p>
+
+
+    <p class="govuk-body">Another cause for confusion was asking people to go through five different screens, including setting up a password, then signing in plus multiple confirmation pages and an unnecessary task list.</p>
+
+    <img src="/public/images/sprint-8/account.png" id="writing-image">
+
+    <p class="govuk-body">So we changed two things…</p>
+
+    <p class="govuk-body">Firstly we cut the screens from five pages to <a href="/en/register/email">just two</a>. One asking for someone’s email address. Followed by asking for security codes sent to their email. People forget and lose passwords, so emailing them a security code is simpler and just as secure.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-8/authentication.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">Second, we don’t mention ‘create an account’. People don’t care. Plus it’s not even a good description. It’s actually authentication so people can save and return another time.</p>
+
+    <p class="govuk-body">Last couple of things about authentication. Keep it as minimal as possible for registration. Just email verification is enough to register. Only when more sensitive information, like tax data, should a higher level of authentication be needed. By the time people begin submitting tax returns for visitor levy, <a href="https://design-system.service.gov.uk/">GOV.UK One Login</a> will likely be available to devolved governments.</p>
+
+    <h2 class="govuk-heading-m">Say ‘property’ not accommodation</h2>
+
+    <p class="govuk-body">You’ll notice going through the latest registration flow, content says ‘property’ not ‘accommodation’. The reason being people in research kept getting confused by the term. When previously having ‘accommodation’ in questions users kept saying, “what do you mean?”</p>
+
+    <p class="govuk-body">In later tests, ‘property’ tested much better, as it's a more easily defined concept.</p>
+    
+    <h2 class="govuk-heading-m">Bulk upload for multiple properties</h2>
+
+    <p class="govuk-body">Previously whether someone was registering one property or a thousand, the service was the same.</p>
+
+    <img src="/public/images/sprint-8/how-many.png" id="writing-image">
+
+    <p class="govuk-body">One person entered ‘400’ following by saying “That’s mad”.</p>
+
+    <p class="govuk-body">So we created <a href="/en/register/method-volumn">two different routes</a>, bulk upload using a spreadsheet or filling in one form, one property at a time. <p class="govuk-body">
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-8/bulk-upload.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Pulling business details from Companies House</h2>
+
+    <p class="govuk-body">Previously people had to input a lot of information about their company. People in user research told us, for example, they don't know their Companies House number, so would have to interupt their journey to go find this out.</p>
+
+    <img src="/public/images/sprint-8/old-company-info.png" id="writing-image">
+
+    <p class="govuk-body">We opted for a different idea, where someone could get all the company details, just by searching for its name, thanks to the <a href="https://developer.company-information.service.gov.uk/">Companies House API</a>. With all the other details like address and company number being pulled into the service automatically.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/sprint-8/company-search.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">This has several advantages:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Saves people manually typing in information</li>
+      <li>Reduce wrong or inaccuted information being submitted</li>
+      <li>Automated updates to business info when Companies House data changes, such as <a href="/en/middles-ends/email-companies-house-push">when a business ceases trading</a>.</li>
+    </ol>
+
+    <p class="govuk-body">The same feature could be done for searching for charity information using the <a href="https://register-of-charities.charitycommission.gov.uk/documentation-on-the-api">Charity Commission API</a>.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Homepage<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-9" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}

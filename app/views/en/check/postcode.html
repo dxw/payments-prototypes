@@ -1,0 +1,52 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/register/postcode"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="./select-address" method="post">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form class="form" action="/en/middles-ends/select-address-add-more" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the property address?
+                </h1>
+              </legend>
+              <!--<div id="changedName-hint" class="govuk-hint">
+                This includes changing your last name or spelling your name differently.
+              </div>-->
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="address-postcode">
+                    Postcode
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" autocomplete="postal-code">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <br>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save and continue
+          </button>
+
+        </form>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

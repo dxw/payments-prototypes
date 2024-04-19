@@ -1,0 +1,49 @@
+{% extends "layouts/english.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+
+        <form action="./preview" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Enter security code
+              </h1>
+            </legend>
+            <p id="call-out-gov-wales" style="background: #fff;"><span class="govuk-!-font-weight-regular">Code emailed to </span>{{ data['email'] }}</p>
+            <label class="govuk-label" for="email">
+              Enter email verification code
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              We’ve emailed you eight digit verification code
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

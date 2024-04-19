@@ -1,0 +1,16 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "layouts/main-signed-in.html" %}
+
+{% set currentLanguage = "en" %}
+{% set alternateLanguage = "cy" %}
+{% set alternateLanguageText = "Cymraeg" %}
+
+{% block languageToggle %}
+	<a class="govuk-header__link language-switch-button" href="{{ alternateLink }}" hreflang="{{ alternateLanguage }}" lang="{{ alternateLanguage }}" rel="alternate">
+		{{ alternateLanguageText }}
+	</a>
+{% endblock %}

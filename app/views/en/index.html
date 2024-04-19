@@ -1,0 +1,39 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payments prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <p class="govuk-body-l">We are a team at the Welsh Revenue Authority, tasked with delivering improvements to how the organisation takes and calculates payments.</p>
+
+    <p class="govuk-body-l">This website documents how these improvements would work and look.</p> 
+
+    <p class="govuk-body-m"><a href="#">Read about the thinking behind these prototypes</a></p>     
+    
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <span class="govuk-caption-m">Sprint 1 - April 2024</span>
+    <h2 class="govuk-heading-m">How much do I owe?</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="/en/check/homepage">
+          Amount portal
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

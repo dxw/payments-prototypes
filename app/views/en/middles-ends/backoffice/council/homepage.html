@@ -1,0 +1,145 @@
+{% extends "layouts/english-council.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Properties</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Visitor levy</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="./settings">Settings</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-l">Swandiff County Council</h3>
+
+      <h3 class="govuk-heading-m">Visitor levy</h3>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">1,209,200</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Night stays provided</a></p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£2,176,560</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Visited levy collected in 2027-28</a></p>
+      </div>
+
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Properties</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £0
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            3,023
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £631,202
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2992
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £870,624
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2901
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="./tax-quarter">View</a></td>
+        </tr>
+        </tbody>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £674,733
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2891
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="./tax-quarter">View</a></td>
+        </tr>
+        </tbody>      
+      </table>
+      <p class="govuk-body"><a href="#">View transactions</a></p>
+
+      <br>
+      <br>
+
+      <h3 class="govuk-heading-m">Properties</h3>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #F8D756;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">3,023</span><br>
+          <a href="#" class="govuk-link" style="color: #1f1f1f;">Properties registers in area</a></p>
+      </div>
+
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Address</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Type</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">18 Cangen Close, Swandiff, SD32...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Hotel</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">45 Afon Lane, Swandiff, SD18...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Campsite or caravan park</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">71 Nunney Avenue, Swandiff, SD32...</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Self-catering</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <p><a href="">View all registered properties</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
