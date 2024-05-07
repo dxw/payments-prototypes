@@ -86,7 +86,13 @@
          Currently left to pay
         </p>
       </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #fea8a9;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+         Last updated: Today at 9:00am
+        </p>
+      </div>
       <br><br>
+
       <table class="govuk-table">
         <caption class="govuk-table__caption govuk-table__caption--m">Sub-total</caption>
         <thead class="govuk-table__head">
@@ -105,17 +111,31 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Interest on unpaid tax</th>
             <td class="govuk-table__cell">15 Oct 2025 <span style="color: #505a5f;">(today)</span></td>
-            <td class="govuk-table__cell">525.00</td>
+            <td class="govuk-table__cell">£525.00</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalties (x2)</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              <a href="#">
+                Penalties (2)
+              </a>
+            </th>
             <td class="govuk-table__cell">24 Sep 2025 <span style="color: #505a5f;">(20 days ago)</span></td>
             <td class="govuk-table__cell">£1000.00</td>
+          </tr>
+          <tr id="myDIV" class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalty ONE</th>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">£0.00</td>
+          </tr>
+          <tr id="myDIV" class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalty TWO</th>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">£0.00</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Interest on penalties</th>
             <td class="govuk-table__cell">15 Oct 2025 <span style="color: #505a5f;">(today)</span></td>
-            <td class="govuk-table__cell">13.14</td>
+            <td class="govuk-table__cell">£13.14</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Aready paid</th>
@@ -254,6 +274,27 @@
         </div>
         <p><a href="/">View five more</a></p>
       </details>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">      
+
+      <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Email statement details
+          </h3>
+        </legend>
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll use this to send someone the balance details
+        </div>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" style="display: inline-block;">
+        Send email
+      </button>
 
     </div>
   </div>
