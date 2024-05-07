@@ -5,6 +5,15 @@
 
 // Add extra styles here
 
+#toggle-reveal {
+  font-size: 19px;
+  color: #1d70b8;
+  text-decoration: underline;
+  background-color: #fff;
+  padding: 0px;
+  border: 0px solid black;
+}
+
 .font-red {
   color: #aa1111;
 }
@@ -56,6 +65,15 @@
   font-size: 20px;
   padding: 15px 20px;
   box-shadow: 0 2px 0 #7e0a0e;
+}
+
+#copy-button-gov-wales {
+  background: #fff;
+  border: 2px solid #0360a6; 
+  color: #0360a6;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 20px;
 }
 
 #back-link-gov-wales {

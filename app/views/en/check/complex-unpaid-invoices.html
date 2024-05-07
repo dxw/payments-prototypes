@@ -93,11 +93,39 @@
       </div>
       <br><br>
 
+      <!-- how https://stackoverflow.com/questions/46533249/group-html-table-rows-with-enclosing-tag -->
+      <script>
+        function toggleRowVisibility() {
+          var hiddenRow = document.getElementById("hidden-row");
+
+          if (hiddenRow.style.display === "none") {
+            hiddenRow.style.display = "";
+          } else {
+            hiddenRow.style.display = "none";
+          }
+
+          var x = document.getElementById("PenaltyDate");
+          if (x.innerHTML === "27 Sep 2025") {
+            x.innerHTML = "↓";
+          } else {
+            x.innerHTML = "27 Sep 2025";
+          }
+
+          var x = document.getElementById("PenaltyAmount");
+          if (x.innerHTML === "£1000.00") {
+            x.innerHTML = "↓";
+          } else {
+            x.innerHTML = "£1000.00";
+          }
+
+        }
+      </script>
+
       <table class="govuk-table">
         <caption class="govuk-table__caption govuk-table__caption--m">Sub-total</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Item</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Item</th>
             <th scope="col" class="govuk-table__header">Last updated</th>
             <th scope="col" class="govuk-table__header">Amount</th>
           </tr>
@@ -110,33 +138,42 @@
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Interest on unpaid tax</th>
-            <td class="govuk-table__cell">15 Oct 2025 <span style="color: #505a5f;">(today)</span></td>
+            <td class="govuk-table__cell">15 Oct 2025</td>
             <td class="govuk-table__cell">£525.00</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-              <a href="#">
+              <button id="toggle-reveal" onclick="toggleRowVisibility()">
                 Penalties (2)
-              </a>
+              </button>
             </th>
-            <td class="govuk-table__cell">24 Sep 2025 <span style="color: #505a5f;">(20 days ago)</span></td>
-            <td class="govuk-table__cell">£1000.00</td>
+            <td class="govuk-table__cell" id="PenaltyDate">27 Sep 2025</td>
+            <td class="govuk-table__cell" id="PenaltyAmount">£1000.00</td>
           </tr>
-          <tr id="myDIV" class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalty ONE</th>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">£0.00</td>
-          </tr>
-          <tr id="myDIV" class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalty TWO</th>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">£0.00</td>
+        </tbody>
+        <tbody id="hidden-row" style="display: none;background-color: #eeeeee;">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
+            <td class="govuk-table__cell">27 Feb 2025</td>
+            <td class="govuk-table__cell">£500.00</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Interest on penalties</th>
-            <td class="govuk-table__cell">15 Oct 2025 <span style="color: #505a5f;">(today)</span></td>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on penalty</th>
+            <td class="govuk-table__cell">15 Oct 2025</td>
             <td class="govuk-table__cell">£13.14</td>
           </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 12 months</th>
+            <td class="govuk-table__cell">27 Oct 2025</span></td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on penalty</th>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">£0.00</td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Aready paid</th>
             <td class="govuk-table__cell">-</td>
@@ -144,7 +181,7 @@
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">TOTAL</th>
-            <td class="govuk-table__cell govuk-!-font-weight-bold">15 Oct 2025 <span class="govuk-!-font-weight-regular">(today)</span></td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">15 Oct 2025</td>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£11,538.14</td>
           </tr>
         </tbody>
