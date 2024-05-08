@@ -15,7 +15,6 @@ window.GOVUKPrototypeKit.documentReady(() => {
           this.innerHTML = 'Show';
       }
   }
-
   
 })
 
