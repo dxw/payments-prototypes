@@ -82,7 +82,7 @@
 
       <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #fea8a9;">
         <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
-          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£11,538.14</span><br>
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£25,190.02</span><br>
          Currently left to pay
         </p>
       </div>
@@ -93,33 +93,84 @@
       </div>
       <br><br>
 
-      <!-- how https://stackoverflow.com/questions/46533249/group-html-table-rows-with-enclosing-tag -->
+      <!-- reveals tax details -->
       <script>
-        function toggleRowVisibility() {
-          var hiddenRow = document.getElementById("hidden-row");
+        function toggleTax() {
+          var TaxDetails = document.getElementById("TaxDetails");
 
-          if (hiddenRow.style.display === "none") {
-            hiddenRow.style.display = "";
+          if (TaxDetails.style.display === "none") {
+            TaxDetails.style.display = "";
           } else {
-            hiddenRow.style.display = "none";
+            TaxDetails.style.display = "none";
           }
 
-          var x = document.getElementById("PenaltyDate");
-          if (x.innerHTML === "27 Sep 2025") {
-            x.innerHTML = "↓";
+          var x = document.getElementById("TaxDate");
+          if (x.innerHTML === "Today") {
+            x.innerHTML = "";
           } else {
-            x.innerHTML = "27 Sep 2025";
+            x.innerHTML = "Today";
           }
 
-          var x = document.getElementById("PenaltyAmount");
-          if (x.innerHTML === "£1000.00") {
-            x.innerHTML = "↓";
+          var x = document.getElementById("TaxAmount");
+          if (x.innerHTML === "£22,970.63") {
+            x.innerHTML = "";
           } else {
-            x.innerHTML = "£1000.00";
+            x.innerHTML = "£22,970.63";
           }
+
+          var x = document.getElementById("RevealTaxButton");
+          if (x.innerHTML === "Close") {
+            x.innerHTML = "View";
+          } else {
+            x.innerHTML = "Close";
+          }
+
+          var element = document.getElementById("TaxParentRow");
+          element.classList.toggle("TaxParentRow");
+
+          var element = document.getElementById("TaxParentRowHead");
+          element.classList.toggle("TaxParentRowHead");
 
         }
       </script>
+
+      <!-- reveals penalty details -->
+      <script>
+        function togglePenalties() {
+          var PenaltyDetails = document.getElementById("PenaltyDetails");
+
+          if (PenaltyDetails.style.display === "none") {
+            PenaltyDetails.style.display = "";
+          } else {
+            PenaltyDetails.style.display = "none";
+          }
+
+          var x = document.getElementById("PenaltyDate");
+          if (x.innerHTML === "Today") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "Today";
+          }
+
+          var x = document.getElementById("PenaltyAmount");
+          if (x.innerHTML === "£2,219.39") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "£2,219.39";
+          }
+
+          var x = document.getElementById("RevealPenaltyButton");
+          if (x.innerHTML === "Close") {
+            x.innerHTML = "View";
+          } else {
+            x.innerHTML = "Close";
+          }
+
+          var element = document.getElementById("PenaltyParentRow");
+          element.classList.toggle("PenaltyParentRow");
+
+        }
+      </script>        
 
       <table class="govuk-table">
         <caption class="govuk-table__caption govuk-table__caption--m">Sub-total</caption>
@@ -128,49 +179,77 @@
             <th scope="col" class="govuk-table__header govuk-!-width-one-half">Item</th>
             <th scope="col" class="govuk-table__header">Last updated</th>
             <th scope="col" class="govuk-table__header">Amount</th>
+            <th scope="col" class="govuk-table__header"></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Land Transaction Tax</th>
-            <td class="govuk-table__cell">27 Aug 2024</td>
-            <td class="govuk-table__cell">£10,000.00</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Interest on unpaid tax</th>
-            <td class="govuk-table__cell">15 Oct 2025</td>
-            <td class="govuk-table__cell">£525.00</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-              <button id="toggle-reveal" onclick="toggleRowVisibility()">
-                Penalties (2)
-              </button>
+          <tr class="govuk-table__row" id="TaxParentRow">
+            <th id="TaxParentRowHead" scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Land Transaction Tax
             </th>
-            <td class="govuk-table__cell" id="PenaltyDate">27 Sep 2025</td>
-            <td class="govuk-table__cell" id="PenaltyAmount">£1000.00</td>
+            <td id="TaxDate" class="govuk-table__cell">Today</td>
+            <td id="TaxAmount" class="govuk-table__cell">£22,970.63</td>
+            <td id="TaxAmount" class="govuk-table__cell">
+              <button id="RevealTaxButton" class="reveal-penalty-button" onclick="toggleTax()">
+                View
+              </button>
+            </td>
           </tr>
         </tbody>
-        <tbody id="hidden-row" style="display: none;background-color: #eeeeee;">
+        <tbody id="TaxDetails" style="display: none;">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">
+              Tax return filled
+            </th>
+            <td class="govuk-table__cell">27 Aug 2024</td>
+            <td class="govuk-table__cell">£21,697.36</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
+            <td class="govuk-table__cell">Today</td>
+            <td class="govuk-table__cell">£1,273.27</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr class="govuk-table__row" id="PenaltyParentRow">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                Penalties (2)
+            </th>
+            <td class="govuk-table__cell" id="PenaltyDate">Today</td>
+            <td class="govuk-table__cell" id="PenaltyAmount">£2,219.39</td>
+            <td class="govuk-table__cell">
+              <button id="RevealPenaltyButton" class="reveal-penalty-button" onclick="togglePenalties()">
+                View
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody id="PenaltyDetails" style="display: none;">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
             <td class="govuk-table__cell">27 Feb 2025</td>
-            <td class="govuk-table__cell">£500.00</td>
+            <td class="govuk-table__cell">£1,084.86</td>
+            <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on penalty</th>
-            <td class="govuk-table__cell">15 Oct 2025</td>
-            <td class="govuk-table__cell">£13.14</td>
+            <td class="govuk-table__cell">Today</td>
+            <td class="govuk-table__cell">£49.67</td>
+            <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 12 months</th>
             <td class="govuk-table__cell">27 Oct 2025</span></td>
-            <td class="govuk-table__cell">£500.00</td>
+            <td class="govuk-table__cell">£1,084.86</td>
+            <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on penalty</th>
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">£0.00</td>
+            <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
         <tbody>
@@ -178,11 +257,13 @@
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Aready paid</th>
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">£0.00</td>
+            <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">TOTAL</th>
-            <td class="govuk-table__cell govuk-!-font-weight-bold">15 Oct 2025</td>
-            <td class="govuk-table__cell govuk-!-font-weight-bold">£11,538.14</td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Today</td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">£25,190.02</td>
+            <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
       </table>
@@ -198,9 +279,9 @@
           <div class="hods-timeline">
             <div class="hods-timeline__item">
               <h2 class="hods-timeline__title">
-                £11,538.14 total 
+                £25,190.02 total 
                 <span class="govuk-!-font-weight-regular font-red">
-                  (£12.02↑)
+                  (£31.48↑)
                 </span>
               </h2>
               <p class="hods-timeline__by">
@@ -211,7 +292,7 @@
                   class="hods-date-time"
                   datetime="2021-03-15T16:27:00.000Z"
                 >
-                  15th October 2025 at 9:00am
+                  2nd May 2024 at 9:00am
                 </time>
               </p>
               <p class="hods-timeline__description">
@@ -220,9 +301,9 @@
             </div>
             <div class="hods-timeline__item">
               <h2 class="hods-timeline__title">
-                £11,526.12 total 
+                £25,158.54 total 
                 <span class="govuk-!-font-weight-regular font-red">
-                  (£12.02↑)
+                  (£31.48↑)
                 </span>
               </h2>
               <p class="hods-timeline__by">
@@ -233,18 +314,18 @@
                   class="hods-date-time"
                   datetime="2021-03-15T16:27:00.000Z"
                 >
-                  8th October 2025 at 9:00am
+                  25th April 2025 at 9:00am
                 </time>
               </p>
               <p class="hods-timeline__description">
-                Interest of £12.02 (5.25%) added for last 7 days
+                Interest of £31.48 (5.25%) added for last 7 days
               </p>
             </div>
             <div class="hods-timeline__item">
               <h2 class="hods-timeline__title">
-                £11,514.10 total 
+                £25,127.06 total 
                 <span class="govuk-!-font-weight-regular font-red">
-                  (£12.02↑)
+                  (£31.48↑)
                 </span>
               </h2>
               <p class="hods-timeline__by">
@@ -255,18 +336,18 @@
                   class="hods-date-time"
                   datetime="2021-03-15T16:27:00.000Z"
                 >
-                  1st October 2025 at 9:00am
+                  18th April 2024 at 9:00am
                 </time>
               </p>
               <p class="hods-timeline__description">
-                Interest of £12.02 (5.25%) added for last 7 days
+                Interest of £31.48 (5.25%) added for last 7 days
               </p>
             </div>
             <div class="hods-timeline__item">
               <h2 class="hods-timeline__title">
-                £11,502.08
+                £25,095.58
                 <span class="govuk-!-font-weight-regular font-red">
-                  (£12.02↑)
+                  (£31.48↑)
                 </span>
               </h2>
               <p class="hods-timeline__by">
@@ -277,18 +358,18 @@
                   class="hods-date-time"
                   datetime="2021-03-15T16:27:00.000Z"
                 >
-                  24th September 2025 at 9:00am
+                  11th April 2024 at 9:00am
                 </time>
               </p>
               <p class="hods-timeline__description">
-                Interest of £12.02 (5.25%) added for last 7 days
+                Interest of £31.48 (5.25%) added for last 7 days
               </p>
             </div>
             <div class="hods-timeline__item">
               <h2 class="hods-timeline__title">
-                £11,002.08 total 
+                £25,064.10 total 
                 <span class="govuk-!-font-weight-regular font-red">
-                  (£500.00↑)
+                  (£1,084.86↑)
                 </span>
               </h2>
               <p class="hods-timeline__by">
@@ -299,11 +380,11 @@
                   class="hods-date-time"
                   datetime="2021-03-15T16:27:00.000Z"
                 >
-                  24th September 2025 at 9:00am
+                  11th April 2025 at 11:03am
                 </time>
               </p>
               <p class="hods-timeline__description">
-                Late payment penalty of £500.00 (5% of tax bill)
+                Late payment penalty of £1,084.86 (5% of tax bill)
               </p>
             </div>
           </div>

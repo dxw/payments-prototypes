@@ -5,13 +5,43 @@
 
 // Add extra styles here
 
-#toggle-reveal {
+.TaxParentRow {
+  background-color: #c2e0fc;
+}
+
+.TaxParentRow th {
+  padding-left: 20px;
+  font-weight: bold !important;
+}
+
+.TaxParentRow button {
+  color: #0b0c0c;
+}
+
+.PenaltyParentRow {
+  background-color: #ffe4e5;
+}
+
+.PenaltyParentRow th {
+  padding-left: 20px;
+  font-weight: bold !important;
+}
+
+.PenaltyParentRow button {
+  color: #0b0c0c;
+}
+
+.reveal-penalty-button {
   font-size: 19px;
   color: #1d70b8;
   text-decoration: underline;
-  background-color: #fff;
+  background-color: transparent;
   padding: 0px;
   border: 0px solid black;
+}
+
+#PenaltyDetails, #TaxDetails { 
+  background: #eeeeee;
 }
 
 .font-red {
