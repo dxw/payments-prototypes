@@ -12,10 +12,11 @@
 .TaxParentRow th {
   padding-left: 20px;
   font-weight: bold !important;
+  color: #1f446d !important;
 }
 
 .TaxParentRow button {
-  color: #0b0c0c;
+  color: #1f446d;
 }
 
 .PenaltyParentRow {
@@ -25,10 +26,12 @@
 .PenaltyParentRow th {
   padding-left: 20px;
   font-weight: bold !important;
+  color: #7e0a0e !important; 
 }
 
 .PenaltyParentRow button {
-  color: #0b0c0c;
+  color: #7e0a0e;
+  text-decoration-color: #7e0a0e;
 }
 
 .reveal-penalty-button {
@@ -40,7 +43,30 @@
   border: 0px solid black;
 }
 
-#PenaltyDetails, #TaxDetails { 
+.PaidParentRow {
+  background-color: #cdf7d4;
+}
+
+.PaidParentRow th {
+  padding-left: 20px;
+  font-weight: bold !important;
+  color: #3b510d !important;
+}
+
+.PaidParentRow button {
+  color: #3b510d;
+}
+
+.reveal-paid-button {
+  font-size: 19px;
+  color: #1d70b8;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px solid black;
+}
+
+#PenaltyDetails, #TaxDetails, #PaidDetails { 
   background: #eeeeee;
 }
 
