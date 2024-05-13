@@ -212,13 +212,29 @@
   margin-bottom: 20px;
 }
 
-#warning-call-out-gov-wales {
-  background: #ffe4e5; 
-  border-left: 10px solid #aa1111; 
+#call-out-gov-wales {
+  background: #eeeeee; 
+  border-left: 10px solid #0360a6; 
   display: block;
   font-size: 18px;  
   font-weight: bold;
   padding: 25px 30px;
+}
+
+.info-circle-icon {
+  float: inline-start; 
+  border-radius: 50%; 
+  height: 25px;
+  width: 25px;
+  background-color: #0360a6; 
+  content: "Reference";
+  text-align: center; 
+  color: #eeeeee; 
+  font-weight: 700;
+}
+
+.info-circle-icon::before {
+  content: "i";
 }
 
 #triangle {
