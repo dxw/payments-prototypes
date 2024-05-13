@@ -177,7 +177,7 @@
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-width-one-half">Item</th>
-            <th scope="col" class="govuk-table__header">Last updated</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date</th>
             <th scope="col" class="govuk-table__header">Amount</th>
             <th scope="col" class="govuk-table__header"></th>
           </tr>
@@ -201,7 +201,7 @@
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">
               Tax return filed
             </th>
-            <td class="govuk-table__cell">27 Aug 2024</td>
+            <td class="govuk-table__cell">30 Jul 2023</td>
             <td class="govuk-table__cell">£21,697.36</td>
             <td class="govuk-table__cell"></td>
           </tr>
@@ -228,8 +228,8 @@
         </tbody>
         <tbody id="PenaltyDetails" style="display: none;">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
-            <td class="govuk-table__cell">27 Feb 2025</td>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay - other</th>
+            <td class="govuk-table__cell">29 Sep 2024</td>
             <td class="govuk-table__cell">£1,084.86</td>
             <td class="govuk-table__cell"></td>
           </tr>
@@ -240,8 +240,8 @@
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 12 months</th>
-            <td class="govuk-table__cell">27 Oct 2025</span></td>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
+            <td class="govuk-table__cell">19 May 2024</span></td>
             <td class="govuk-table__cell">£1,084.86</td>
             <td class="govuk-table__cell"></td>
           </tr>
@@ -398,7 +398,7 @@
       <div class="govuk-form-group">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h3 class="govuk-fieldset__heading">
-            Email statement details
+            Send statement document
           </h3>
         </legend>
         <label class="govuk-label" for="email">
@@ -410,9 +410,14 @@
         <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
       </div>
 
-      <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales" style="display: inline-block;">
-        Send email
-      </button>
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Email PDF
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" id="secondary-button-gov-wales">
+          Downloand PDF
+        </button>
+      </div>
 
     </div>
   </div>
