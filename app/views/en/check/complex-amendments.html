@@ -172,10 +172,10 @@
           }
 
           var x = document.getElementById("PaidDate");
-          if (x.innerHTML === "Today") {
+          if (x.innerHTML === "2 Mar 2025") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "Today";
+            x.innerHTML = "2 Mar 2025";
           }
 
           var x = document.getElementById("PaidAmount");
@@ -234,7 +234,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
             <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">£00.00</td>
+            <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
@@ -246,7 +246,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on tax refund</th>
             <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">£00.00</td>
+            <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
@@ -254,7 +254,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalties</th>
             <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">£0.00</td>
+            <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
@@ -263,7 +263,7 @@
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
                 Already paid
             </th>
-            <td class="govuk-table__cell" id="PaidDate">26 Jun 2025</td>
+            <td class="govuk-table__cell" id="PaidDate">2 Mar 2025</td>
             <td class="govuk-table__cell" id="PaidAmount">£23,940.00</td>
             <td class="govuk-table__cell">
               <button id="RevealPaidButton" class="reveal-paid-button" onclick="togglePaid()">
