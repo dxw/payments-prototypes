@@ -1,0 +1,86 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">    Dashboard
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 1</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 2</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 3</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-form-group">
+      <form action="#" method="post" novalidate >
+        <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Search by Unique Tax Reference Number" style="width: 87.7%; border-right: 0px solid black;">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 8px 10px">
+        Search
+        </button>
+      </form>
+      </div>
+
+    <!--
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Needs attention (137)</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half govuk-table__header--text">Issue</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Nadiya Kanaa
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              3 unpaid invoices
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="./complex-unpaid-invoices">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Kelvin Ryan
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              4 installment with outstanding balance 
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="./complex-installments">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Ivan Philips
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              2 amendments to tax return
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="./complex-amendments">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View issues</a></p>
+    -->
+
+    </div>
+  </div>
+
+{% endblock %}

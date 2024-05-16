@@ -1,0 +1,187 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link govuk-!-font-weight-bold" href="#">Dashboard</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 1</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 2</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Nav item 3</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-l">Nadiya Kanaa <span class="govuk-!-font-weight-regular" style="color: #505a5f;">/ 270213394877</span></h3>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #fea8a9;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,193.07</span><br>
+         Currently left to pay
+        </p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #fea8a9;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+         Last updated: Today at 9:00am
+        </p>
+      </div>
+      <br><br>
+
+      <!-- reveals tax details -->
+      <script>
+        function toggleTax() {
+          var TaxDetails = document.getElementById("TaxDetails");
+
+          if (TaxDetails.style.display === "none") {
+            TaxDetails.style.display = "";
+          } else {
+            TaxDetails.style.display = "none";
+          }
+
+          var x = document.getElementById("TaxDate");
+          if (x.innerHTML === "Today") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "Today";
+          }
+
+          var x = document.getElementById("TaxAmount");
+          if (x.innerHTML === "£4,193.07") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "£4,193.07";
+          }
+
+          var x = document.getElementById("RevealTaxButton");
+          if (x.innerHTML === "Close") {
+            x.innerHTML = "View";
+          } else {
+            x.innerHTML = "Close";
+          }
+
+          var element = document.getElementById("TaxParentRow");
+          element.classList.toggle("TaxParentRow");
+
+          var element = document.getElementById("TaxParentRowHead");
+          element.classList.toggle("TaxParentRowHead");
+
+        }
+      </script>
+
+      <!-- reveals penalty details -->
+      <script>
+        function togglePenalties() {
+          var PenaltyDetails = document.getElementById("PenaltyDetails");
+
+          if (PenaltyDetails.style.display === "none") {
+            PenaltyDetails.style.display = "";
+          } else {
+            PenaltyDetails.style.display = "none";
+          }
+
+          var x = document.getElementById("PenaltyDate");
+          if (x.innerHTML === "Today") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "Today";
+          }
+
+          var x = document.getElementById("PenaltyAmount");
+          if (x.innerHTML === "£2,219.39") {
+            x.innerHTML = "";
+          } else {
+            x.innerHTML = "£2,219.39";
+          }
+
+          var x = document.getElementById("RevealPenaltyButton");
+          if (x.innerHTML === "Close") {
+            x.innerHTML = "View";
+          } else {
+            x.innerHTML = "Close";
+          }
+
+          var element = document.getElementById("PenaltyParentRow");
+          element.classList.toggle("PenaltyParentRow");
+
+        }
+      </script>        
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Sub-total</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Item</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Last updated</th>
+            <th scope="col" class="govuk-table__header">Amount</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row" id="TaxParentRow">
+            <th id="TaxParentRowHead" scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+              Tax
+            </th>
+            <td id="TaxDate" class="govuk-table__cell">Today</td>
+            <td id="TaxAmount" class="govuk-table__cell">£4,193.07</td>
+            <td id="TaxAmount" class="govuk-table__cell">
+              <button id="RevealTaxButton" class="reveal-penalty-button" onclick="toggleTax()">
+                View
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody id="TaxDetails" style="display: none;">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">
+              Land Transaction Tax
+            </th>
+            <td class="govuk-table__cell">30 Jul 2023</td>
+            <td class="govuk-table__cell">£4,193.07</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
+            <td class="govuk-table__cell">Today</td>
+            <td class="govuk-table__cell">£3.05</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Penalties (0)</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Aready paid</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">TOTAL</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">Today</td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">£4,193.07</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
