@@ -29,7 +29,7 @@
       <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #fea8a9;">
         <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
           <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£5,519.36</span><br>
-         Currently left to pay
+         Left to pay
         </p>
       </div>
       <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #fea8a9;">
@@ -58,10 +58,10 @@
           }
 
           var x = document.getElementById("TaxAmount");
-          if (x.innerHTML === "£5,644.36") {
+          if (x.innerHTML === "+£5,644.36") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "£5,644.36";
+            x.innerHTML = "+£5,644.36";
           }
 
           var x = document.getElementById("RevealTaxButton");
@@ -92,17 +92,17 @@
           }
 
           var x = document.getElementById("PenaltyDate");
-          if (x.innerHTML === "Today") {
+          if (x.innerHTML === "11 Jul 2025") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "Today";
+            x.innerHTML = "11 Jul 2025";
           }
 
           var x = document.getElementById("PenaltyAmount");
-          if (x.innerHTML === "£275.00") {
+          if (x.innerHTML === "+£275.00") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "£275.00";
+            x.innerHTML = "+£275.00";
           }
 
           var x = document.getElementById("RevealPenaltyButton");
@@ -130,17 +130,17 @@
           }
 
           var x = document.getElementById("PaidDate");
-          if (x.innerHTML === "Today") {
+          if (x.innerHTML === "2 Mar 2025") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "Today";
+            x.innerHTML = "2 Mar 2025";
           }
 
           var x = document.getElementById("PaidAmount");
-          if (x.innerHTML === "£400.00") {
+          if (x.innerHTML === "-£400.00") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "£400.00";
+            x.innerHTML = "-£400.00";
           }
 
           var x = document.getElementById("RevealPaidButton");
@@ -169,10 +169,10 @@
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row" id="TaxParentRow">
             <th id="TaxParentRowHead" scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-              Tax due
+              Tax
             </th>
             <td id="TaxDate" class="govuk-table__cell">Today</td>
-            <td id="TaxAmount" class="govuk-table__cell">£5,644.36</td>
+            <td id="TaxAmount" class="govuk-table__cell">+£5,644.36</td>
             <td id="TaxAmount" class="govuk-table__cell">
               <button id="RevealTaxButton" class="reveal-penalty-button" onclick="toggleTax()">
                 View
@@ -186,13 +186,13 @@
               Land Transaction Tax
             </th>
             <td class="govuk-table__cell">11 Jan 2025</td>
-            <td class="govuk-table__cell">£5,500.00</td>
+            <td class="govuk-table__cell">+£5,500.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
             <td class="govuk-table__cell">Today</td>
-            <td class="govuk-table__cell">£144.36</td>
+            <td class="govuk-table__cell">+£144.36</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
@@ -201,8 +201,8 @@
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
                 Penalties (1)
             </th>
-            <td class="govuk-table__cell" id="PenaltyDate">Today</td>
-            <td class="govuk-table__cell" id="PenaltyAmount">£275.00</td>
+            <td class="govuk-table__cell" id="PenaltyDate">11 Jul 2025</td>
+            <td class="govuk-table__cell" id="PenaltyAmount">+£275.00</td>
             <td class="govuk-table__cell">
               <button id="RevealPenaltyButton" class="reveal-penalty-button" onclick="togglePenalties()">
                 View
@@ -214,7 +214,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
             <td class="govuk-table__cell">11 Jul 2025</span></td>
-            <td class="govuk-table__cell">£275.00</td>
+            <td class="govuk-table__cell">+£275.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
@@ -228,10 +228,10 @@
         <tbody>
           <tr class="govuk-table__row" id="PaidParentRow">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-                Already paid
+                Paid off
             </th>
-            <td class="govuk-table__cell" id="PaidDate">Today</td>
-            <td class="govuk-table__cell" id="PaidAmount">£400.00</td>
+            <td class="govuk-table__cell" id="PaidDate">2 Mar 2025</td>
+            <td class="govuk-table__cell" id="PaidAmount">-£400.00</td>
             <td class="govuk-table__cell">
               <button id="RevealPaidButton" class="reveal-paid-button" onclick="togglePaid()">
                 View
@@ -241,43 +241,190 @@
         </tbody>
         <tbody id="PaidDetails" style="display: none;">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">1st installment</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">1st instalment</th>
             <td class="govuk-table__cell">2 Mar 2025</span></td>
-            <td class="govuk-table__cell">£100.00</td>
+            <td class="govuk-table__cell">-£100.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">2nd installment</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">2nd instalment</th>
             <td class="govuk-table__cell">2 May 2025</span></td>
-            <td class="govuk-table__cell">£100.00</td>
+            <td class="govuk-table__cell">-£100.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">3rd installment</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">3rd instalment</th>
             <td class="govuk-table__cell">1 Jun 2025</span></td>
-            <td class="govuk-table__cell">£100.00</td>
+            <td class="govuk-table__cell">-£100.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">4th installment</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">4th instalment</th>
             <td class="govuk-table__cell">2 Jul 2025</span></td>
-            <td class="govuk-table__cell">£100.00</td>
+            <td class="govuk-table__cell">-£100.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
         <tbody>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">TOTAL</th>
+            <th scope="row" class="govuk-table__header">TOTAL TO PAY</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">Today</td>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£5,519.36</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
-      </table>  
+      </table>
+
+      <!--
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View history
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px;">
+
+          <div class="hods-timeline">
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,443.14 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  11th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,438.22 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£225.00↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Tax Management System [manual]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  11th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Late payment penalty of £225.00 (5% of tax bill)
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,213.22 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  4th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,208.30 total 
+                <span class="govuk-!-font-weight-regular font-green">
+                  (£100.00↓)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by NatWest Bankline (manual)
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  2nd July 2024 at 11:34am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                £100.00 manual bank transfer to NatWest 
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,308.30 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  25th June 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p><a href="/">View five more</a></p>
+      </details>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">      
+
+      <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Send statement document
+          </h3>
+        </legend>
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll use this to send someone the balance details
+        </div>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
 
       <div class="govuk-button-group">
-        <a href="./letter-installments" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Preview and download PDF</a>
+        <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Send
+        </button>
+        <a href="./letter-installments" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Preview and download</a>
       </div>
+
+    -->
 
     </div>
   </div>
