@@ -57,10 +57,10 @@
           }
 
           var x = document.getElementById("TaxAmount");
-          if (x.innerHTML === "+£4,196.12") {
+          if (x.innerHTML === "£4,196.12") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "+£4,196.12";
+            x.innerHTML = "£4,196.12";
           }
 
           var x = document.getElementById("RevealTaxButton");
@@ -133,7 +133,7 @@
               Tax
             </th>
             <td id="TaxDate" class="govuk-table__cell">Today</td>
-            <td id="TaxAmount" class="govuk-table__cell">+£4,196.12</td>
+            <td id="TaxAmount" class="govuk-table__cell">£4,196.12</td>
             <td id="TaxAmount" class="govuk-table__cell">
               <button id="RevealTaxButton" class="reveal-penalty-button" onclick="toggleTax()">
                 View
@@ -147,13 +147,13 @@
               Land Transaction Tax
             </th>
             <td class="govuk-table__cell">30 Jul 2023</td>
-            <td class="govuk-table__cell">+£4,193.07</td>
+            <td class="govuk-table__cell">£4,193.07</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
             <td class="govuk-table__cell">Today</td>
-            <td class="govuk-table__cell">+£3.05</td>
+            <td class="govuk-table__cell">£3.05</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
@@ -167,13 +167,19 @@
         </tbody>
         <tbody>
           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Total owed</th>
+            <td class="govuk-table__cell">Today</td>
+            <td class="govuk-table__cell">£4,196.12</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Payments</th>
             <td class="govuk-table__cell"></td>
             <td class="govuk-table__cell"></td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">TOTAL</th>
+            <th scope="row" class="govuk-table__header">LEFT TO PAY</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">Today</td>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£4,196.12</td>
             <td class="govuk-table__cell"></td>

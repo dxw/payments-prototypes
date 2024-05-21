@@ -58,10 +58,10 @@
           }
 
           var x = document.getElementById("TaxAmount");
-          if (x.innerHTML === "+£5,644.36") {
+          if (x.innerHTML === "£5,644.36") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "+£5,644.36";
+            x.innerHTML = "£5,644.36";
           }
 
           var x = document.getElementById("RevealTaxButton");
@@ -99,10 +99,10 @@
           }
 
           var x = document.getElementById("PenaltyAmount");
-          if (x.innerHTML === "+£275.00") {
+          if (x.innerHTML === "£275.00") {
             x.innerHTML = "";
           } else {
-            x.innerHTML = "+£275.00";
+            x.innerHTML = "£275.00";
           }
 
           var x = document.getElementById("RevealPenaltyButton");
@@ -172,7 +172,7 @@
               Tax
             </th>
             <td id="TaxDate" class="govuk-table__cell">Today</td>
-            <td id="TaxAmount" class="govuk-table__cell">+£5,644.36</td>
+            <td id="TaxAmount" class="govuk-table__cell">£5,644.36</td>
             <td id="TaxAmount" class="govuk-table__cell">
               <button id="RevealTaxButton" class="reveal-penalty-button" onclick="toggleTax()">
                 View
@@ -186,13 +186,13 @@
               Land Transaction Tax
             </th>
             <td class="govuk-table__cell">11 Jan 2025</td>
-            <td class="govuk-table__cell">+£5,500.00</td>
+            <td class="govuk-table__cell">£5,500.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Interest on unpaid tax</th>
             <td class="govuk-table__cell">Today</td>
-            <td class="govuk-table__cell">+£144.36</td>
+            <td class="govuk-table__cell">£144.36</td>
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
@@ -202,7 +202,7 @@
                 Penalties (1)
             </th>
             <td class="govuk-table__cell" id="PenaltyDate">11 Jul 2025</td>
-            <td class="govuk-table__cell" id="PenaltyAmount">+£275.00</td>
+            <td class="govuk-table__cell" id="PenaltyAmount">£275.00</td>
             <td class="govuk-table__cell">
               <button id="RevealPenaltyButton" class="reveal-penalty-button" onclick="togglePenalties()">
                 View
@@ -214,7 +214,7 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="padding-left: 20px;">Failure to pay within 6 months</th>
             <td class="govuk-table__cell">11 Jul 2025</span></td>
-            <td class="govuk-table__cell">+£275.00</td>
+            <td class="govuk-table__cell">£275.00</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
@@ -224,6 +224,13 @@
             <td class="govuk-table__cell"></td>
           </tr>
         </tbody>
+        <tbody>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Total owed</th>
+            <td class="govuk-table__cell">Today</td>
+            <td class="govuk-table__cell">£5,919.36 </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
         </tbody>
         <tbody>
           <tr class="govuk-table__row" id="PaidParentRow">
@@ -267,7 +274,7 @@
         </tbody>
         <tbody>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">TOTAL TO PAY</th>
+            <th scope="row" class="govuk-table__header">Left to pay</th>
             <td class="govuk-table__cell govuk-!-font-weight-bold">Today</td>
             <td class="govuk-table__cell govuk-!-font-weight-bold">£5,519.36</td>
             <td class="govuk-table__cell"></td>
