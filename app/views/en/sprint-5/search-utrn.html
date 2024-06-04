@@ -1,0 +1,28 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Check balance</h1>
+
+      <div class="govuk-form-group">
+        <form action="/en/sprint-5/basic-design" method="post" novalidate >
+          <input class="govuk-input" id="event-name" name="eventName" type="text" placeholder="Search by Unique Tax Reference Number" style="width: 86%; border-right: 0px solid black;">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 8px 10px">
+          Search
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
