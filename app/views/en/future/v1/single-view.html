@@ -7,7 +7,7 @@
   <div class="govuk-grid-row" style="font-style">
     <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
 
-        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+        <p style="color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
           <span class="govuk-!-font-weight-bold">Names:</span><br>
           Kelvin Ryan<br>Matthew Ryan<br><br>
           <span class="govuk-!-font-weight-bold">UTRN:</span><br>
@@ -17,6 +17,10 @@
             Swandiff<br>
             SD16 4LF<br>
         </p>
+
+        <div class="govuk-button-group">
+          <a href="#" class="govuk-button govuk-button--secondary" id="small-button-gov-wales">Copy share link</a>
+        </div>
 
     </div>
     <div class="govuk-grid-column-three-quarters">
@@ -44,13 +48,13 @@
 
       <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
         <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
-          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,443.14</span><br>
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£5,519.36</span><br>
          Currently left to pay
         </p>
       </div>
-      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
-        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
-         Last updated: Today at 9:00am
+      <div id="last-change">
+        <p>
+         Last change: 15 July (Today) - £0.70 interest (5.25%) added
         </p>
       </div>
       <br><br>      
@@ -258,32 +262,114 @@
             </div>
           </div>
         </div>
-        <p><a href="/">View five more</a></p>
+        <p class="govuk-body"><a href="#" id="back-link-gov-wales">View more</a></p> 
       </details>
 
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">      
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">   
 
-      <div class="govuk-form-group">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h3 class="govuk-fieldset__heading">
-            Send statement document
-          </h3>
-        </legend>
-        <label class="govuk-label" for="email">
-          Email address
-        </label>
-        <div id="email-hint" class="govuk-hint">
-          We’ll use this to send someone the balance details
+      <h2 class="govuk-heading-m">Casework and interactions</h2>
+
+      <br>
+
+      <div class="hods-timeline">
+        <div class="hods-timeline__item">
+          <h2 class="hods-timeline__title">
+            Balance viewed
+          </h2>
+          <p class="hods-timeline__by">
+            by Laura Mullins | Welsh Revenue Service
+          </p>
+          <p class="hods-timeline__date">
+            <time
+              class="hods-date-time"
+              datetime="2021-03-15T16:27:00.000Z"
+            >
+              15 July 2025 at 9:23am
+            </time>
+          </p>
+          <p class="hods-timeline__description">
+            Laura Mullins viewed the balance
+          </p>
         </div>
-        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+        <div class="hods-timeline__item">
+          <h2 class="hods-timeline__title">
+            Flagged for attention
+          </h2>
+          <p class="hods-timeline__by">
+            by automated
+          </p>
+          <p class="hods-timeline__date">
+            <time
+              class="hods-date-time"
+              datetime="2021-03-15T10:04:00.000Z"
+            >
+              15 July 2025 at 9:00am
+            </time>
+          </p>
+          <p class="hods-timeline__description">
+            Flagged up to help desk as potentially complex case needing attention. Triggered by 4 repayment being made.
+          </p>
+        </div>
+        <div class="hods-timeline__item">
+          <h2 class="hods-timeline__title">
+            Balance viewed by taxpayer
+          </h2>
+          <p class="hods-timeline__by">
+            by Kelvin Ryan
+          </p>
+          <p class="hods-timeline__date">
+            <time
+              class="hods-date-time"
+              datetime="2021-03-15T10:04:00.000Z"
+            >
+              2 July 2025 at 11:20am
+            </time>
+          </p>
+          <p class="hods-timeline__description">
+            Kelvin Ryan signed into wra.gov.wales/check-balance
+          </p>
+        </div>
+        <div class="hods-timeline__item">
+          <h2 class="hods-timeline__title">
+            Confirmation email sent
+          </h2>
+          <p class="hods-timeline__by">
+            by GOV.UK Notify
+          </p>
+          <p class="hods-timeline__date">
+            <time
+              class="hods-date-time"
+              datetime="2021-03-15T10:04:00.000Z"
+            >
+              2 July 2025 at 11:20am
+            </time>
+          </p>
+          <p class="hods-timeline__description">
+            Email sent confirmation of payment to kelvin.ryan@gmail.com
+          </p>
+        </div>
+        <div class="hods-timeline__item">
+          <h2 class="hods-timeline__title">
+            Payment made
+          </h2>
+          <p class="hods-timeline__by">
+            by NatWest
+          </p>
+          <p class="hods-timeline__date">
+            <time
+              class="hods-date-time"
+              datetime="2021-03-15T10:04:00.000Z"
+            >
+              2 July 2025 at 11:20am
+            </time>
+          </p>
+          <p class="hods-timeline__description">
+            £100.00 payment made by MR K M Ryan, account number ending XXXXXX834
+          </p>
+        </div>
       </div>
-
-      <div class="govuk-button-group">
-        <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
-          Send
-        </button>
-        <a href="./letter-installments" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Preview and download</a>
-      </div>
+      <br>
+      <p class="govuk-body"><a href="#" id="back-link-gov-wales">View more</a></p> 
 
     </div>
   </div>
