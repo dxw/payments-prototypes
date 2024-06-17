@@ -1,0 +1,291 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Names:</span><br>
+          Kelvin Ryan<br>Matthew Ryan<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2507 4339 4889<br><br>
+          <span class="govuk-!-font-weight-bold">Address of purchase:</span><br>
+            14 Harper Mews<br>
+            Swandiff<br>
+            SD16 4LF<br>
+        </p>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <div id="call-out-gov-wales" style="border-left: 10px solid #323232">
+
+        <p class="info-circle-icon" style="background: #323232;">
+        </p>  
+
+        <table>
+          <tbody>
+            <tr>
+              <th style="padding-right: 25px;">      
+              </th>
+              <td>
+                <p style="margin-bottom: 0px;">4 installments with outstanding balance</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <br>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,443.14</span><br>
+         Currently left to pay
+        </p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+         Last updated: Today at 9:00am
+        </p>
+      </div>
+      <br><br>      
+
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax and penalties</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Item</th>
+            <th scope="col" class="govuk-table__header">Due date</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Interest</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Land Transaction Tax</th>
+            <td class="govuk-table__cell">31 Jan 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,500.00</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£144.36</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,644.36</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failure to pay within 6 months</th>
+            <td class="govuk-table__cell">31 Jul 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£275.00</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£275.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total tax and penalties</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£5,919.36</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payments</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment</th>
+            <th scope="col" class="govuk-table__header">Type</th>
+            <th scope="col" class="govuk-table__header">Date paid</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">1st payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">1 March 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">2nd payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">2 May 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">3rd payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">1 Jun 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">4th payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">2 Jul 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total payments</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">-£400.00</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View balance history
+          </span>
+        </summary>
+        <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px;">
+
+          <div class="hods-timeline">
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,443.14 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  11th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,438.22 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£225.00↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Tax Management System [manual]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  11th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Late payment penalty of £225.00 (5% of tax bill)
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,213.22 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  4th July 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,208.30 total 
+                <span class="govuk-!-font-weight-regular font-green">
+                  (£100.00↓)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by NatWest Bankline (manual)
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  2nd July 2024 at 11:34am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                £100.00 manual bank transfer to NatWest 
+              </p>
+            </div>
+            <div class="hods-timeline__item">
+              <h2 class="hods-timeline__title">
+                £4,308.30 total 
+                <span class="govuk-!-font-weight-regular font-red">
+                  (£4.92↑)
+                </span>
+              </h2>
+              <p class="hods-timeline__by">
+                by Finance & Operations [automated]
+              </p>
+              <p class="hods-timeline__date">
+                <time
+                  class="hods-date-time"
+                  datetime="2021-03-15T16:27:00.000Z"
+                >
+                  25th June 2025 at 9:00am
+                </time>
+              </p>
+              <p class="hods-timeline__description">
+                Interest of £4.92 (5.25%) added for last 7 days.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p><a href="/">View five more</a></p>
+      </details>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">      
+
+      <div class="govuk-form-group">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Send statement document
+          </h3>
+        </legend>
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll use this to send someone the balance details
+        </div>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Send
+        </button>
+        <a href="./letter-installments" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Preview and download</a>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

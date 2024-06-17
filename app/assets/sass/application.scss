@@ -324,16 +324,21 @@ input[type='radio']:after {
 }
 
 .language-switch-button-public {
-  color: #fff;
+  color: black;
   font-size: 14px;
   text-decoration: underline;
   font-weight: 700;
   padding: 10px 10px 10px 10px;
-  background: #000;
+  background: #fff;
   text-decoration: none;
   float: right;
   margin-top: 14px;
 }
+
+.language-switch-button-public a {
+  color: #000;
+}
+
 
 .hods-timeline {
   overflow: hidden;
