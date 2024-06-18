@@ -1,0 +1,42 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Check balance</h1>
+
+      <form action="./instalments" method="post" novalidate >
+
+        <label class="govuk-label" for="width-10">
+          Unique Tax Reference Number
+        </label>
+
+        <script type="text/javascript">
+          IMask(
+            document.getElementById('phone-mask'),
+            {
+              mask: '+{7}(000)000-00-00'
+            }
+          )
+        </script>
+
+        <div class="govuk-button-group">
+
+          <input class="govuk-input govuk-input--width-20" id="event-name" data-module="govuk-button" name="eventName" type="text">
+          <button id="phone-mask" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 9px 10px; box-shadow: 0px 0px transparent; margin-left: 15px;">
+          Search
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
