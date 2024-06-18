@@ -9,6 +9,19 @@ html, body {
   scroll-padding-top: 6rem;
 }
 
+#last-change {
+  text-align: left; 
+  padding: 15px 15px 15px 15px; 
+  background-color: #dddddd; 
+  border-left: 10px solid #0360a6;
+}
+
+#last-change p {
+  margin-bottom: 0; 
+  color: #1f1f1f; 
+  font-size: 16px;
+}
+
 .TaxParentRow {
   background-color: #dddddd;
 }
@@ -133,6 +146,16 @@ html, body {
   font-weight: 700;
   font-size: 20px;
   padding: 15px 20px;
+}
+
+#small-button-gov-wales {
+  background: #fff;
+  border: 1px solid #0360a6; 
+  color: #0360a6;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 0px transparent;
 }
 
 #danger-button-gov-wales {
