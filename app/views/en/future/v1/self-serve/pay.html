@@ -1,0 +1,82 @@
+{% extends "layouts/public/english-pay.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Enter card details</h1>
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Card number
+        </label>
+        <input class="govuk-input" style="width: 66.6%;" type="number">
+        <img src="/public/images/accepted-cards-sprite.png" style="width: 66.6%;margin-top: 10px;">
+        <div id="account-number-hint" class="govuk-hint">
+          Accepted credit and debit card types
+        </div>
+      </div>
+
+      <br>
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Expiry date
+        </label>
+        <div id="account-number-hint" class="govuk-hint">
+          For example 07/27
+        </div>
+        <div class="govuk-button-group">
+          <div class="govuk-form-group govuk-date-input__item--with-separator">
+            <label class="govuk-label" for="width-2">
+              Month
+            </label>
+            <input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-2">
+              Year
+            </label>
+            <input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Name on card
+        </label>
+        <input class="govuk-input" style="width: 66.6%;" type="number">
+      </div>
+
+      <form action="./pay" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #f8f8f8; border: 8px solid #bfc1c3;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Payment summary</span><br><br>
+          <span class="govuk-!-font-size-19 govuk-!-font-weight-bold">Land Transaction Tax</span><br><br>
+          Amount to pay
+          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£4,196.12</span><br>
+        </p>
+      </div>
+
+    </div>
+  
+    </div>
+  </div>
+
+
+{% endblock %}
