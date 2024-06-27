@@ -1,46 +1,36 @@
-{% extends "layouts/public/english-login.html" %}
+{% extends "layouts/public/english-account.html" %}
 {% set alternateLink = "/cy/levy/email"%}
 {% set pageName="Payments prototypes" %}
 
 {% block content %}
 
-  <div class="govuk-grid-row" style="font-style">
+  <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-
       <div class="govuk-form-group" id="form-background-gov-wales">
 
-        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+        <p id="confirmation-gov-wales">
+          Request complete<br><br>
+          <span class="govuk-!-font-weight-regular">
+          Your reference number is
+          </span>HDJ2123F
+        </p>
 
-        <form action="./security-code" method="post" id="myForm">
-
-          <div class="govuk-form-group">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What is your Uninque Tax Reference Number?
-              </h1>
-            </legend>
-            <label class="govuk-label" for="email">
-              Unique Tax Reference Number
-            </label>
-            <div id="email-hint" class="govuk-hint">
-              It’s on any letter from us. For example, ‘3423 3423 6545’.
-            </div>
-            <input class="govuk-input govuk-input--width-10" id="phone" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-          </div>
-
-          <br>
-
-          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
-            Continue
-          </button>
-          
-        </form>
+        <p class="govuk-body">We have sent you a confirmation letter.</p>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          Your request will be reviewed by the tax team at Welsh Revenue Authority with 10 working days. 
+        </p>
+        <p class="govuk-body">
+          Will they either confirm your refund or contact you for more information.
+        </p>
+        <p class="govuk-body">
+          <a href="./homepage" class="govuk-link">View all your Welsh tax records.</a>
+        </p>
 
       </div>
 
     </div>
-
   </div>
 
 {% endblock %}

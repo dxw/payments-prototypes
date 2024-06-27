@@ -1,4 +1,4 @@
-{% extends "layouts/public/english-login.html" %}
+{% extends "layouts/public/english-account.html" %}
 {% set alternateLink = "/cy/levy/email"%}
 {% set pageName="Payments prototypes" %}
 
@@ -10,23 +10,44 @@
 
       <div class="govuk-form-group" id="form-background-gov-wales">
 
-        <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
 
-        <form action="./security-code" method="post" id="myForm">
+        <form action="./reason" method="post" id="myForm">
+
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="cost">
+              What is the amended total tax for this transaction?
+            </label>
+          </h1>
+
+          <table id="call-out-table-gov-wales" style="background: #fff; border-left: 10px solid #0360a6;">
+            <tr>
+              <td style="padding-bottom: 10px; width: 50%;">Land Transaction Tax:</td>
+              <td style="padding-bottom: 10px" id="table-cell">£4,193.07</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Paid on:</td>
+              <td style="padding-bottom: 10px" id="table-cell">16 July 2025
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Purchase address:</td>
+              <td style="padding-bottom: 10px" id="table-cell">14 Harper Mews<br>
+                  Swandiff<br>
+                  SD16 4LF</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Unique Tax Reference Number:</td>
+              <td style="padding-bottom: 10px" id="table-cell">2702 1339 4877
+            </tr>
+          </table>
+
+          <br>
 
           <div class="govuk-form-group">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What is your Uninque Tax Reference Number?
-              </h1>
-            </legend>
-            <label class="govuk-label" for="email">
-              Unique Tax Reference Number
-            </label>
-            <div id="email-hint" class="govuk-hint">
-              It’s on any letter from us. For example, ‘3423 3423 6545’.
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
             </div>
-            <input class="govuk-input govuk-input--width-10" id="phone" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
           </div>
 
           <br>
