@@ -1,0 +1,172 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Names:</span><br>
+          Kelvin Ryan<br>Matthew Ryan<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2507 4339 4889<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            14 Harper Mews<br>
+            Swandiff<br>
+            SD16 4LF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Warren Law Ltd<br>
+        </p>
+      </div>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£5,519.36</span><br>
+         Outstanding balance to pay
+        </p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+         Balance updated:
+         <span style="font-weight: bold;"> 15 April (Today) at 9:25am</span>
+        </p>
+      </div>
+
+      <br>
+      <br>
+
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax and penalties</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Item</th>
+            <th scope="col" class="govuk-table__header">Due date</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Interest</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Land Transaction Tax</th>
+            <td class="govuk-table__cell">31 Jan 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,500.00</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£182.76</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,682.76</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failure to pay within 60 days (5%)</th>
+            <td class="govuk-table__cell">1 Apr 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£275.00</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+             £5.81
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£275.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total tax and penalties</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£5,963.57</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payments</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment</th>
+            <th scope="col" class="govuk-table__header">Type</th>
+            <th scope="col" class="govuk-table__header">Date paid</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">1st payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">5 Apr 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">2nd payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">2 May 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">3rd payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">1 Jun 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">4th payment</th>
+            <td class="govuk-table__cell">Time to pay</td>
+            <td class="govuk-table__cell">2 Jul 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total payments</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">-£400.00</td>
+          </tr>
+        </tbody>
+      </table> 
+
+      <br>
+
+      <h3 class="govuk-heading-m">Interest</h3>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">When</th>
+            <th scope="col" class="govuk-table__header">Rate</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">New balance</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Tomorrow</th>
+            <td class="govuk-table__cell">7.25%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£2.77</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,966.34</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">2 days time</th>
+            <td class="govuk-table__cell">7.25%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5.54</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,969.11</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">7 days time</th>
+            <td class="govuk-table__cell">7.25%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£19.39</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£5,982.96</td>
+          </tr>
+        </tbody>
+      </table>  
+    
+  
+    </div>
+  </div>
+
+
+{% endblock %}
