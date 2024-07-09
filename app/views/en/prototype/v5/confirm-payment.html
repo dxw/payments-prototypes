@@ -1,0 +1,67 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="./cleared-balance" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Summary
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Names:</span><br>
+          Kelvin Ryan<br>Matthew Ryan<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2507 4339 4889<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            14 Harper Mews<br>
+            Swandiff<br>
+            SD16 4LF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Warren Law Ltd<br>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p id="confirmation-gov-wales">
+        <span class="govuk-!-font-size-27">
+          Payment successful
+        </span>
+          <br><br>
+        <span class="govuk-!-font-weight-regular">Payment reference number is</span><br><br>
+        <span class="govuk-!-font-size-19">QE9 Q6C8 ADD</span>
+      </p>
+
+      <h3 class="govuk-heading-s">What happens next</h3>
+
+      <p class="govuk-body">We have sent a confirmation email.</p>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payment summary</caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Payment for:</th>
+            <td class="govuk-table__cell">Land Transaction Tax</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="border-bottom: 0px solid grey;">Total amount:</th>
+            <td class="govuk-table__cell" style="border-bottom: 0px solid grey;">£4,197.29</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  
+  </div>
+
+
+{% endblock %}
