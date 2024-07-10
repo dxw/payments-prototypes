@@ -1,0 +1,169 @@
+{% extends "layouts/public/english-pay.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" style="margin-top: 20px; margin-bottom: 0px;">Back
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Enter payment details</h1>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; margin-bottom: 20px; background-color: #f3f2f1; border-top: 2px solid #1d70b8;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Payment summary</span><br><br>
+          <span class="govuk-!-font-size-19">2507 4339 4889</span><br><br>
+          Amount to pay<br>
+          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£4,197.29</span><br>
+        </p>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Card number
+        </label>
+        <div id="account-number-hint" class="govuk-hint">
+          Accepted credit and debit card types
+        </div>
+        <div>
+          <img src="/public/images/visa.png" style="height: 40px; float: left; padding-right: 10px; margin-bottom: 10px;">
+          <img src="/public/images/mastercard.png" style="height: 40px; float: left; margin-bottom: 10px;">
+        </div>
+        <input class="govuk-input govuk-input--width-20" type="number">
+      </div>
+
+      <br>
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Expiry date
+        </label>
+        <div id="account-number-hint" class="govuk-hint">
+          For example 07/27
+        </div>
+        <div class="govuk-button-group">
+          <div class="govuk-form-group govuk-date-input__item--with-separator">
+            <label class="govuk-label" for="width-2">
+              Month
+            </label>
+            <input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-2">
+              Year
+            </label>
+            <input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text">
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Name on card
+        </label>
+        <input class="govuk-input" type="number">
+      </div>
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-20">
+          Card security code
+        </label>
+        <div id="account-number-hint" class="govuk-hint">
+          For example 07/27
+        </div>
+        <div class="govuk-button-group">
+          <div class="govuk-form-group">
+            <input class="govuk-input govuk-input--width-3" id="width-2" name="width2" type="text" style="float: left; margin-right: 10px;">
+            <img src="/public/images/security-code.png" style="height: 40px; float: left;">
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+      <br>
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Billing address
+          </h1>
+        </legend>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Address line 1
+          </label>
+          <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            Address line 2 (optional)
+          </label>
+          <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            County (optional)
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+        </div>
+      </fieldset>
+
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+      <br>
+
+      <h3 class="govuk-heading-s">Contact details</h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Email address
+        </label>
+        <div id="email-hint" class="govuk-hint">
+          We’ll only use this to send you a receipt
+        </div>
+        <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+      </div>
+
+      <br>
+
+      <form action="./confirm-payment" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Cancel payment</a>
+      </p>
+  
+    </div>
+  </div>
+
+
+{% endblock %}

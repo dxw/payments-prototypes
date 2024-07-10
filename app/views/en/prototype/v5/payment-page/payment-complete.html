@@ -1,0 +1,42 @@
+{% extends "layouts/public/english-pay.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Your payment was successful
+        </h1>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>4235253</strong>
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-m">What happens next</h3>
+
+      <p class="govuk-body">We have sent your a confirmation email.</p>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payment summary</caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Payment for:</th>
+            <td class="govuk-table__cell">Land Transaction Tax</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" style="border-bottom: 0px solid grey;">Total amount:</th>
+            <td class="govuk-table__cell" style="border-bottom: 0px solid grey;">£4,197.29</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+{% endblock %}
