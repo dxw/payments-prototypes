@@ -1,0 +1,82 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div style="background: #ffe4e5; padding: 25px; margin-bottom: 20px;">
+
+        <div id="warning-call-out-gov-wales">
+
+          <table class="govuk-table" style="margin-bottom: 0px;">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" style="border-bottom: solid #aa1111 0px;">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="25px" viewBox="0 0 2003.000000 1996.000000"
+                     preserveAspectRatio="xMidYMid meet" style="margin-top: 5px;">
+
+                    <g transform="translate(0.000000,1996.000000) scale(0.100000,-0.100000)"
+                    fill="#aa1111" stroke="none">
+                    <path d="M5059 9990 c-2747 -5485 -4995 -9976 -4997 -9981 -2 -5 3953 -9 9982
+                    -9 l9986 0 0 25 c0 24 -1250 2532 -2935 5890 -403 803 -1636 3265 -2740 5470
+                    -2862 5716 -4287 8559 -4295 8568 -4 4 -2254 -4479 -5001 -9963z m5999 -57
+                    l-3 -2858 -1002 0 -1003 0 0 2858 0 2857 1005 0 1005 0 -2 -2857z m2 -5618 l0
+                    -1295 -1005 0 -1005 0 0 1295 0 1295 1005 0 1005 0 0 -1295z"/>
+                    </g>
+                    </svg>
+                </th>
+                <td class="govuk-table__cell" style="border-bottom: solid #aa1111 0px;">
+
+                  <h2 class="govuk-error-summary__title" style="font-weight: 400; margin-bottom: 0px;">
+                    There is a problem
+                  </h2>
+                  <br>
+                  Enter a valid Unique Transaction Reference Number. The numbered entered does not match any records. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+      <br>
+
+      <h1 class="govuk-heading-l">Check balance</h1>
+
+      <form action="./just-tax-and-some-interest" method="post" novalidate >
+
+      <div class="govuk-form-group govuk-form-group--error" style="border-color: #aa1111;">
+
+          <label class="govuk-label" for="width-10">
+            Unique Transaction Reference Number
+          </label>
+
+          <p id="full-name-input-error" class="govuk-error-message" style="color: #aa1111;">
+            <span class="govuk-visually-hidden">Error:</span>Enter a valid Unique Transaction Reference Number
+
+          </p>
+
+          <div class="govuk-button-group">
+            <input class="govuk-input govuk-input--width-20" id="event-name" data-module="govuk-button" name="eventName" type="text" style="border-color: #aa1111;">
+            <button id="phone-mask" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 9px 10px; box-shadow: 0px 0px transparent; margin-left: 15px; margin-bottom: 0px;">
+            Search
+            </button>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
