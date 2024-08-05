@@ -1,0 +1,51 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/levy/security-code"%}
+{% set pageName="Payment prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Pay your Land Transaction Tax bill</h1>
+
+      <p>Use this service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Pay your Lands Transaction Tax bill</li>
+        <li>Pay any interest or penalties for late filing or paying
+      </ul>
+
+      <p>To use this service you'll need to know:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Unique Transaction Reference Number</li>
+      </ul>
+
+      <p>You must have already filed a tax return for a purchase of property in Wales, before you can pay your bill.</p>
+
+
+      <form action="./utrn" method="post" novalidate>
+        <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Continue
+        </button>
+      </form>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+        You can also <a href="#">pay by cheque</a>.
+      </p>
+
+      <p>
+        The online service is also <a href="#">available in Welsh (ar gael yn Gymraeg)</a>.
+      </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 {% extends "layouts/public/english-login.html" %}
-{% set alternateLink = "/cy/levy/security-code"%}
+{% set alternateLink = "/cy/levy/email"%}
 {% set pageName="Payments prototypes" %}
 
 {% block content %}
@@ -12,21 +12,21 @@
 
         <a href="#" class="govuk-back-link" style="margin-top: 0px;">Back</a>
 
-        <form action="./balance" method="post" novalidate >
+        <form action="./amount" method="post" id="myForm">
 
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Enter security code
+                What is your Uninque Tax Reference Number?
               </h1>
             </legend>
             <label class="govuk-label" for="email">
-              Enter letter security code
+              Unique Tax Reference Number
             </label>
             <div id="email-hint" class="govuk-hint">
-              We’ve posted you eight digit security code
+              It’s on any letter from us. For example, ‘3423 3423 6545’.
             </div>
-            <input class="govuk-input govuk-input--width-10" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            <input class="govuk-input govuk-input--width-10" id="phone" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
           </div>
 
           <br>
@@ -34,6 +34,7 @@
           <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
             Continue
           </button>
+          
         </form>
 
       </div>

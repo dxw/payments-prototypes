@@ -1,0 +1,101 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,196.12</span><br>
+          Outstanding balance to pay
+        </p>
+      </div>
+      <br>
+
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Unique Transaction Reference Number</th>
+            <td class="govuk-table__cell">2702 1339 4877</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Land address</th>
+            <td class="govuk-table__cell">14 Harper Mews<br>Swandiff<br>SD16 4LF</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <h2 class="govuk-heading-m">Pay online by debit card</h2>
+
+      <p class="govuk-body">You can pay online by debit card.</p>
+
+      <p class="govuk-body">We will send you a confirmation email when payment is made.</p>
+
+      <form action="./confirm-details" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Pay now
+          </button>
+        </div>
+      </form>
+
+      <h2 class="govuk-heading-m">Pay by bank transfer</h2>
+
+ <p style="text-align: left;">
+        You can pay by bank transfer.
+      </p>
+
+      <p style="text-align: left;">
+        <span>You'll need to reference your Unique Transaction Reference Number.
+      </p>
+
+      <table id="call-out-table-gov-wales" style="border: 3px solid #999; margin-bottom: 15px;">
+        <tr>
+          <td style="padding-bottom: 10px">Unique Tax Reference Number:</td>
+          <td style="padding-bottom: 10px" id="table-cell">2702 1339 4877</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px">Account name:</td>
+          <td style="padding-bottom: 10px" id="table-cell">Welsh Revenue Authority Tax</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px; vertical-align: top;">Account number:</td>
+          <td style="padding-bottom: 10px" id="table-cell">10028838
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px; vertical-align: top;">Sort code:</td>
+          <td style="padding-bottom: 10px" id="table-cell">
+            60 70 80
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px">Bank name:</td>
+          <td style="padding-bottom: 5px" id="table-cell">NatWest</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px; ">
+
+      <h3 class="govuk-heading-s">Contact us</h3>
+      <p class="govuk-body">
+        If you are not sure about how much you owe or aren't able to pay, contact our help desk. 
+      </p>
+
+      <p class="govuk-body">
+        <span style="font-weight: bold;">Telephone:</span> 03000 254 000 (Monday to Friday, 10am to 3pm)<br><br>
+        <span style="font-weight: bold;">Email:</span> contact@wra.gov.wales <br>
+        (Replies in two working days)
+      </p>
+
+    </div>
+  
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layouts/public/english-pay.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" style="margin-top: 30px; margin-bottom: 0px;">Back
+  </a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+
+        <form action="./amount" method="post" id="myForm">
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Enter Uninque Transaction Reference Number
+              </h1>
+            </legend>
+            <div id="email-hint" class="govuk-hint">
+              The Uninque Transaction Reference Number is 12 digits and can be found any email or letter from us. Please do not add any other text to this field.
+            </div>
+            <input class="govuk-input govuk-input--width-20" id="phone" name="utrn" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          
+        </form>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Cancel payment</a>
+        </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

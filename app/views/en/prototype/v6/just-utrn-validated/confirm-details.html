@@ -1,0 +1,62 @@
+{% extends "layouts/public/english-pay.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" style="margin-top: 30px; margin-bottom: 0px;">Back
+  </a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+
+        <form action="./card-details" method="post" id="myForm">
+
+          <h1 class="govuk-heading-l">Pay Land Transaction Tax</h1>
+          <h2 class="govuk-heading-m">Check your details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Unique Transaction Reference Number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                2702 1339 4877
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Total to pay
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £4,197.29
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+              </dd>
+            </div>
+          </dl>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue to payment
+          </button>
+          
+        </form>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Cancel payment</a>
+        </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
