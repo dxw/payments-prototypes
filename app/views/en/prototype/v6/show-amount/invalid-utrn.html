@@ -1,0 +1,58 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 0px;">Back</a>
+
+        <form action="./balance" method="post" id="myForm">
+
+          <div style="text-align: left; padding: 25px 25px 25px 25px; background-color: #ffe4e5; border-left: 10px solid #aa1111;">
+            <p style="margin-bottom color: #1f1f1f; margin-bottom: 0px;">
+              <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">There is a problem</span>
+              <br><br>
+              <a href="#input" style="color: inherit;">
+                Enter a valid Unique Transaction Reference Number
+              </a>
+            </p>
+          </div>
+
+          <br>
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your Uninque Tax Reference Number?
+              </h1>
+            </legend>
+            <label class="govuk-label" for="email">
+              Unique Tax Reference Number
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              It’s on any letter from us. For example, ‘2702 1339 4877’.
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="input" name="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+          
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

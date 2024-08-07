@@ -12,7 +12,7 @@
 
         <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 0px;">Back</a>
 
-        <form action="./amount" method="post" id="myForm">
+        <form action="/en/prototype/v6/just-utrn-validated/invalid-utrn" method="post" id="myForm">
 
           <div class="govuk-form-group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -24,10 +24,42 @@
               Unique Tax Reference Number
             </label>
             <div id="email-hint" class="govuk-hint">
-              It’s on any letter from us. For example, ‘3423 3423 6545’.
+              It’s on any letter from us. For example, ‘2702 1339 4877’.
             </div>
-            <input class="govuk-input govuk-input--width-10" id="phone" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            <input class="govuk-input govuk-input--width-10" name="utrn" id="cc" value="" maxlength="14" onkeypress="return checkDigit(event)">
           </div>
+
+          <script>
+            function cc_format(value) {
+              var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+              var matches = v.match(/\d{4,16}/g);
+              var match = matches && matches[0] || ''
+              var parts = []
+              for (i=0, len=match.length; i<len; i+=4) {
+                parts.push(match.substring(i, i+4))
+              }
+              if (parts.length) {
+                return parts.join(' ')
+              } else {
+                return value
+              }
+            }
+
+            onload = function() {
+              document.getElementById('cc').oninput = function() {
+                this.value = cc_format(this.value)
+              }
+            }
+            function checkDigit(event) {
+                var code = (event.which) ? event.which : event.keyCode;
+
+                if ((code < 48 || code > 57) && (code > 31)) {
+                    return false;
+                }
+
+                return true;
+            }
+          </script>
 
           <br>
 
