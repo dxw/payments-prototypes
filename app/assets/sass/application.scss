@@ -281,6 +281,112 @@ input[type='radio']:after {
   color: #000;
 }
 
+#last-change {
+  text-align: left; 
+  padding: 15px 15px 15px 15px; 
+  background-color: #dddddd; 
+  border-left: 10px solid #0360a6;
+}
+
+#last-change p {
+  margin-bottom: 0; 
+  color: #1f1f1f; 
+  font-size: 16px;
+}
+
+.TaxParentRow {
+  background-color: #dddddd;
+}
+
+.TaxParentRow th {
+  border-left: 5px solid #0360a6;
+  padding-left: 20px;
+  font-weight: bold !important;
+  color: #1f1f1f !important;
+}
+
+.TaxParentRow button {
+  color: #1f1f1f;
+  text-decoration-color: #1f1f1f;
+}
+
+#TaxDetails {
+  border-left: 5px solid #0360a6;
+}
+
+.PenaltyParentRow {
+  background-color: #dddddd;
+}
+
+.PenaltyParentRow th {
+  border-left: 5px solid #fea8a9;
+  padding-left: 20px;
+  font-weight: bold !important;
+  color: #1f1f1f !important; 
+}
+
+.PenaltyParentRow button {
+  color: #1f1f1f;
+  text-decoration-color: #1f1f1f;
+}
+
+.reveal-penalty-button {
+  font-size: 19px;
+  color: #1d70b8;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px solid black;
+}
+
+#PenaltyDetails {
+  border-left: 5px solid #fea8a9;
+  outline-offset: 5px;
+}
+
+.PaidParentRow {
+  background-color: #dddddd;
+}
+
+.PaidParentRow th {
+  border-left: 5px solid #019e1e;
+  padding-left: 20px;
+  font-weight: bold !important;
+  color: #1f1f1f !important;
+}
+
+.PaidParentRow button {
+  color: #1f1f1f;
+  text-decoration-color: #1f1f1f;
+}
+
+.reveal-paid-button {
+  font-size: 19px;
+  color: #1d70b8;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px solid black;
+}
+
+#PaidDetails {
+  border-left: 5px solid #019e1e;
+}
+
+#PenaltyDetails, #TaxDetails, #PaidDetails { 
+  background: #eeeeee;
+}
+
+#toggle-reveal {
+  font-size: 19px;
+  color: #1d70b8;
+  text-decoration: underline;
+  background-color: #fff;
+  background-color: transparent;
+  padding: 0px;
+  border: 0px solid black;
+}
+
 
 .hods-timeline {
   overflow: hidden;
