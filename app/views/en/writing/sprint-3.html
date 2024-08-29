@@ -1,0 +1,110 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Test MVP with staff</h1>
+    
+    <p class="govuk-body">In this next sprint, we tested with staff for the first time. We wanted to test a prototype that would be feasible to build in production code in the following sprint. So what we tested was more minimal. 
+
+    <h2 class="govuk-heading-m">Most common case</h2>
+    
+    <p class="govuk-body">Few cases are complicated. Most are just tax, with maybe a little bit of interest. So that’s what we prototyped in this sprint to test with staff. We wanted to test whether they could interpret the figures correctly.</p>
+
+    <img src="/public/images/writing/sprint-3/simple-case.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Complex case box</h2>
+
+    <p class="govuk-body">As we were just testing the simpler, most common cases, we dropped the box component at the top of the screen, which highlights that a case is complex.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-3/complex-case-box.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">The single view design still included:</p>
+
+    <ol class="govuk-list govuk-list--bullet">
+      <li>Name and UTRN</li>
+      <li>Big total box</li>
+      <li>Subtotal table</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">Balance time removed</h2>
+
+    <p class="govuk-body">As we only wanted to prototype and test what our developers could realistically build in a week or two, we dropped the timeline component.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-1/timeline.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">As a team, we felt it would be quite time consuming to build in production code. It might be novel, but it wasn't clear to us that it was absolutely necessary. If it came out in research staff need more detail on the provenance of financials, then we'd revisit the idea.</p>
+    
+    <h2 class="govuk-heading-m">Stretch the design with some complexity</h2>
+
+    <p class="govuk-body">We also tested a slightly more complex case - of someone who has got a penalty and begun to pay off the debt in instalments.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-3/complex-case.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">If there’s time: Preview and send PDF</h2>
+
+    <p class="govuk-body">As we wanted to stay focused on a MVP, we decided we’d only show staff the Preview and send the PDF feature, if there was enough time at the end of each user research session.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-3/pdf-preview.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Navigate from search bar</h2>
+
+    <p class="govuk-body">Both user journeys in testing, started with the search bar component, where staff try enter a unique reference number.</p>
+
+    <img src="/public/images/writing/sprint-3/search-bar.png" id="writing-image">
+
+    <p class="govuk-body">The next post discusses what we learned in the first round of testing and the design changes we made as a result.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-2" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-9" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}

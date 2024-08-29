@@ -1,0 +1,102 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Single view</h1>
+    
+    <p class="govuk-body">In our second sprint, we concentrated on refining the single view idea. 
+
+    <p class="govuk-body">With version two, we prototype three most common complex caes:</p>
+
+    <ol class="govuk-list govuk-list--bullet">
+      <li><a href="/en/prototype/v2/complex-unpaid-invoices">Unpaid invoices</li>
+      <li><a href="/en/prototype/v2/complex-installments">Paying in instalments</a></li>
+      <li><a href="/en/prototype/v2/complex-amendments">Amended tax to pay</a></li>
+    </ol>
+    
+    <h2 class="govuk-heading-m">Preview and send PDF</h2>
+
+    <p class="govuk-body">The biggest change we made from version one, was giving detail to how a taxpayer might be sent their balance. Currently staff type out emails with balance details. So we prototyped what a more consistent and quicker version of this could be.</p>
+
+    <p class="govuk-body">At the bottom of the page, staff can both enter someone’s email to send a PDF or preview the document before sending.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-2/pdf-preview.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">The PDF is formatted as an A4 letter over multiple pages, including the same information as the digital single view, plus with WRA contact information and how to pay.</p> 
+    <img src="/public/images/writing/sprint-2/pdf.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Bye bye individual branding</h2>
+    
+    <p class="govuk-body">In the first iteration of the single view, we had a novel name and brand  - Single Taxpayer View. The intent was to communicate internally that whatever we were building, would bring all information about how much someone ones, into one view.</p>
+
+    <img src="/public/images/writing/sprint-2/old-branding.png" id="writing-image">
+
+    <p class="govuk-body">This then gave way to having default WRA branding, like all other internal applications. As we started to make the app into something to test with staff, it needed to look more realistic.</p>
+
+    <img src="/public/images/writing/sprint-2/new-branding.png" id="writing-image">
+
+    <p class="govuk-body">At this point we still didn’t have a name for the service. We decided to be led by user research and see what names emerged in testing the prototype with staff with the language they used.</p>
+
+    <h2 class="govuk-heading-m">Toning down colour use</h2>
+    
+    <p class="govuk-body">We began to reduce how much colour we used in the prototype. Starting with making more components grey. Beginning with the login subheader and boxes that highlights why a case should be looked at.</p>
+
+    <img src="/public/images/writing/sprint-2/more-colour.png" id="writing-image">
+
+    <img src="/public/images/writing/sprint-2/less-colour.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Refining subtotal tables</h2>
+
+    <p class="govuk-body">We continued to refine the subtotal table. Making it clear people could reveal more detail with ‘view’ and close button for the three sections.</p>
+
+    <p class="govuk-body">Like other components, we replace much of the colour with grey. Using just a thin left border for each expanded row.</p>
+
+    <img src="/public/images/writing/sprint-2/table-closed.png" id="writing-image">
+
+    <img src="/public/images/writing/sprint-2/table-open.png" id="writing-image">
+
+    <p class="govuk-body">Still at this point, everything that makes up someone’s balance is in one subtotal table. Tax, interest, penalties, payments. You name it.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-1" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-3" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
