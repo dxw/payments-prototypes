@@ -1,0 +1,46 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/security-code"%}
+{% set pageName="Visitor levy prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form action="./edited-transaction" method="post" novalidate >
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Edit reference
+              </h1>
+            </legend>
+            <p id="call-out-gov-wales" style="background: #fff;"><span class="govuk-!-font-weight-regular">Name on account </span>N B KANAA</p>
+            <label class="govuk-label" for="email">
+              Reference number
+            </label>
+            <div id="email-hint" class="govuk-hint">
+              Transaction information will update when saved
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="2702 1339 487">
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Save
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -132,9 +132,18 @@ html, body {
   border-bottom: 2px solid #666666;
 }
 
+#summary-card-footer {
+  background: #dddddd; 
+  border-top: 2px solid #666666;
+}
+
 #summary-card__action a, a:visited, a:hover, a:active {
   color: #0360a6; 
   text-decoration: none;
+}
+
+#json-value {
+  font-weight: 700;
 }
 
 .govuk-date-input__item--with-separator {
