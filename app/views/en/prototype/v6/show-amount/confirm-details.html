@@ -37,7 +37,12 @@
                 Total to pay
               </dt>
               <dd class="govuk-summary-list__value">
-                £{{ data['amount'] }}
+                {% if (data['amount'] == "4,196.12") %}
+                    £{{ data['amount'] }}
+                {% endif %}
+                {% if (data['amount'] == "part") %}
+                  £{{ data['part-amount'] }}
+                {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
