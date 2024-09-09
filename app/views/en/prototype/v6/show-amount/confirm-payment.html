@@ -15,7 +15,14 @@
           <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Payment summary</span><br><br>
           <span class="govuk-!-font-size-19">2507 4339 4889</span><br><br>
           Amount to pay<br>
-          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£4,197.29</span><br>
+          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">
+            {% if (data['amount'] == "4,196.12") %}
+                £{{ data['amount'] }}
+            {% endif %}
+            {% if (data['amount'] == "part") %}
+              £{{ data['part-amount'] }}
+            {% endif %}
+          </span><br>
         </p>
       </div>
 
