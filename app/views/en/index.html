@@ -10,7 +10,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-three-quarters">
 
     <!--{% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
 
@@ -25,38 +25,25 @@
     <span class="govuk-caption-m">Sprint 7 - Aug / Sept 2024</span>
     <h2 class="govuk-heading-m">Banking API interface</h2>
 
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--green">
-        Production
-      </strong>
-      Version.3
-    </h3>
+    <style type="text/css">
+      #list-index li {
+        margin-bottom: 15px;
+      }
 
-    <ul class="govuk-list govuk-list--bullet">
+      #list-index strong {
+        font-size: 16px;
+      }
+    </style>
+
+    <ul class="govuk-list govuk-list--bullet" id="list-index">
       <li>
-        <a href="/en/production/22-day-letter/v2">
-          22 day letter
-        </a>
-      </li>
-    </ul>
-
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--yellow">
-        MVP Prototype
-      </strong>
-      Version.4
-    </h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/en/prototype/banking-interface/v1/dashboard">
-          Banking interface
-        </a>
+        <a href="/en/production/22-day-letter/v2">22 day letter</a> <strong class="govuk-tag govuk-tag--green">2.0</strong> 
       </li>
       <li>
-        <a href="/en/prototype/error-message/404/v1">
-          404 error message
-        </a>
+        <a href="/en/prototype/banking-interface/v1/dashboard">Banking interface</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
+      </li>
+      <li>
+        <a href="/en/prototype/error-message/404/v1">404 error message</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
     </ul>
 
@@ -65,55 +52,25 @@
     <span class="govuk-caption-m">Sprint 6 - August 2024</span>
     <h2 class="govuk-heading-m">Card payments</h2>
 
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--green">
-        Production
-      </strong>
-      Version.3
-    </h3>
-
-    <ul class="govuk-list govuk-list--bullet">
+    <ul class="govuk-list govuk-list--bullet" id="list-index">
       <li>
-        <a href="/en/production/22-day-letter/v1">
-          22 day letter
-        </a>
+        <a href="/en/production/22-day-letter/v1">22 day letter</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
       <li>
-        <a href="/en/production/v3/search">
-          UTRN summary page
-        </a>
+        <a href="/en/prototype/summary/v6">Summary page</a> (instalments) <strong class="govuk-tag govuk-tag--purple">6.0</strong> 
       </li>
     </ul>
 
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--yellow">
-        MVP prototype
-      </strong>
-      Version.6
-    </h3>
-
     <p class="govuk-body">Taking card payments:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/en/prototype/v6/22-day-letter">
-          22 day letter with card payment
-        </a>
+    <ul class="govuk-list govuk-list--bullet" id="list-index">
+      <li><a href="/en/prototype/v6/22-day-letter">22 day letter with card payment</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v6/payment-page/service-description">
-          Refence number not validated, blank amount
-        </a>
+      <li><a href="/en/prototype/v6/payment-page/service-description">GOV.UK Pay payment page</a> (no validation) <strong class="govuk-tag govuk-tag--green">2.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v6/just-utrn-validated/start-page">
-          Validated refence number, blank amount
-        </a>
+      <li><a href="/en/prototype/v6/just-utrn-validated/start-page">Self service</a> (just check reference) <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v6/show-amount/start-page">
-          Validated refence number, amount auto-filled
-        </a>
+      <li><a href="/en/prototype/v6/show-amount/start-page">Self service</a> (check reference, show balance) <strong class="govuk-tag govuk-tag--green">2.0</strong>
       </li>
     </ul>
 
@@ -122,60 +79,28 @@
     <span class="govuk-caption-m">Sprint 5 - July 2024</span>
     <h2 class="govuk-heading-m">Refinement and taking payments</h2>
 
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--green">
-        Production
-      </strong>
-      Version.2
-    </h3>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/en/production/v2/search-one">
-          Just tax with some interest
-        </a>
+    <ul class="govuk-list govuk-list--bullet" id="list-index">
+      <li><a href="/en/production/v2/search-one">Search page</a> <strong class="govuk-tag govuk-tag--green">2.0</strong> 
       </li>
-      <li>
-        <a href="/en/production/v2/search-two">
-          Instalments
-        </a>
+      <li><a href="/en/production/v2/just-tax-and-some-interest">Summary page</a> (just interest) <strong class="govuk-tag govuk-tag--light-blue">5.0</strong> 
       </li>
-      <li>
-        <a href="/en/production/v2/error/invalid-utrn">
-          Error - invalid UTRN
-        </a>
+      <li><a href="/en/production/v2/instalments">Summary page</a> (instalments) <strong class="govuk-tag govuk-tag--light-blue">5.0</strong> 
+      </li>
+      <li><a href="/en/production/v2/error/invalid-utrn">Error message</a> (invalid UTRN) <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
+      </li>
       </li>
     </ul>
 
-    <h3 class="govuk-heading-s">
-      <strong class="govuk-tag govuk-tag--yellow">
-        MVP prototype
-      </strong>
-      Version.5
-    </h3>
-
     <p class="govuk-body">Taking payments:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/en/prototype/v5/payment-page/service-description">
-          Payment page
-        </a>
+    <ul class="govuk-list govuk-list--bullet" id="list-index">
+      <li><a href="/en/prototype/v5/payment-page/service-description">GOV.UK Pay payment page</a> (no validation) <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v5/govuk-admin/dashboard">
-          GOV.UK Pay admin 
-        </a>
+      <li><a href="/en/prototype/v5/self-service/utrn">Self-service</a> (with validation) </a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v5/moto-api/search">
-          Over the phone
-        </a>
+      <li><a href="/en/prototype/v5/govuk-admin/dashboard">Over the phone - GOV.UK Pay admin</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
-      <li>
-        <a href="/en/prototype/v5/self-service/utrn">
-          Self-service
-        </a>
+      <li><a href="/en/prototype/v5/moto-api/search">Over the phone - WRA admin</a> <strong class="govuk-tag govuk-tag--grey">1.0</strong> 
       </li>
     </ul>
 
