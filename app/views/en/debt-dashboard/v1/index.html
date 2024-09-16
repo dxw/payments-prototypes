@@ -1,0 +1,384 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#tax-returns">Tax returns</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#revenue">Revenue</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#debt">Debt outstanding</a>
+        </li>    
+      </ul>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="location">
+          Select tax year
+        </label>
+        <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+          <option value="2728" selected>2027-28</option>
+          <option value="2026-27">2026-27</option>
+          <option value="2025-26">2025-26</option>
+          <option value="2024-25">2024-25</option>
+          <option value="2023-24">2023-24</option>
+          <option value="2022-23">2022-23</option>
+          <option value="2021-22">2021-22</option>
+          <option value="2020-21">2020-21</option>
+          <option value="2019-20">2019-20</option>
+          <option value="2018-19">2018-19</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-xl" id="top">Land Transaction Tax</h1>
+
+      <h2 class="govuk-heading-l" id="tax-returns">Tax returns</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">58,671</span><br>
+          Tax returns filed in 2027-2028</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£423,564,936</span><br>
+          Potential revenue in 2027-28</p>
+      </div>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Period</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric">Returns filed</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric">Potential revenue</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            16,431
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,902,243
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            13,024
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £98,242,002
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            15,023
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £101,476,862
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            14,193
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,001,232
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Returns filed</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Percentage</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">No tax due</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">000</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">X%</td>
+            <td class="govuk-table__cell govuk-table__header--numeric"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Tax due</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">000</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">X%</td>
+            <td class="govuk-table__cell govuk-table__header--numeric"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Superseded</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">000</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">X%</td>
+            <td class="govuk-table__cell govuk-table__header--numeric"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Modified</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">000</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">X%</td>
+            <td class="govuk-table__cell govuk-table__header--numeric"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Void</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">000</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">X%</td>
+            <td class="govuk-table__cell govuk-table__header--numeric"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+      <h2 class="govuk-heading-l" id="revenue">Revenue</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£406,622,339</span><br>
+          Collected revenue in 2027-28</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">96.2%</span><br>
+          Paid within 30 days</p>
+      </div>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Collected</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Paid within 30 days</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,902,243
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            X%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £98,242,002
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            X%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £101,476,862
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            X%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,001,232
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            X%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+      <h2 class="govuk-heading-l" id="debt">Debt outstanding</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£11,385,425</span><br>
+          Outstanding debt in 2027-28</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">2.8%</span><br>
+          Tax returns unpaid after 30 days</p>
+      </div>
+      <br>
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Debt</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tax returns (%)</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Within 31-60 days
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £7,725,824
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            1115 (1.9%)
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Within 61-90 days
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £406,623 
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            107 (0.1%)
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Over 91 days
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £3,252,978
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            528 (0.8%)
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Debt from previous years
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £4,235,649
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            586
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Reminder</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Sent</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Response rate</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            22 day letter
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2131
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            17.8%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            30 day text message
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            1879
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            13.4%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            38 day email
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            687
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            21.7%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            52 day letter
+          </th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            602
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            11.2%
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            <a href="#">View</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">Check balance</h1>
+
+      <div style="text-align: left; padding: 25px 25px 25px 25px; background-color: #ffe4e5; border-left: 10px solid #aa1111;">
+        <p style="margin-bottom color: #1f1f1f; margin-bottom: 0px;">
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">There is a problem</span>
+          <br><br>
+          <a href="#input" style="color: inherit;">
+            Enter a valid Unique Transaction Reference Number
+          </a>
+        </p>
+      </div>
+
+      <br>
+
+      <form action="./just-tax-and-some-interest" method="post" novalidate >
+
+      <div class="govuk-form-group" style="border-color: #aa1111;">
+
+          <label class="govuk-label" for="width-10">
+            Unique Transaction Reference Number
+          </label>
+
+          <div class="govuk-button-group">
+            <input class="govuk-input govuk-input--width-20" id="input" data-module="govuk-button" name="eventName" type="text">
+            <button id="phone-mask" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 9px 10px; box-shadow: 0px 0px transparent; margin-left: 15px; margin-bottom: 0px;">
+            Search
+            </button>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

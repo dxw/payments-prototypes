@@ -1,0 +1,137 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Name:</span><br>
+          Nadiya Kanaa<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2702 1339 4877<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            71 Nunney Avenue<br>
+            Swandiff<br>
+            SD32 8AF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Church Solicitors Ltd<br>
+        </p>
+      </div>
+
+      <br>
+
+      <div class="govuk-button-group">
+        <a href="./confirm-details" class="govuk-button govuk-button--secondary" id="small-button-gov-wales" style="width: 100%;">Take payment</a>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,197.29</span><br>
+         Outstanding balance to pay
+        </p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+         Balance updated:
+         <span style="font-weight: bold;"> 11:48am on 5 Jun 2025 (Today)</span>
+        </p>
+      </div>
+
+      <br>
+      <br>
+
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax and penalties</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Item</th>
+            <th scope="col" class="govuk-table__header">Due date</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Interest</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Land Transaction Tax</th>
+            <td class="govuk-table__cell">30 Jun 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£4,193.07</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£4.22</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£4,197.29</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total tax and penalties</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£4,197.29</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <br>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payments</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment</th>
+            <th scope="col" class="govuk-table__header">Date paid</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total payments</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£0.00</td>
+          </tr>
+        </tbody>
+      </table> 
+
+      <br>
+
+      <h3 class="govuk-heading-m">Interest</h3>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Period</th>
+            <th scope="col" class="govuk-table__header">Rate</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Daily interest</th>
+            <td class="govuk-table__cell">7.25%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£0.84</td>
+          </tr>
+          <!--
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Failure to pay within 60 days</th>
+            <td class="govuk-table__cell">30 Aug 2025</td>
+            <td class="govuk-table__cell">5% of tax</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£209.65</td>
+          </tr>
+        -->
+        </tbody>
+      </table>  
+  
+    </div>
+  </div>
+
+
+{% endblock %}

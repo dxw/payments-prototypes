@@ -1,0 +1,75 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Summary
+  </a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Name:</span><br>
+          Nadiya Kanaa<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2702 1339 4877<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            71 Nunney Avenue<br>
+            Swandiff<br>
+            SD32 8AF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Church Solicitors Ltd<br>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+
+        <form action="./card-details" method="post" id="myForm">
+
+          <h1 class="govuk-heading-l">Pay Land Transaction Tax</h1>
+          <h2 class="govuk-heading-m">Check your details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Unique Transaction Reference Number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                2702 1339 4877
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Total to pay
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £4,197.29
+              </dd>
+            </div>
+          </dl>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue to payment
+          </button>
+          
+        </form>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Cancel payment</a>
+        </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

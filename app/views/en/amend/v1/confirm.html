@@ -1,0 +1,36 @@
+{% extends "layouts/public/english-account.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <p id="confirmation-gov-wales">
+          Request complete<br><br>
+          <span class="govuk-!-font-weight-regular">
+          Your reference number is
+          </span>HDJ2123F
+        </p>
+
+        <p class="govuk-body">We have sent you a confirmation letter.</p>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          Your request will be reviewed by the tax team at Welsh Revenue Authority with 10 working days. 
+        </p>
+        <p class="govuk-body">
+          Will they either confirm your refund or contact you for more information.
+        </p>
+        <p class="govuk-body">
+          <a href="./homepage" class="govuk-link">View all your Welsh tax records.</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

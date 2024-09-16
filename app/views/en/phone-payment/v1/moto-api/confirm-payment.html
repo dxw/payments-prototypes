@@ -1,0 +1,100 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Name:</span><br>
+          Nadiya Kanaa<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2702 1339 4877<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            71 Nunney Avenue<br>
+            Swandiff<br>
+            SD32 8AF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Church Solicitors Ltd<br>
+        </p>
+      </div>
+
+    </div>    
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Confirm payment</h1>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; margin-bottom: 20px; background-color: #f3f2f1; border-top: 2px solid #1d70b8;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Payment summary</span><br><br>
+          <span class="govuk-!-font-size-19">2507 4339 4889</span><br><br>
+          Amount to pay<br>
+          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">£4,197.29</span><br>
+        </p>
+      </div>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Card number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <span class="">⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤</span> 4877
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Expiry date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            01/26
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name on card
+          </dt>
+          <dd class="govuk-summary-list__value">
+            NADIYA KANAA
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Billing address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            71 Nunney Avenue, Swandiff, SD32 8AF
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Confirmation email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            nadiya@blueblueholidays.com
+          </dd>
+        </div>
+      </dl>
+
+      <form action="./payment-complete" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Confirm payment
+          </button>
+        </div>
+      </form>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Cancel payment</a>
+      </p>
+
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layouts/public/english-account.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form action="./check-answers" method="post" novalidate >
+
+          <fieldset class="govuk-fieldset" aria-describedby="fee-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is the reason for changing what Land Transaction Tax you paid?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fee" name="fee" type="radio" value="yes" aria-describedby="fee-item-hint">
+                <label class="govuk-label govuk-radios__label" for="fee">
+                  Made a mistake
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fee-2" name="fee" type="radio" value="no" aria-describedby="fee-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="fee-2">
+                  Underpaid tax
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fee-2" name="fee" type="radio" value="no" aria-describedby="fee-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="fee-2">
+                  Claim a refund
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="fee-2" name="fee" type="radio" value="no" aria-describedby="fee-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="fee-2">
+                  Multiple dwellings relief
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

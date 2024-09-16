@@ -1,0 +1,123 @@
+{% extends "layouts/public/english-signed-in.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£4,196.12</span><br>
+         Total tax left to pay
+        </p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-size: 16px; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          Purchase of 14 Harper Mews, Swandiff, SD16 4LF on <a href="#" style="color: inherit;">25 June 2025</a>
+        </p>
+      </div>
+      <br>
+      <br>
+
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m">Sub-total</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Item</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Land Transaction Tax</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£4,193.07</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Interest for 3 days</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£3.05</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total left to pay</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£4,196.12</td>
+          </tr>
+        </tbody>
+      </table>  
+
+      <h2 class="govuk-heading-m">How to pay</h2>
+
+      <p style="text-align: left;">
+        You can pay by bank transfer.
+      </p>
+
+      <p style="text-align: left;">
+        <span>You'll need to reference your Unique Tax Reference Number.
+      </p>
+
+      <table id="call-out-table-gov-wales" style="border: 3px solid #999; margin-bottom: 15px;">
+        <tr>
+          <td style="padding-bottom: 10px">Unique Tax Reference Number:</td>
+          <td style="padding-bottom: 10px" id="table-cell">2702 1339 4877</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px">Account name:</td>
+          <td style="padding-bottom: 10px" id="table-cell">Welsh Revenue Authority Tax</td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px; vertical-align: top;">Account number:</td>
+          <td style="padding-bottom: 10px" id="table-cell">10028838
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px; vertical-align: top;">Sort code:</td>
+          <td style="padding-bottom: 10px" id="table-cell">
+            60 70 80
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 10px">Bank name:</td>
+          <td style="padding-bottom: 5px" id="table-cell">NatWest</td>
+        </tr>
+      </table>
+
+      <p class="govuk-body">We will send you a confirmation email when payment is made.</p>
+
+      <h2 class="govuk-heading-m">Pay online</h2>
+
+      <p>You can also pay online. You will need debit card.</p>
+
+      <form action="./pay" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Pay now
+          </button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px; ">
+
+      <h3 class="govuk-heading-s">Contact us for support</h3>
+      <p class="govuk-body">
+        If you need support with paying your balance, contact our helpdesk. 
+      </p>
+
+      <p class="govuk-body">
+        <span style="font-weight: bold;">Telephone:</span> 03000 254 000 (Monday to Friday, 10am to 3pm)<br><br>
+        <span style="font-weight: bold;">Email:</span> contact@wra.gov.wales <br>
+        (Replies in two working days)
+      </p>
+
+      <p class="govuk-body">
+        <a href="#" style="font-size: 16px; width: 100%; margin-bottom: 15px" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Start live chat</a>
+        (Monday to Friday, 10am to 3pm)
+      </p>
+
+    </div>
+  
+    </div>
+  </div>
+
+
+{% endblock %}

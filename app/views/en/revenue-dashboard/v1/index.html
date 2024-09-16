@@ -1,0 +1,276 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#land-transaction-tax">Land Transaction tax</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#landfill-disposal-tax">Landfill Disposals Tax</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#visitor-levy">Visitor levy</a>
+        </li>      
+      </ul>
+
+      <br>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="location">
+          Select tax year
+        </label>
+        <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+          <option value="2728" selected>2027-28</option>
+          <option value="2026-27">2026-27</option>
+          <option value="2025-26">2025-26</option>
+          <option value="2024-25">2024-25</option>
+          <option value="2023-24">2023-24</option>
+          <option value="2022-23">2022-23</option>
+          <option value="2021-22">2021-22</option>
+          <option value="2020-21">2020-21</option>
+          <option value="2019-20">2019-20</option>
+          <option value="2018-19">2018-19</option>
+        </select>
+      </div>
+
+      <div class="govuk-button-group">
+        <a href="#" style="font-size: 16px;" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Download figures CSV</a>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l" id="top">Devolved taxes</h1>
+
+      <h2 class="govuk-heading-m" id="land-transaction-tax">Land Transaction Tax</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">58,671</span><br>
+          Tax returns filed in 2027-2028</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£406,622,339</span><br>
+          Land Transaction Tax collected in 2027-28</p>
+      </div>
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Collected</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Transactions</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,902,243
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            16,431
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £98,242,002
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            13,024
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £101,476,862
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            15,023
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £103,001,232
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            14,193
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <br><br>
+
+      <h2 class="govuk-heading-m" id="landfill-disposal-tax">Landfill Disposals Tax</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #F8D756;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">8,349</span><br>
+          Tax returns in 2027-2028</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #F8D756;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£51,622,339</span><br>
+          Landfill Disposals Tax collected in 2027-28</p>
+      </div>
+
+
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Collected</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Tax returns</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £13,902,243
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2,331
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £12,242,002
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            1,902
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £11,476,862
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            2,123
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £14,001,232
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            1,993
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <br><br>
+
+      <h2 class="govuk-heading-m" id="visitor-levy">Visitor levy</h2>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #fea8a9;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">1,403</span><br>
+          Tranactions in 2027-2028</p>
+      </div>
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #dddddd; border-left: 10px solid #fea8a9;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£38,664,548</span><br>
+          Visited Levy collected in 2027-28</p>
+      </div>
+
+
+      <br>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Period</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Collected</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Tax returns</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric ">Properties</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jan - Mar 2028</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £0
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            0
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            41,223
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Oct - Dec 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £11,207,382
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            5,603,691
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            39,123
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Jul - Sep 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £15,476,862
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            7,738,430
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            37,234
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Apr - Jun 2027</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            £11,980,304
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            5,990,152
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">
+            37,003
+          </td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
