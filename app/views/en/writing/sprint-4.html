@@ -1,0 +1,139 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Building a basic design</h1>
+
+      <p class="govuk-body">After the first round of testing, the team began writing production code. Turning them most basic version of the check balance app into something connected to databases via APIs.</p>
+
+      <p class="govuk-body">First, what did we learn in that first round of user research with call centre staff?</p>
+
+      <h2 class="govuk-heading-m">Search page worked fine</h2>
+
+      <p class="govuk-body">The people we tested could use the search page without any issues. They could copy and page a reference number without any instruction.</p>
+
+      <img src="/public/images/writing/sprint-3/search-bar.png" id="writing-image">
+
+      <p class="govuk-body">One thing people asked for, was for there to be masking, where characters are automatically spaced after a set number. For example a reference number of 270213394877 would be separated into 2702 1339 4877, making it easier to read and double check.</p>
+
+      <h2 class="govuk-heading-m">Total balance box tested well</h2>
+      
+      <p class="govuk-body">The big total box tested well. People liked having an unambiguous figure about how much someone owes.</p>
+
+      <img src="/public/images/writing/sprint-4/total-balance.png" id="writing-image">
+
+      <p class="govuk-body">Staff found the microscopy of ‘left to pay’ odd. In trying to make the language really plain, the design departed from what staff usually call ‘Outstanding balance to pay’. Staff are regular users, so its okay to make language more specific, unlike public facing services, which a people use once and shouldn’t be expected to learn a new.  
+
+      <p class="govuk-body">Some people didn’t like the pink border-left, but the functionality itself worked well.
+
+      <h2 class="govuk-heading-m">Microcopy counts</h2>
+
+      <p class="govuk-body">We also learned how much labels matter. The ‘Last updated’ date label below the total balance.</p>
+
+      <img src="/public/images/writing/sprint-4/timestamp.png" id="writing-image">
+
+      <p class="govuk-body">We added this feature from the first version of the summary page, as staff said not only did they say needed all the figures, but needed to know they were up-to-date. So we added this time stamp. However, while the feature tested well, the wording was a bit confusing. People kept questioning what ‘last’ meant in relation to whether features were the latest ones.</p>
+      
+      <h2 class="govuk-heading-m">Accordion table was trying to be too clever</h2>
+
+      <p class="govuk-body">People found the accordion table confusing. They wanted to see all the subtotal figures, without some of them being. Having to reveal figures was unnecessary. The assumption we didn’t want to overwhelm staff with too much information at once proved wrong. They want the detail at once, to double check the big figure at the top added up.</p>
+
+      <video width="100%" controls autoplay loop id="writing-image">
+        <source src="/public/images/writing/sprint-4/accordion-table.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h2 class="govuk-heading-m">Separate debt from payments</h2>
+
+      <p class="govuk-body">The biggest finding in the round of research was seeing people try to do the mental asymmetric and check sums themselves. Adding up taxes, fines, interest and deducting the payments.</p>
+
+      <img src="/public/images/writing/sprint-4/subtotal.png" id="writing-image">
+
+      <p class="govuk-body">Meaning having all these bunch into one table made checking much harder. Debt and payments needed to be separate, so people could easily minus one number from the other. 
+
+      <p class="govuk-body">This is how things work now. When call centre staff need to find out how much debt someone owe, they ask finance, who produce a spreadsheet with two tables. 
+
+      <img src="/public/images/writing/sprint-4/spreadsheet.png" id="writing-image">
+
+      <h2 class="govuk-heading-m">Preview letter raises more questions than it answers</h2>
+
+      <p class="govuk-body">At the end of the research session, we showed users a version of the summary page, that they could send someone a PDF version of their balance.</p>
+
+      <video width="100%" controls autoplay loop id="writing-image">
+        <source src="/public/images/writing/sprint-4/preview-letter.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="govuk-body">While the feedback was really positive - how consistent the design. How fast it was compared to writing an email (what happens now), the PDF feature raised more questions than it answered.</p>
+
+      <p class="govuk-body">First someone’s balance could be out of date within hours - interest is added daily after a certain number of days. So, is giving someone a snapshot in time of their balance, that useful?</p>
+
+      <p class="govuk-body">Second, PDFs are inherently inaccessible, should we be using them to share information publicly? There’s a legal duty for public information and services meeting minimum accessibility standards.</p> 
+
+      <p class="govuk-body">Third, should we encourage staff to share so much sensitive information using an email? There’s lot of security risks with email.</p>
+
+      <p class="govuk-body">Lastly, would generating a PDF just be digitising an inefficient process - making and sharing out-of-date information? Shouldn’t we just replace the need for process all together and look at self service later on?</p>
+      
+      <h2 class="govuk-heading-m">Basic design
+
+      <p class="govuk-body">Learning what we did, we decided upon a very basic design to build in production, as a first version.</p>
+
+      <img src="/public/images/writing/sprint-4/search.png" id="writing-image">
+
+      <img src="/public/images/writing/sprint-4/summary.png" id="writing-image">
+
+      <p class="govuk-body">The version included:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>A search page, with automatically spaces every four characters and placeholder name of 'Check balance'</li>
+        <li>We removed the placeholder side navigation and replaced it with a grey book with the name and reference number</li>
+        <li>The total balance box (with blue border-left)
+        <li>Time stamp, with amount added most recently</li>
+        <li>Subtotal table where each tax and penalty has its own row. Interest, if there is any, has its own column within a row, as does the due date. This copies the format already used by the finance team to show what someone owes and why.</li>
+        <li>Separate table for payments, with dates and type of payment</li>
+      </ul>
+
+      <p class="govuk-body">That's it.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-2" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-9" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
