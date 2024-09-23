@@ -1,0 +1,129 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Thinking beyond MVP</h1>
+    
+    <p class="govuk-body">In the same two weeks as <a href="./sprint-4">building a MVP in production</a>, we thought about how Welsh taxes services could change beyond the next six months. Both for taxpayers and staff working behind the scenes. We prototyped a few ideas. Not to design how near-future services will work, uninformed by research, but as a way of asking questions about what we could explore, beyond MVP.</p>
+
+    <h2 class="govuk-heading-m">Self service</h2>
+
+    <p class="govuk-body">As detailed in the first post, at present, taxpayers have to call up WRA to find out how much money they owe. It’s obvious, but what if they didn’t need to? They could just go online and a website tells them. They could bypass the whole current process.</p>
+
+    <p class="govuk-body">Before going into the details of this idea, it's important to say, self service is not about replacing taxpayers being able to call up WRA and speak to someone, But its another option for taxpayers to choose how they want to use WRA services. It also frees up staff time, which means there is more capacity to support new taxpayers paying Visitor Levy when it is introduced.</p>
+    
+    <h3 class="govuk-heading-s">Authentication</h3>
+
+    <p class="govuk-body">First, taxpayers would authenticate someone to view their balance. In the idea version we prototype someone first has to <a href="/en/self-service/v1/utrn">enter their unique reference number</a>, then a <a href="/en/self-service/v1/security-code">security code</a> they have received in the post.</p>
+
+    <img src="/public/images/writing/sprint-4/utrn.png" id="writing-image">
+
+    <img src="/public/images/writing/sprint-4/security-code.png" id="writing-image">
+
+    <p class="govuk-body">Depending on what information is accessible, the self service might not require two step authentication. And of course GOV.UK One Login will be more pervasive in the coming months and years. The platform has been <a href="https://www.gov.uk/government/publications/agent-update-issue-118/issue-118-of-agent-update#GOV-UK-One-Login-a-new-way-to-access-HMRCs-online-services-for-some-customers">introduced for new taxpayers at HMRC services from May 2024</a>.</p>
+
+    <h3 class="govuk-heading-s">Summary page</h3>
+
+    <p class="govuk-body"><a href="/en/self-service/v1/balance">A taxpayer's summary page</a> gives a total balance to pay, with a brief subtotal. There’s two ways to pay, but bank transfers and by debit card, which <a href="/en/self-service/v1/pay">links off to GOV.UK Pay</a>. On the right hand side. There are ways to contact WRA for support, including live online chat.</p>
+
+    <img src="/public/images/writing/sprint-4/summary-bells-whistles.png" id="writing-image">
+
+    <img src="/public/images/writing/sprint-4/pay.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Amend a tax bill</h2>
+
+    <p class="govuk-body">We also thought people could <a href="/en/amend/v1/amount">amend their tax bill</a> from the same self service, while this is currently a separate online service.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-4/amend.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">View all tax records</h2>
+
+    <p class="govuk-body">This idea is less convincing. It shows that a taxpayer could <a href="/en/tax-records/v1">see different Welsh tax returns</a>, from Land Transaction Tax to Visitor Levy.</p>
+
+    <img src="/public/images/writing/sprint-4/records.png" id="writing-image">
+
+    <p class="govuk-body">The reason the idea is less convincing, is it is organised around what services an organisation provides, rather than the top-line task a taxpayer is trying to achieve. Say 'Buy property in Wales', which LTT is part of or 'Run accommodation in Wales', which Visitor Levy is included. When was the last time you logged into the <a href="https://www.gov.uk/guidance/download-the-hmrc-app">HRMC App</a> to view all the different tax services? Probably never.</p>
+
+    <h2 class="govuk-heading-m">Summary page with bells and whistles</h2>
+
+    <p class="govuk-body">We also thought about what beyond MVP for WRA staff could look like. Starting with <a href="/en/summary-page/far-future">a summary page</a>. With many more features than the minimal <a href="/en/summary-page/v4">summary page we began to build in production</a>.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-4/summary-page.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="govuk-body">How it different from the MVP:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Button to generate a unique share link, that case workers could send to taxpayers to quickly and securely view they balance</li>
+      <li>Box atop the page to highlight the case is likely complex due to multiple instalments</li>
+      <li>Balance timeline to see how someone’s balance has changed over time, likely more useful when something has gone wrong and needs a closer look</li>
+      <li>Table of forecast charges if balance remains unpaid</li>
+      <li>Timeline of interactions and casework</li>
+    </ul>
+
+    <p class="govuk-body">Arguably, the last feature is the most interesting, as it shows how the check balance app could gradually become a single view for everything about taxpayers. Removing the need to have multiple applications and screens open at any one time.</p>
+
+    <h2 class="govuk-heading-m">Revenue dashboard</h2>
+
+    <p class="govuk-body">Having an <a href="en/revenue-dashboard/v1">at-a-glance view</a> of all revenue coming into the WRA is interesting. The dashboard show’s revenue breakdown by tax and financial quarter. With the NatWest Bankline API, a dashboard like this could be automatic and real time. There’s an argument it could be a public, showing how much revenue devolved taxes are collecting.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-4/revenue.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Debt dashboard</h2>
+
+    <p class="govuk-body"><a href="en/debt-dashboard/v1">A dashboard</a> where debt and late payments are most concentrated, a tool like this could help teams decide where to focus most effort in recovering debt. Also it would serve as a way to measure whatever service improvement are introduced, say tax reminders or self service leads to lower rates of late payments and people getting into debt in the first place.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-4/debt.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-3" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-4.5" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
