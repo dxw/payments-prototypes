@@ -16,11 +16,15 @@
 
     <div class="govuk-grid-column-three-quarters">
 
+        <h2 class="govuk-heading-m">Bank transaction</h2>
+
+        <!--
         <p id="confirmation-gov-wales">
           Reference edited<br><br>
           <span class="govuk-!-font-weight-regular">
           Reference was changed and now matches <a href="./utrn-summary">a tax record</a><br>
         </p>
+        -->
 
         <div class="govuk-summary-card" id="summary-card">
           <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
@@ -69,15 +73,62 @@
               </div>
             </dl>
           </div>
-        <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
-          <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                View original data 
-              </span>
-            </summary>
-            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
-              <p style="color: #323232; font-size: 16px;">
+        </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Reference edited
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Previous
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <span style="background: #ffe4e5; color: #7e0a0e;">
+                  2702 1339 4<span style="background: #fea8a9; color: #fea8a9;">000</span>     
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Current
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <span style="background: #cdf7d4; color: #3b510d;">
+                    2702 1339 4<span style="background: #67d47b;">877</span>
+                  </span>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Time
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  15:48 on 13 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Edit by
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Alex Mullins
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Original transaction data
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
 <pre style="font-size: 16px;">
   {
     "id": <span id="json-value">147</span>,
@@ -112,12 +163,7 @@
     }
   }
 </pre>
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-        </div>
+          </div>
         </div>
 
     </div>
