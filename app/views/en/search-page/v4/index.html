@@ -18,23 +18,47 @@
           Unique Transaction Reference Number
         </label>
 
-        <script type="text/javascript">
-          IMask(
-            document.getElementById('phone-mask'),
-            {
-              mask: '+{7}(000)000-00-00'
-            }
-          )
-        </script>
-
         <div class="govuk-button-group">
 
-          <input class="govuk-input govuk-input--width-20" id="event-name" data-module="govuk-button" name="eventName" type="text">
+          <input class="govuk-input govuk-input--width-20" id="cc" name="utrn" id="cc" value="" maxlength="14" onkeypress="return checkDigit(event)">
           <button id="phone-mask" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 9px 10px; box-shadow: 0px 0px transparent; margin-left: 15px;">
           Search
           </button>
         </div>
       </form>
+
+      <!-- input masking script -->
+      <script>
+        function cc_format(value) {
+          var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+          var matches = v.match(/\d{4,16}/g);
+          var match = matches && matches[0] || ''
+          var parts = []
+          for (i=0, len=match.length; i<len; i+=4) {
+            parts.push(match.substring(i, i+4))
+          }
+          if (parts.length) {
+            return parts.join(' ')
+          } else {
+            return value
+          }
+        }
+
+        onload = function() {
+          document.getElementById('cc').oninput = function() {
+            this.value = cc_format(this.value)
+          }
+        }
+        function checkDigit(event) {
+            var code = (event.which) ? event.which : event.keyCode;
+
+            if ((code < 48 || code > 57) && (code > 31)) {
+                return false;
+            }
+
+            return true;
+        }
+      </script>
 
     </div>
   </div>
