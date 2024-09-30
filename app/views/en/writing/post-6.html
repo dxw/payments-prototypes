@@ -1,0 +1,129 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Refining ‘check balance’ app</h1>
+
+    <p class="govuk-body">Here’s what we learned from testing <a href="/en/summary-page/v5/instalments">summary page (V5)</a> and <a href="/en/search-page/v3">search pages (V3)</a>.</p>
+
+    <p class="govuk-body">The total balance and separate subtotal tables tested well again, as in the previous round of user research. The findings focus on new components and ones that didn’t work as expected.</p> 
+
+    <h2 class="govuk-heading-m">‘Check balance’ - a placeholder that worked</h2>
+
+    <p class="govuk-body">We needed a placeholder name for the start page and it was ‘check balance’. This name tested well with staff, as they said, it clearly says what the product does. We later had a naming workshop and ‘check balance’ came out as the team chose.</p>
+
+    <h2 class="govuk-heading-m">Search worked no problems</h2>
+
+    <p class="govuk-body">Again, staff could use the search page without any issues. As before, people commented on likely the masking that automatically separates.</p>
+
+    <img src="/public/images/writing/sprint-5/search-v3.png" id="writing-image">
+
+    <p class="govuk-body">We made a <a href="/en/search-page/v4">4th and final version</a>, reducing the input width to match the 12 character reference number and adding label. </p>
+
+    <img src="/public/images/writing/sprint-5/search-v4.png" id="writing-image">
+    
+    <h2 class="govuk-heading-m">'Land address' address’ not ‘purchase address’</h2>
+
+    <p class="govuk-body">The sidebar component is for staff to check they are looking at the right record.</p>
+
+    <img src="/public/images/writing/sprint-5/sidebar.png" id="writing-image">
+
+    <p class="govuk-body">Staff like the sidebar could display if there were multiple buyers and that the next version included property address and agent name.</p>
+
+    <p class="govuk-body">It’s a small change, but ‘purchase address’ wasn’t quite the right label. Staff said ‘land address’ was more accurate, as people might buy a field without a building on it.</p>
+
+    <h2 class="govuk-heading-m">Timestamp still not quite right</h2>
+
+    <p class="govuk-body">The timestamp feature is for staff to know all the figures on the summary page are up-to-date. This version includes what item was last added or deducted from the total.</p>
+
+    <img src="/public/images/writing/sprint-5/timestamp.png" id="writing-image">
+
+    <p class="govuk-body">While staff appreciated knowing figures were in date, the stamp was still a bit confusing. ‘Last balance change’ wasn’t clear. They didn’t need to know what was the latest item to change the balance, but when the information was calculated.</p>
+
+    <h2 class="govuk-heading-m">Payment type confusing</h2>
+
+    <p class="govuk-body">The payment table allows staff to easily see what has been paid off so far and when.</p>
+
+    <img src="/public/images/writing/sprint-5/payments.png" id="writing-image">
+    
+    <p class="govuk-body">In this version, other than date and amount, we had a type of payment. For example, ‘time to pay’, when a taxpayer has agreed with WRA to pay instalments, as they can’t afford the whole balance. The issue is, this would not be information contain in the NatWest Bankline API, which payment data is pulled from. This got point out multiple times in the research round.</p>
+
+    <h2 class="govuk-heading-m">Forecasting charges</h2>
+
+    <p class="govuk-body">We heard from staff in the previous round of research that sometimes taxpayers who call up want to know what they will be charged in the near future. Say they get paid in two days, and can’t pay until then. To try probe this further, we made added a feature that showed how much more debt someone would be in</p>
+
+    <img src="/public/images/writing/sprint-5/forecast.png" id="writing-image">
+
+    <p class="govuk-body">This didn’t test well at. Three reasons. One, as staff said in testing, while some taxpayers do ask for a short-term future, they didn’t want to encourage people to put off paying. Second, the timescales were arbitrary, they’d want to pick a precise future day. Remember, staff really don’t want to give out figures, unless they are certain. And third, forecasting things like interest rates is quite risky, so giving out a forecast is a false certainty.</p>
+
+    <h2 class="govuk-heading-m">Versions 6 & 7</h2>
+    
+    <p class="govuk-body">Based on the findings, the <a href="/en/summary-page/v6/instalments">version 6 of the summary page</a>, the second we built in a production environment.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-5/summary-v6.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">The design included:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Sidebar with buyer names, reference number, land address and agent name</li>
+      <li>Total balance</li>
+      <li>Timestamp with the time and date the page was loaded, as that’s when the records were last checked, which is what staff care about</li>
+      <li>Subtotal table of payments and penalties, including due dates and interest, if incurred</li>
+      <li>Payments table, with type of payment removed, just date and amount</li>
+      <li>Interest table, just with daily interest, with the rate and amount</li>
+    </ul>
+
+    <p class="govuk-body">We later removed the interest table as it was untested and forecasting, even simply seemed like a can of worms we didn’t have time to explore. Also, forecasting is different to the main</p>
+
+    <p class="govuk-body">At this point, <a href="/en/summary-page/v7">summary page version 7</a>, we decided to pause usability testing the summary page, as the design had changed very little between rounds and was fairly stable. The next step was for the finance team to test it with live data and see whether the right figures came out.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/sprint-5/summary-v7.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/sprint-3" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-4-part-2" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
