@@ -1,0 +1,237 @@
+{% extends "layouts/english-single-view.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block header %}
+
+  {% include "components/wra-header.html" %}
+  <section aria-label="Service information" class="govuk-service-navigation"
+    data-module="govuk-service-navigation" id="service-navigation">
+    <div class="govuk-width-container">
+      <div class="govuk-service-navigation__container">
+        <span class="govuk-service-navigation__service-name">
+          <a href="#" class="govuk-service-navigation__link" style="color: #323232;">
+            TALU
+          </a>
+        </span>
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+          <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="./transactions">
+                Transactions
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" style="color: ;" href="./balances">
+                Balances
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item govuk-service-navigation__item--active" id="active-nav">
+              <a class="govuk-service-navigation__link" href="./dunning" aria-current="true">
+                <strong class="govuk-service-navigation__active-fallback"> Dunning</strong>
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="./reports">
+                Reports
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="govuk-service-navigation__service-name" style="margin-left: auto; font-weight: 400;"><a href="#" style="color: inherit;">Sign out</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <h1 class="govuk-heading-l">Dunning</h1>
+
+      <form action="#" method="post" novalidate >
+
+        <div class="govuk-form-group" data-module="govuk-password-input">
+          <div class="govuk-input__wrapper govuk-password-input__wrapper">
+            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" >
+            <button type="submit" class="govuk-button govuk-button--secondary" style="margin-left: 5px; background: #000000; color: #fff; font-weight: 700;">
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Unmatched bank transactions</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Unmatched</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Reference
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:10 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £4,196.12
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-reference">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Name on account
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:21 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £5,121.39
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-name">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+             Amount
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:03 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £200.00
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-amount">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Matched bank transactions</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Reference</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2702 1339 4877
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:07 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £5,091.32
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2770 2429 9382
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:39 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £4,221.98
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+             2782 2423 0349
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:03 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £7,507.21
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">All bank transactions</caption>
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Idenifier</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              N B KANAA
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:10 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £4,091.47
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2702 1339 4877
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:07 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £5,091.32
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2770 2429 9382
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:39 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              £4,221.98
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

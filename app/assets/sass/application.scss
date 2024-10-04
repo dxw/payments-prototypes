@@ -9,6 +9,28 @@ html, body {
   scroll-padding-top: 6rem;
 }
 
+#service-navigation { 
+  background: #eeeeee; 
+  border-bottom-color: #323232;
+}
+
+#navigation a {
+  color: #323232;
+}
+
+#active-nav {
+  border-bottom-color: #323232;
+}
+
+#search-button {
+  background: #323232; 
+  color: #fff; 
+  font-weight: 700; 
+  padding: 8px 10px 9px 10px; 
+  box-shadow: none;
+  margin-left: 5px;
+}
+
 .font-red {
   color: #aa1111;
 }
