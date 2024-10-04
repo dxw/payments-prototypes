@@ -179,7 +179,8 @@
   .govuk-summary-card__title-wrapper {
     padding: govuk-spacing(3);
 
-    // Ensures the card header appears separate to the summary list in forced colours mode
+    // Ensures the card header appears separate to the summary list in forced
+    // colours mode
     border-bottom: 1px solid transparent;
     background-color: govuk-colour("light-grey");
 
@@ -202,7 +203,7 @@
   }
 
   .govuk-summary-card__actions {
-    @include govuk-typography-responsive($size: 19);
+    @include govuk-font-size($size: 19);
     @include govuk-typography-weight-bold;
     display: flex;
     flex-wrap: wrap;
