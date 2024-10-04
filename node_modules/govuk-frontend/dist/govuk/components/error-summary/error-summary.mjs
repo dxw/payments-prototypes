@@ -1,4 +1,4 @@
-import { mergeConfigs, getFragmentFromUrl } from '../../common/index.mjs';
+import { mergeConfigs, setFocus, getFragmentFromUrl } from '../../common/index.mjs';
 import { normaliseDataset } from '../../common/normalise-dataset.mjs';
 import { ElementError } from '../../errors/index.mjs';
 import { GOVUKFrontendComponent } from '../../govuk-frontend-component.mjs';
@@ -28,19 +28,11 @@ class ErrorSummary extends GOVUKFrontendComponent {
       });
     }
     this.$module = $module;
-    this.config = mergeConfigs(ErrorSummary.defaults, config, normaliseDataset($module.dataset));
-    this.setFocus();
-    this.$module.addEventListener('click', event => this.handleClick(event));
-  }
-  setFocus() {
-    if (this.config.disableAutoFocus) {
-      return;
+    this.config = mergeConfigs(ErrorSummary.defaults, config, normaliseDataset(ErrorSummary, $module.dataset));
+    if (!this.config.disableAutoFocus) {
+      setFocus(this.$module);
     }
-    this.$module.setAttribute('tabindex', '-1');
-    this.$module.addEventListener('blur', () => {
-      this.$module.removeAttribute('tabindex');
-    });
-    this.$module.focus();
+    this.$module.addEventListener('click', event => this.handleClick(event));
   }
   handleClick(event) {
     const $target = event.target;
@@ -101,9 +93,20 @@ class ErrorSummary extends GOVUKFrontendComponent {
  * @property {boolean} [disableAutoFocus=false] - If set to `true` the error
  *   summary will not be focussed when the page loads.
  */
+
+/**
+ * @typedef {import('../../common/index.mjs').Schema} Schema
+ */
 ErrorSummary.moduleName = 'govuk-error-summary';
 ErrorSummary.defaults = Object.freeze({
   disableAutoFocus: false
+});
+ErrorSummary.schema = Object.freeze({
+  properties: {
+    disableAutoFocus: {
+      type: 'boolean'
+    }
+  }
 });
 
 export { ErrorSummary };
