@@ -11,7 +11,7 @@ html, body {
 
 #service-navigation { 
   background: #eeeeee; 
-  border-bottom-color: #323232;
+  border-bottom: 2px solid #323232;
 }
 
 #navigation a {
@@ -29,6 +29,47 @@ html, body {
   padding: 8px 10px 9px 10px; 
   box-shadow: none;
   margin-left: 5px;
+}
+
+#report-card {
+  text-align: left; 
+  padding: 20px 20px 20px 20px; 
+  background-color: #ffffff; 
+  border: 2px solid #323232;
+}
+
+#card-actions {
+  text-align: left; 
+  padding: 20px 20px 20px 20px; 
+  background-color: #eeeeee; 
+  border-top: 0px solid #323232;
+  border-left: 2px solid #323232;
+  border-right: 2px solid #323232;
+  border-bottom: 2px solid #323232;
+  margin-bottom: 30px;
+}
+
+#report-card h2 { 
+  margin-bottom: 10px; 
+}
+
+#report-card hr { 
+  border-bottom: 2px solid #323232; 
+  margin: 15px 0 15px 0;
+}
+
+#report-card p {
+  color: #323232; 
+  margin-bottom: 0px;
+}
+
+#card-actions a {
+  color: inherit; 
+}
+
+#action-divider {
+  margin: 0px 20px 0px 20px; 
+  border-left: 2px solid #323232;
 }
 
 .font-red {
