@@ -54,85 +54,94 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row" style="font-style">
+  <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Dunning</h1>
+      <div class="govuk-form-group" id="form-background-gov-wales">
 
-      <form action="#" method="post" novalidate >
+        <h1 class="govuk-heading-l">Track dunning process</h1>
 
-        <div class="govuk-form-group" data-module="govuk-password-input">
-          <div class="govuk-input__wrapper govuk-password-input__wrapper">
-            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" >
-            <button type="submit" class="govuk-button govuk-button--secondary" style="margin-left: 5px; background: #000000; color: #fff; font-weight: 700;">
-              Search
+        <form action="#" method="post" novalidate >
+
+          <label class="govuk-label" for="width-10">
+            Unique Transaction Reference Number
+          </label>
+
+          <div class="govuk-button-group">
+
+            <input class="govuk-input govuk-input--width-20" id="cc" name="utrn" id="cc" value="" maxlength="14" onkeypress="return checkDigit(event)">
+            <button id="phone-mask" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="display: block; float: right; background: #000; color: #fff; font-weight: 700; padding: 8px 10px 9px 10px; box-shadow: 0px 0px transparent; margin-left: 15px;">
+            Search
             </button>
           </div>
+        </form>
+
+        <!-- input masking script -->
+        <script>
+          function cc_format(value) {
+            var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+            var matches = v.match(/\d{4,16}/g);
+            var match = matches && matches[0] || ''
+            var parts = []
+            for (i=0, len=match.length; i<len; i+=4) {
+              parts.push(match.substring(i, i+4))
+            }
+            if (parts.length) {
+              return parts.join(' ')
+            } else {
+              return value
+            }
+          }
+
+          onload = function() {
+            document.getElementById('cc').oninput = function() {
+              this.value = cc_format(this.value)
+            }
+          }
+          function checkDigit(event) {
+              var code = (event.which) ? event.which : event.keyCode;
+
+              if ((code < 48 || code > 57) && (code > 31)) {
+                  return false;
+              }
+
+              return true;
+          }
+        </script>
+
+      </div>  
+
+      <h2 class="govuk-heading-m" id="22-day-letter">22 day laters</h2>
+
+      <div class="govuk-grid-row" style="text-align: left;">
+
+        <div class="govuk-grid-column-one-half">
+          <div style="text-align: left; margin-bottom: 25px; padding: 25px 25px 25px 25px; background-color: #eeeeee; border-left: 4px solid #323232;">
+            <p style="margin-bottom: 0; color: #323232;">
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">163</span><br>
+             Letters sent in May 2025
+            </p>
+          </div>
         </div>
-      </form>
+
+        <div class="govuk-grid-column-one-half">
+          <div style="text-align: left; margin-bottom: 25px; padding: 25px 25px 25px 25px; background-color: #eeeeee; border-left: 4px solid #323232;">
+            <p style="margin-bottom: 0; color: #323232;">
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£205.38</span><br>
+             Spent in May 2025
+            </p>
+          </div>
+        </div>
+
+      </div>
 
       <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Unmatched bank transactions</caption>
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Unmatched</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
-        </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              Reference
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              14:10 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £4,196.12
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-reference">View</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              Name on account
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              13:21 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £5,121.39
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-name">View</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-             Amount
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              13:03 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £200.00
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="./unmatched-amount">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="govuk-body"><a href="#">View all</a></p>
-
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Matched bank transactions</caption>
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Reference</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">UTRN</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Date</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
           <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
         </tr>
         </thead>
@@ -145,7 +154,7 @@
               14:07 on 13 May 2025
             </td>
             <td class="govuk-table__cell govuk-table__cell--numeric">
-              £5,091.32
+              Accepted
             </td>
             <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
           </tr>
@@ -157,7 +166,7 @@
               13:39 on 13 May 2025
             </td>
             <td class="govuk-table__cell govuk-table__cell--numeric">
-              £4,221.98
+              Accepted
             </td>
             <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
           </tr>
@@ -169,61 +178,7 @@
               13:03 on 13 May 2025
             </td>
             <td class="govuk-table__cell govuk-table__cell--numeric">
-              £7,507.21
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="govuk-body"><a href="#">View all</a></p>
-
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">All bank transactions</caption>
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Idenifier</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--text">Booking</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
-        </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              N B KANAA
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              14:10 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £4,091.47
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              2702 1339 4877
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              14:07 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £5,091.32
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              2770 2429 9382
-            </th>
-            <td class="govuk-table__cell govuk-table__cell--text">
-              13:39 on 13 May 2025
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric">
-              £4,221.98
+              Received
             </td>
             <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
           </tr>
@@ -232,6 +187,30 @@
       <p class="govuk-body"><a href="#">View all</a></p>
 
     </div>
+
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="margin-top: 0px; border-bottom: 2px solid #323232;">
+
+      <h3 class="govuk-heading-m">Letters</h3>
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#22-day-letter">22 day letters</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">[X] days laters</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">[Y] month letters</a>
+        </li>   
+        <li>
+          <a class="govuk-link" href="#">[Z] month letters</a>
+        </li>    
+      </ul>
+
+    </div>
+
   </div>
 
 {% endblock %}
