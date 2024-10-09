@@ -9,6 +9,14 @@ html, body {
   scroll-padding-top: 6rem;
 }
 
+#list-index li {
+  margin-bottom: 15px;
+}
+
+#list-index strong {
+  font-size: 16px;
+}
+
 #service-navigation { 
   background: #eeeeee; 
   border-bottom: 2px solid #323232;
