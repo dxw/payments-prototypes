@@ -62,7 +62,7 @@
 
         <h1 class="govuk-heading-l">Track dunning process</h1>
 
-        <form action="#" method="post" novalidate >
+        <form action="./summary-dunning" method="post" novalidate >
 
           <label class="govuk-label" for="width-10">
             Unique Transaction Reference Number
@@ -112,24 +112,26 @@
 
       </div>  
 
-      <h2 class="govuk-heading-m" id="22-day-letter">22 day letter</h2>
+      <!-- 22 day letter -->
 
-      <div class="govuk-grid-row" style="text-align: left;">
+      <h2 class="govuk-heading-m" id="22-day">22 day reminder letter</h2>
+
+      <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-one-half">
-          <div style="text-align: left; margin-bottom: 25px; padding: 25px 25px 25px 25px; background-color: #eeeeee; border-left: 4px solid #323232;">
-            <p style="margin-bottom: 0; color: #323232;">
+          <div id="stat-card">
+            <p>
               <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">163</span><br>
-             Letters sent in May 2025
+              Letters sent in May 2025
             </p>
           </div>
         </div>
 
         <div class="govuk-grid-column-one-half">
-          <div style="text-align: left; margin-bottom: 25px; padding: 25px 25px 25px 25px; background-color: #eeeeee; border-left: 4px solid #323232;">
-            <p style="margin-bottom: 0; color: #323232;">
+          <div id="stat-card">
+            <p>
               <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£205.38</span><br>
-             Spent in May 2025
+              Spent in May 2025
             </p>
           </div>
         </div>
@@ -186,6 +188,158 @@
       </table>
       <p class="govuk-body"><a href="#">View all</a></p>
 
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m" id="35-day">35 day reminder letter</h2>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <div id="stat-card">
+            <p>
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">98</span><br>
+              Letters sent in May 2025
+            </p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+          <div id="stat-card">
+            <p>
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£123.48</span><br>
+              Spent in May 2025
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-table__header--text">UTRN</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Date</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">GOV.UK Notify status</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2802 1339 4877
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:07 on 13 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Accepted
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2670 2429 9382
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:39 on 12 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Recieved
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+             2782 2423 0349
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:03 on 11 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Received
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all</a></p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m" id="60-day">60 day penalty letter</h2>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <div id="stat-card">
+            <p>
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">8</span><br>
+              Letters sent in May 2025
+            </p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+          <div id="stat-card">
+            <p>
+              <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£10.08</span><br>
+              Spent in May 2025
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-table__header--text">UTRN</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text">Date</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">GOV.UK Notify status</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--text"></th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2602 1339 4877
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:07 on 9 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Recieved
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              2670 2429 9382
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              14:39 on 8 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Recieved
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+             2782 2423 0349
+            </th>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              13:03 on 5 May 2025
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text">
+              Received
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--text"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="#">View all</a></p>
+
     </div>
 
     <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
@@ -196,16 +350,22 @@
 
       <ul class="govuk-list" id="side-nav-gov-wales">
         <li>
-          <a class="govuk-link" href="#22-day-letter">22 day letters</a>
+          <a class="govuk-link" href="#22-day">22 day reminder letter</a>
         </li>
         <li>
-          <a class="govuk-link" href="#">35 day letter</a>
+          <a class="govuk-link" href="#35-day">35 day reminder letter</a>
         </li>
         <li>
-          <a class="govuk-link" href="#">60 day letter</a>
+          <a class="govuk-link" href="#60-day">60 day penalty letter</a>
         </li>   
         <li>
-          <a class="govuk-link" href="#">90 day letter</a>
+          <a class="govuk-link" href="#">90 day reminder letter</a>
+        </li>  
+        <li>
+          <a class="govuk-link" href="#">6 month penalty letter</a>
+        </li> 
+        <li>
+          <a class="govuk-link" href="#">12 month penalty letter</a>
         </li>    
       </ul>
 

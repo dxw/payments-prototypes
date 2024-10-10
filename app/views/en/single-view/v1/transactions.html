@@ -76,7 +76,7 @@
 
       </div>
 
-      <table class="govuk-table">
+      <table class="govuk-table" id="unmatched">
         <caption class="govuk-table__caption govuk-table__caption--m">Unmatched bank transactions</caption>
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -130,7 +130,7 @@
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-      <table class="govuk-table">
+      <table class="govuk-table" id="matched">
         <caption class="govuk-table__caption govuk-table__caption--m">Matched bank transactions</caption>
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -183,8 +183,7 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-
-      <table class="govuk-table">
+      <table class="govuk-table" id="all">
         <caption class="govuk-table__caption govuk-table__caption--m">All bank transactions</caption>
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -236,6 +235,27 @@
       <p class="govuk-body"><a href="#">View all</a></p>
 
     </div>
+
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" style="margin-top: 0px; border-bottom: 2px solid #323232;">
+
+      <h3 class="govuk-heading-m">Transaction types</h3>
+
+      <ul class="govuk-list" id="side-nav-gov-wales">
+        <li>
+          <a class="govuk-link" href="#unmatched">Unmatched bank transactions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#matched">Matched bank transactions</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#all">All bank transactions</a>
+        </li>     
+      </ul>
+
+    </div>
+
   </div>
 
 {% endblock %}
