@@ -1,13 +1,55 @@
-{% extends "layouts/english-backoffice.html" %}
+{% extends "layouts/english-single-view.html" %}
 {% set alternateLink = "/cy/dashboard"%}
 
 {% block pageTitle %}
   Home - Provide accommodation in Wales
 {% endblock %}
 
-{% block beforeContent %}
-  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Transactions
-  </a>
+{% block header %}
+
+  {% include "components/wra-header.html" %}
+  <section aria-label="Service information" class="govuk-service-navigation"
+    data-module="govuk-service-navigation" id="service-navigation">
+    <div class="govuk-width-container">
+      <div class="govuk-service-navigation__container">
+        <span class="govuk-service-navigation__service-name">
+          <a href="#" class="govuk-service-navigation__link" style="color: #323232;">
+            TALU
+          </a>
+        </span>
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+          <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item govuk-service-navigation__item--active" id="active-nav">
+              <a class="govuk-service-navigation__link" href="./transactions" aria-current="true">
+                <strong class="govuk-service-navigation__active-fallback"> Transactions</strong>
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" style="color: ;" href="./balances">
+                Balances
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="./dunning">
+                Dunning
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="./reports">
+                Reports
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="govuk-service-navigation__service-name" style="margin-left: auto; font-weight: 400;">Alex Mullins <span style="padding: 0px 5px 0px 5px;">|</span> <a href="#" style="color: inherit;">Sign out</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
 
 {% block content %}
@@ -34,7 +76,7 @@
               </span>
             </h2>
             <ul class="govuk-summary-card__actions">          
-              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="./utrn-summary">View tax record<span class="govuk-visually-hidden"></span></a>
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="./summary-page">View tax record<span class="govuk-visually-hidden"></span></a>
               </li>             
             </ul>
           </div>
