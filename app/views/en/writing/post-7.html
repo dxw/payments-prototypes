@@ -1,0 +1,122 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Debt prevention letter</h1>
+
+    <p class="govuk-body">This was a nice, contained bit of work. Automating a reminder letter that prevents people falling into debt. Called internally the “22 day letter” or “pre-debt letter”, it is mailed to someone 10 days before the deadline to pay their Land Transaction Tax (LTT). At which point they begin to be charged interest and later other penalties. 
+
+    <p class="govuk-body">The debt team in 2023 did a trial of the letter. Manually checking records, they identified 100 people who still hadn’t paid their tax after 22 days. Then typing by hand and posting the letters. They found that 11% more people, as a sample, paid their tax on time. So the WRA sensibly wanted to automate these letter reminders and post them to everyone who hasn’t yet paid their tax.
+
+    <p class="govuk-body">Latest version of <a href="/en/22-day-letter/v2">pre-debt letter</a>:</p>
+
+    <img src="/public/images/writing/post-7/pre-debt-letter.png" id="writing-image">
+
+    <p class="govuk-body">Here’s a non-technical description of how the letter was automated. Plus the design changes we made.</p>
+    
+    <h2 class="govuk-heading-m">Generating the letter</h2>
+    
+    <p class="govuk-body">What happens to generate a letter:</p>
+
+    <ul class="govuk-list govuk-list--number">
+      <li>Code checks for Tax Management System (TMS) system where the property sale date was 20 days ago in</li>
+      <li>Code pulls data from TMS to get the relevant names, addresses and owed amount for the letter</li>
+      <li>Code checks Finance & Operations system to make sure the entire amount is still owed</li>
+      <li>If the balance is zero or partly paid, no letter will be triggered</li>
+      <li>Code then creates a PDF letter from a HTML template </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Sending a letter</h2>
+
+    <p class="govuk-body">What happens to generate a letter:</p>
+
+    <ul class="govuk-list govuk-list--number">
+      <li value="6">Code send the PDF letter to <a href="https://www.notifications.service.gov.uk/">GOV.UK Notify</a>, which handles printing and postage</li>
+      <li value="7">If Notify accepts the PDF, code then logs in Customer Relationship Management (CRM) system that the letter has been created and attaches this to the relevant tax filing</li>
+      <li value="8">This also attaches it to the recipient (buyer or agent) of the letter in CRM</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Designing the letter</p>
+
+    <p class="govuk-body">We decided we weren’t going to change the content of the letter trialled in 2023. We knew from the success of the trial the content was good enough. The debt prevention letters would be the Payment team’s first live service improvement. So it was important for team momentum and credibility to get something shipped.</p>
+
+    <p class="govuk-body">So the changes we made were graphic design improvements, apart from one.</p>
+
+    <h3 class="govuk-heading-s">Adding reference number to bank details</h3>
+
+    <p class="govuk-body">The only way people can currently pay their LTT is by bank transfer. They have to include the right Unique Transaction Reference Number (UTRN) in the reference field, along with the account number and sort code. These details are included in the pre-debt letter.</p>
+
+    <p class="govuk-body">However the UTRN is on a different page to the other bank details. We know from the number of unmatched bank transactions, that lots of people are entering the wrong or no reference when doing a bank transfer. Which leads to payments being classed as late.</p>
+
+    <p class="govuk-body">So we included the UTRN as the first row of the bank details. Also the 12-digit number is formatted without gaps, which the current payment process struggles to match.</p>
+
+    <img src="/public/images/writing/post-7/bank-details.png" id="writing-image">
+
+    <p class="govuk-body">The team doesn't think this small change will fix up unmatched bank transactions, but it couldn’t hurt.</p>
+
+    <h3 class="govuk-heading-s">Making typography consistent</h3>
+
+    <p class="govuk-body">GOV.UK Notify gives specifications for how to format letters you send it. So things like the address are in the right place when folded up and put in one of those envelopes with a little window.</p>
+
+    <p class="govuk-body">In the older version of the letter, there were lots of different font sizes, which made it look less official. Which isn’t what you want in a government letter asking for money. So we made just two font sizes. One for heading and one for body text.</p>
+
+    <p class="govuk-body">The only exception was blowing up the balance owing to being nice and large. If someone receives a reminder to pay money, the amount and deadline are the most important. So there are most prominent on the first page.</p>
+
+    <p class="govuk-body">We also made the logo not quite so wide across the top of the first page. Public sector logos on letters tend to be more understated. Again, this goes back to the letter looking more official and consistent with other government letters people might get.</p>
+    
+    <h3 class="govuk-heading-s">Removing colour</h3>
+
+    <p class="govuk-body">We did some test prints of the letters before pushing any code to pre-production. As a result, we removed all colour from the letter. Every element is black on white. Even grey and dark blues came out really washed out when printed by GOV.UK Notify.</p>
+
+    <img src="/public/images/writing/post-7/test-print.png" id="writing-image">
+
+    <img src="/public/images/writing/post-7/pre-debt-letter.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Next steps</h2>
+    
+    <p class="govuk-body">At time of writing, the code is ready to go live and start sending automated reminder letters. After a lot of hard work by our technical teammates. 
+
+    <p class="govuk-body">Only a couple hundred letters a month will be sent, so operations will monitor what the impact is on the % of people paying their tax on time. 
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/en/writing/post-6" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-4-part-2" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
