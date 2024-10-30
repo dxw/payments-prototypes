@@ -1,0 +1,102 @@
+{% extends "layouts/direct-debit/english.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div style="text-align: left; padding: 25px 25px 25px 25px; background-color: #eeeeee; border-left: 0px solid #0360a6; margin-bottom: 25px;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          Unique Transation Reference Number:<br>
+          <span class="govuk-!-font-size-27 govuk-!-font-weight-bold">
+            2507 4339 4889
+          </span>
+          <br><br>
+          Purchase address:<br>
+          <span class="govuk-!-font-size-27 govuk-!-font-weight-bold">
+            14 Harper Mews, 
+            Swandiff, 
+            SD16 4LF
+          </span>
+        </p>
+      </div>
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 10px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #323232; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-size-48 govuk-!-font-weight-bold">£300.00</span><br>
+          Payments made so far
+        </p>
+      </div>
+
+      <br>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment</th>
+            <th scope="col" class="govuk-table__header">Date paid</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">1st payment</th>
+            <td class="govuk-table__cell">5 Apr 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">2nd payment</th>
+            <td class="govuk-table__cell">2 May 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">3rd payment</th>
+            <td class="govuk-table__cell">1 Jun 2025</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total payments</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">-£300.00</td>
+          </tr>
+        </tbody>
+      </table> 
+
+      <h2 class="govuk-heading-m">Update Direct Debit</h2>
+
+      <p class="govuk-body">You can update Direct Debit for recurring payments to pay off your tax bill.</p>
+
+      <p class="govuk-body">We will send you a confirmation email when a payment is made.</p>
+
+      <form action="./card-details" method="post" novalidate >
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Set up direct debit
+          </button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px; ">
+
+      <h3 class="govuk-heading-s">Contact us</h3>
+      <p class="govuk-body">
+        If you are not sure about how much you owe or aren't able to pay, contact our help desk. 
+      </p>
+
+      <p class="govuk-body">
+        <span style="font-weight: bold;">Telephone:</span> 03000 254 000 (Monday to Friday, 10am to 3pm)<br><br>
+        <span style="font-weight: bold;">Email:</span> contact@wra.gov.wales <br>
+        (Reply in 2 working days)
+      </p>
+
+    </div>
+  
+    </div>
+  </div>
+
+
+{% endblock %}

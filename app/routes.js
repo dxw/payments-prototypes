@@ -33,3 +33,14 @@ router.post('/en/prototype/v6/show-amount/invalid-utrn', function(request, respo
         response.redirect("/en/prototype/v6/show-amount/invalid-utrn")
     }
 })
+
+// Check UTRN has permission for time to pay
+router.post('/en/direct-debit/v1/no-permission', function(request, response) {
+
+    var utrn = request.session.data['utrn']
+    if (utrn == "2702 1339 4877"){
+        response.redirect("/en/direct-debit/v1/postcode")
+    } else {
+        response.redirect("/en/direct-debit/v1/no-permission")
+    }
+})

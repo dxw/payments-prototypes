@@ -1,0 +1,48 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/levy/security-code"%}
+{% set pageName="Payment prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Pay your tax bill by Direct Debit</h1>
+
+      <p>Set up a Direct Debit payment with Welsh Revenue Authority (WRA).</p>
+
+      <p>Taxes you can pay with Direct Debit:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Land Transaction Tax</li>
+      </ul>
+
+      <p>To use this service you'll need to know:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Unique Transaction Reference Number</li>
+        <li>Postcode of the property tax is due on</li>
+      </ul>
+
+      <p>You must have already filed a tax return for a purchase of property in Wales, before you can pay your bill.</p>
+
+      <form action="./utrn" method="post" novalidate>
+        <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+          Continue
+        </button>
+      </form>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+        The this service is also <a href="#">available in Welsh (ar gael yn Gymraeg)</a>.
+      </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
