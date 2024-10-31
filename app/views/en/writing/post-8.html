@@ -1,0 +1,160 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Thinking about Direct Debit (recurring payments)</h1>
+
+    <p class="govuk-body">In October, we did a little bit of thinking about Direct Debit. A potential feature to focus on next, as many people pay off their tax bill in instalments, given they can’t afford to pay it off all at once.</p>
+
+    <p class="govuk-body">Recurring payments cause some headaches for the finance team. Matching them against someone’s balance can be very manual, which in turn causes problems for checking someone’s balance automatically.</p>
+
+    <p class="govuk-body">Also, while Visitor Levy is some years away, people will be doing regular, smaller payments. Meaning having the capability to do Direct Debits and take some of burden out of paying the new tax for busy people running accommodation businesses.</p>
+
+    <h2 class="govuk-heading-m">Testing first if Direct Debit is needed</h2>
+    
+    <p class="govuk-body">Before exploring Direct Debits, the team must first find out if taxpayers even need the solution.</p>
+
+    <p class="govuk-body">96% of tax bills are paid on time. From a recent survey of users, we learned the vast majority pay via a property lawyer and the profession overwhelmingly pays by bank transfer. So direct debits will be for a small subset of taxpayers.</p> 
+
+    <p class="govuk-body">Looking at the data, we've had less than 25 time-to-pay transactions over the 6 years so these are very low number in terms of overall volume.</p>
+
+    <p class="govuk-body">Yet, before investing too much time in testing and building a solution, we need to prove Direct Debits is needed and what problems it solves. Therefore we need to put a basic Direct Debit prototype in front of the specific people it's for, people who pay their tax bill in instalments.</p>
+    
+    <h2 class="govuk-heading-m">GOV.UK Pay can’t do all the hard work</h2>
+
+    <p class="govuk-body">If Direct Debit is proven to be needed, it’s obvious to see if GOV.UK Pay could be used to take recurring payments. While GOV.UK Pay can do recurring payments via an API, meaning the team will still need to design, build and host a website for taxpayers to set up and update Direct Debit payments.</p>
+    
+    <h2 class="govuk-heading-m">Minimal features</h2>
+
+    <p class="govuk-body">To use GOV.UK Pay API for recurring payments, a service still has responsibilities:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>managing the direct relationship between your service and users</li>
+      <li>providing terms and conditions to users</li>
+      <li>authenticating users</li>
+      <li>getting and recording users’ consent for you to take recurring payments</li>
+      <li>managing payment schedules</li>
+      <li>telling users when you’re going to take or change payments</li>
+      <li>letting users amend their recurring payment</li>
+    </ul>
+
+    <p class="govuk-body">So this is quite a lot of functionality to figure out, even if GOV.UK Pay does the heavy leaving of background payments.</p>
+    
+    <h2 class="govuk-heading-m">Questions from early prototypes</h2>
+
+    <p class="govuk-body">We made some prototypes to ask ourselves as a team, what are the big questions we need to answer if Direct Debits is something we build.</p>
+
+    <h3 class="govuk-heading-s">What to call the service?</h3>
+
+    <p class="govuk-body">This is more straightforward, given there is precedence HMRC has a service called <a href="https://www.gov.uk/pay-tax-direct-debit">pay your tax bill by Direct Debit</a>. However, we’d need to test this name with taxpayers early on to learn what they would call the service, as this is ultimately what they search online.</p>
+
+    <img src="/public/images/writing/post-8/start-page.png" id="writing-image">
+
+    <h3 class="govuk-heading-s">How to authenticate?</h3>
+
+    <p class="govuk-body">This will really depend on how much personal information will be accessible through a Direct Debit service. Assuming it would be pretty minimal, purchase address, payments made so far, partially obscured bank details, authentication could be as basic as:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li><a href="/en/direct-debit/v1/utrn">Enter Unique Transaction Reference Number</a> (UTRN)</li>
+      <li><a href="/en/direct-debit/v1/postcode">Enter post of the property purchased</a></li>
+    </ol>
+
+    <img src="/public/images/writing/post-8/utrn.png" id="writing-image">
+
+    <img src="/public/images/writing/post-8/postcode.png" id="writing-image">
+
+    <p class="govuk-body">There might be an argument to use GOV.UK One Login, as this could become the standard way to access WRA services. That said, it might get complicated if people using the service, say a property lawyer or a family member, were using the service on behalf of the taxpayer in debt.</p>
+
+    <h3 class="govuk-heading-s">Should anyone paying their tax bill be allowed to do Direct Debit?</h3>
+
+    <p class="govuk-body">Probably not, WRA wants people to pay on time and in full. The service should be reserved for people who’ve agreed a ‘time to pay’ plan with WRA to pay off their debt in chunks.</p>
+
+    <p class="govuk-body">As an example, if someone enter their UTRN not flagged as time-to-pay, would the service not be usable and <a href="/en/direct-debit/v1/no-permission">tell the person to contact WRA first</a>.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-8/no-permission.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3 class="govuk-heading-s">What information to display?</h3>
+
+    <p class="govuk-body">If this service is for someone to pay off a debt, displaying the balance left pay would make sense. As things stand, checking the balance of someone who’s fallen into debt is harder to calculate an accurate figure, with amendments and matching multiple payments.</p>
+
+    <p class="govuk-body">In that case, should the service <a href="/en/direct-debit/v1/balance">just show much much has been paid</a> so far, but with no information on what the debt was and is now?</p>
+
+    <img src="/public/images/writing/post-8/balance.png" id="writing-image">
+
+    <p class="govuk-body">Given someone is paying off a debt, they might log multiple times to <a href="/en/direct-debit/v1/balance-updated">check how much they’ve paid</a>.</p>
+
+    <img src="/public/images/writing/post-8/balance-repeat.png" id="writing-image">
+
+    <h3 class="govuk-heading-s">Bank details is the easier bit</h3>
+
+    <p class="govuk-body">This is the <a href="/en/direct-debit/v1/card-details">easiest bit. There are <a href="https://design-system.service.gov.uk/patterns/bank-details/">established design patterns</a> to asking someone for their bank details.</p>
+
+    <img src="/public/images/writing/post-8/bank-details.png" id="writing-image">
+
+    <h3 class="govuk-heading-s">How to ask for consent?</h3>
+
+    <p class="govuk-body">Asking for consent could be part of the bank details page.</p>
+
+    <img src="/public/images/writing/post-8/consent.png" id="writing-image">
+
+    <p class="govuk-body">The less obvious bit is how and where to have someone read through the terms and conditions, so the consent they give is fully informed.</p>
+
+    <h3 class="govuk-heading-s">Should people be allowed to set when they pay and how much?</h3>
+
+    <p class="govuk-body">If someone is on time-to-pay, then the amount they pay and when, has already been agreed. Meaning should the Direct Debit service allow taxpayers to set these parameters or should they be pre-set by someone in the debt time?</p>
+
+    <img src="/public/images/writing/post-8/schedule.png" id="writing-image">
+
+    <img src="/public/images/writing/post-8/amount.png" id="writing-image">
+    
+    <h2 class="govuk-heading-m">What next</h2>
+
+    <p class="govuk-body">In the end, we decided not to focus on Direct Debits in November because there's more backend work to do to get the check balance app calculating accurate figures, such as when someone’s tax bill as had an amendment.</p>
+
+    <p class="govuk-body">At least the team got some questions for if and when it starts to look at Direct Debits.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="./post-7" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-4-part-2" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}

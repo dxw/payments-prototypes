@@ -1,24 +1,6 @@
-{% extends "layouts/public/english-login.html" %}
+{% extends "layouts/direct-debit/english-login.html" %}
 {% set alternateLink = "/cy/levy/email"%}
 {% set pageName="Payments prototypes" %}
-
-{% block header %}
-
-  {% include "components/wra-header.html" %}
-  <section aria-label="Service information" class="govuk-service-navigation"
-    data-module="govuk-service-navigation" id="service-navigation" style="border-bottom: 1px solid #323232;">
-    <div class="govuk-width-container">
-      <div class="govuk-service-navigation__container">
-        <span class="govuk-service-navigation__service-name">
-          <a href="#" class="govuk-service-navigation__link" style="color: #323232;">
-            Pay your tax bill by Direct Debit
-          </a>
-        </span>
-      </div>
-    </div>
-  </section>
-
-{% endblock %}
 
 {% block content %}
 
