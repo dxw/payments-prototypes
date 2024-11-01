@@ -3,14 +3,14 @@ For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
-{% extends "layouts/main.html" %}
+{% extends "layouts/public/main-login.html" %}
 
 {% set currentLanguage = "cy" %}
 {% set alternateLanguage = "en" %}
 {% set alternateLanguageText = "English" %}
 
 {% block languageToggle %}
-	<a class="govuk-header__link language-switch-button" href="{{ alternateLink }}" hreflang="{{ alternateLanguage }}" lang="{{ alternateLanguage }}" rel="alternate">
+	<a class="govuk-header__link language-switch-button-public" href="{{ alternateLink }}" hreflang="{{ alternateLanguage }}" lang="{{ alternateLanguage }}" rel="alternate" style="color: #000;">
 		{{ alternateLanguageText }}
 	</a>
 {% endblock %}

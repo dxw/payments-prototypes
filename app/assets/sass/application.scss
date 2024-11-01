@@ -30,15 +30,6 @@ html, body {
   border-bottom-color: #323232;
 }
 
-#search-button {
-  background: #323232; 
-  color: #fff; 
-  font-weight: 700; 
-  padding: 8px 10px 9px 10px; 
-  box-shadow: none;
-  margin-left: 5px;
-}
-
 #report-card {
   text-align: left; 
   padding: 20px 20px 20px 20px; 
@@ -109,6 +100,17 @@ html, body {
   color: #0b0c0c;
 }
 
+// Buttons
+
+#search-button {
+  background: #323232; 
+  color: #fff; 
+  font-weight: 700; 
+  padding: 8px 10px 9px 10px; 
+  box-shadow: none;
+  margin-left: 5px;
+}
+
 #start-button-gov-wales {
   background: #019e1e;
   font-size: 24px;
@@ -170,6 +172,20 @@ html, body {
   color: #fff;
   font-weight: 700;
   box-shadow: 0 2px 0 #1f1f1f;
+}
+
+.light-button {
+    background: transparent;
+    color: #0b0c0c;
+    box-shadow: 0 3px 0 #0b0c0c;
+    border: 1px #0b0c0c solid;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 0; 
+    margin-right: 5px;
+}
+
+.light-button:hover {
+  background: #b1b4b6;
 }
 
 #phone-mask {
