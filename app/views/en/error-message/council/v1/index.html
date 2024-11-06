@@ -1,0 +1,43 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/register/homepage"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Search
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #eeeeee; border-left: 0px solid #0360a6;">
+        <p style="margin-bottom: 0; color: #1f1f1f; font-style: Arial,Helvetica,"Nimbus Sans L",sans-serif;">
+          <span class="govuk-!-font-weight-bold">Buyer name:</span><br>
+          City and County of Swandiff Council<br><br>
+          <span class="govuk-!-font-weight-bold">UTRN:</span><br>
+          2507 4339 3123<br><br>
+          <span class="govuk-!-font-weight-bold">Land address:</span><br>
+            Afon House<br>
+            8-14 High Road<br>
+            Swandiff<br>
+            SD1 3AF<br><br>
+          <span class="govuk-!-font-weight-bold">Agent:</span><br>
+          Swadiff Council<br>
+        </p>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <div style="text-align: left; padding: 15px 15px 15px 15px; background-color: #fff; border: 4px solid #0360a6;">
+        <p class="govuk-body" style="margin-bottom: 0; color: #1f1f1f;">
+         <span class="govuk-!-font-size-27 govuk-!-font-weight-bold">Contact the finance team</span><br><br>This tool doesn't yet show balances for local councils, as they are harder to calculate accurately.
+        </p>
+      </div>
+  
+    </div>
+  </div>
+
+
+{% endblock %}
