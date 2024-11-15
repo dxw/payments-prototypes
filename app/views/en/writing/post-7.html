@@ -13,81 +13,97 @@
   <div class="govuk-grid-column-two-thirds">
 
     <span class="govuk-caption-l">Writing about these prototypes</span>
-    <h1 class="govuk-heading-l">Debt prevention letter</h1>
+    <h1 class="govuk-heading-l">Considering other ways to pay</h1>
 
-    <p class="govuk-body">This was a nice, contained bit of work. Automating a reminder letter that prevents people falling into debt. Called internally the “22 day letter” or “pre-debt letter”, it is mailed to someone 10 days before the deadline to pay their Land Transaction Tax (LTT). At which point they begin to be charged interest and later other penalties. 
+    <p class="govuk-body">As the <a href="./post-6">check balance app was tested and refined enough</a> to begin building, some of the team began looking at new ways to pay a tax bill.</p>
 
-    <p class="govuk-body">The debt team in 2023 did a trial of the letter. Manually checking records, they identified 100 people who still hadn’t paid their tax after 22 days. Then typing by hand and posting the letters. They found that 11% more people, as a sample, paid their tax on time. So the WRA sensibly wanted to automate these letter reminders and post them to everyone who hasn’t yet paid their tax.
+    <p class="govuk-body">Currently, people can only pay by bank transfer (bacs), with paying by cheque being stopped in February 2023. The team heard anecdotally from the help desk, that some people who call up, want to pay there and then, but can’t, because the WRA can’t process card payments.</p>
 
-    <p class="govuk-body">Latest version of <a href="/en/22-day-letter/v2">pre-debt letter</a>:</p>
-
-    <img src="/public/images/writing/post-7/pre-debt-letter.png" id="writing-image">
-
-    <p class="govuk-body">Here’s a non-technical description of how the letter was automated. Plus the design changes we made.</p>
+    <p class="govuk-body">When the visitor levy is introduced, there will be many more small transactions. So the ability to take card payments and direct debits (see post), is a useful capability in years to come and potentially in the coming months too.</p>
     
-    <h2 class="govuk-heading-m">Generating the letter</h2>
+    <h2 class="govuk-heading-m">GOV.UK Pay</h2>
     
-    <p class="govuk-body">What happens to generate a letter:</p>
+    <p class="govuk-body">When thinking about public services taking payments, it's obvious to first look at <a href="https://www.payments.service.gov.uk/">GOV.UK Pay platform</a>. It’s trusted by hundreds of public services, who with it, can take online payments instantly, do reporting, issue refunds and other features. Free to use in the public sector. So it's simpler and cheaper to implement taking payments than using a private-sector platform.</p>
 
-    <ul class="govuk-list govuk-list--number">
-      <li>Code checks for Tax Management System (TMS) system where the property sale date was 20 days ago in</li>
-      <li>Code pulls data from TMS to get the relevant names, addresses and owed amount for the letter</li>
-      <li>Code checks Finance & Operations system to make sure the entire amount is still owed</li>
-      <li>If the balance is zero or partly paid, no letter will be triggered</li>
-      <li>Code then creates a PDF letter from a HTML template </li>
-    </ul>
-
-    <h2 class="govuk-heading-m">Sending a letter</h2>
-
-    <p class="govuk-body">What happens to generate a letter:</p>
-
-    <ul class="govuk-list govuk-list--number">
-      <li value="6">Code send the PDF letter to <a href="https://www.notifications.service.gov.uk/">GOV.UK Notify</a>, which handles printing and postage</li>
-      <li value="7">If Notify accepts the PDF, code then logs in Customer Relationship Management (CRM) system that the letter has been created and attaches this to the relevant tax filing</li>
-      <li value="8">This also attaches it to the recipient (buyer or agent) of the letter in CRM</li>
-    </ul>
-
-    <h2 class="govuk-heading-m">Designing the letter</p>
-
-    <p class="govuk-body">We decided we weren’t going to change the content of the letter trialled in 2023. We knew from the success of the trial the content was good enough. The debt prevention letters would be the Payment team’s first live service improvement. So it was important for team momentum and credibility to get something shipped.</p>
-
-    <p class="govuk-body">So the changes we made were graphic design improvements, apart from one.</p>
-
-    <h3 class="govuk-heading-s">Adding reference number to bank details</h3>
-
-    <p class="govuk-body">The only way people can currently pay their LTT is by bank transfer. They have to include the right Unique Transaction Reference Number (UTRN) in the reference field, along with the account number and sort code. These details are included in the pre-debt letter.</p>
-
-    <p class="govuk-body">However the UTRN is on a different page to the other bank details. We know from the number of unmatched bank transactions, that lots of people are entering the wrong or no reference when doing a bank transfer. Which leads to payments being classed as late.</p>
-
-    <p class="govuk-body">So we included the UTRN as the first row of the bank details. Also the 12-digit number is formatted without gaps, which the current payment process struggles to match.</p>
-
-    <img src="/public/images/writing/post-7/bank-details.png" id="writing-image">
-
-    <p class="govuk-body">The team doesn't think this small change will fix up unmatched bank transactions, but it couldn’t hurt.</p>
-
-    <h3 class="govuk-heading-s">Making typography consistent</h3>
-
-    <p class="govuk-body">GOV.UK Notify gives specifications for how to format letters you send it. So things like the address are in the right place when folded up and put in one of those envelopes with a little window.</p>
-
-    <p class="govuk-body">In the older version of the letter, there were lots of different font sizes, which made it look less official. Which isn’t what you want in a government letter asking for money. So we made just two font sizes. One for heading and one for body text.</p>
-
-    <p class="govuk-body">The only exception was blowing up the balance owing to being nice and large. If someone receives a reminder to pay money, the amount and deadline are the most important. So there are most prominent on the first page.</p>
-
-    <p class="govuk-body">We also made the logo not quite so wide across the top of the first page. Public sector logos on letters tend to be more understated. Again, this goes back to the letter looking more official and consistent with other government letters people might get.</p>
+    <p class="govuk-body">Each of the four options the team prototyped, GOV.UK Pay is part of the scenario.</p>
     
-    <h3 class="govuk-heading-s">Removing colour</h3>
+    <h2 class="govuk-heading-m">Over the phone or by post</h2>
 
-    <p class="govuk-body">We did some test prints of the letters before pushing any code to pre-production. As a result, we removed all colour from the letter. Every element is black on white. Even grey and dark blues came out really washed out when printed by GOV.UK Notify.</p>
+    <p class="govuk-body">Also known as, <a href="https://docs.payments.service.gov.uk/moto_payments/#take-payments-over-the-phone-or-by-post-moto">Mail Order / Telephone Order (MOTO)</a>, when someone calls up a service and they can give their card details to someone over the phone. Who in turn enters those details into some kind of interface.</p>
 
-    <img src="/public/images/writing/post-7/print-test-3.png" id="writing-image">
+    <p class="govuk-body">However, taking phone payments is more than an interface. Many services record phone calls for monitoring and training, but this creates more security risk with highly sensitive banking information. Before teams can use this feature they need to do things like PCI compliant and have evidence as such.</p>
 
-    <img src="/public/images/writing/post-7/pre-debt-letter.png" id="writing-image">
+    <h3 class="govuk-heading-s">GOV.UK Pay admin tool</h3>
 
-    <h2 class="govuk-heading-m">Next steps</h2>
+    <p class="govuk-body">This first option would involve no software development. Someone with access to GOV.UK Pay’s admin login can take payments. The effort setting up this option up lie more with information management.</p>
+
+    <p class="govuk-body">In this example, someone in the Help Desk is signed into GOV.UK Pay admin login. They are on the phone to a taxpayer, who is late paying their tax bill and wants to pay it there and then.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image" style="margin-bottom: 10px;">
+      <source src="/public/images/writing/post-7/govuk-admin.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="govuk-body-s"><a href="/en/phone-payment/v1/govuk-admin/dashboard">GOV.UK Pay admin login prototype</a></p>
+
+    <p class="govuk-body">The person on the Help Desk enters the UTRN, followed by the amount due. At which point they ask for the card details over the phone.</p>
+
+    <h3 class="govuk-heading-s">WRA interface using API</h3>
+
+    <p class="govuk-body">The second example is very similar. The sequence of screens and data entered is nearly the same. The main difference is information is entered into a custom WRA built interface. Ultimately the payment is still processed by GOV.UK Pay, but information is provided via an API. This option would involve software development and maintenance, unlike the first example.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image" style="margin-bottom: 10px;">
+      <source src="/public/images/writing/post-7/wra-admin.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="govuk-body-s"><a href="/en/phone-payment/v1/moto-api/search">WRA MOTO prototype</a></p>
+
+    <p class="govuk-body">For the sake of the example, the team assumed WRA staff don’t want switching between different screens and applications. Especially if they’re concentrating on listening to someone over the phone. So in the example, staff can take payment over the phone using a button in the check balance app. Again, this might help staff focus on the conversation, as the amount and reference number are automatically passed to the payment details.</p>
     
-    <p class="govuk-body">At time of writing, the code is ready to go live and start sending automated reminder letters. After a lot of hard work by our technical teammates.</p>
+    <h2 class="govuk-heading-m">Self service</h2>
 
-    <p class="govuk-body">Only a couple hundred letters a month will be sent, so operations will monitor what the impact is on the % of people paying their tax on time.</p>
+    <p class="govuk-body">In a previous sprint, we did some thinking beyond MVP. One idea that at some point people would be able to pay their tax bill online. Self service as we called it.</p>
+
+    <h3 class="govuk-heading-s">Payment page hosted on GOV.UK Pay</h3>
+
+    <p class="govuk-body">GOV.UK Pay allows services to generate what it calls a payment page. No software development required. The team generates an URL within the GOV.UK Pay admin login. Users can follow the link to provide payment details. Perfect for smaller services, who say, just want to print the URL on a paper form that only a few hundred people a year fill out.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image" style="margin-bottom: 10px;">
+      <source src="/public/images/writing/post-7/payment-page.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="govuk-body-s"><a href="/en/payment-page/v1/service-description">Payment page prototype</a></p>
+
+    <p class="govuk-body">The service can decide whether it fixes the amount people pay or allow people to set their own figure. For the prototyped example, people would enter their own tax bill amount, as it will be different each time. As well, people can enter a reference number, as this is used to match banks transactions with outstanding balances.</p>
+
+    <img src="/public/images/writing/post-7/utrn.png" id="writing-image" style="margin-bottom: 10px;">
+    <p class="govuk-body-s"><a href="/en/payment-page/v1/utrn">Reference number prototype</a></p>
+
+    <img src="/public/images/writing/post-7/amount.png" id="writing-image" style="margin-bottom: 10px;">
+    <p class="govuk-body-s"><a href="/en/payment-page/v1/amount">Amount page prototype</a></p>
+
+    <p class="govuk-body">There’s an obvious weakness with a payment page, is no validation. People could easily enter the wrong information, which could leave a balance unpaid or unmatched to a bank transaction.</p>
+
+   <h3 class="govuk-heading-s">Check and pay balance</h3>
+
+    <p class="govuk-body">The last option is a service that combines checking your balance and then paying it.</p>
+
+    <p class="govuk-body">In the example, someone to view their balance has to authenticate. Providing their reference number and a security they’ve received in the post. As tax information is a sensitive date, there needs to be some kind of authentication. Two-factor authentication might be over the top, but it depends on what information is accessible.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image" style="margin-bottom: 10px;">
+      <source src="/public/images/writing/post-7/authenticate.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="govuk-body-s"><a href="/en/self-service/v2/utrn">Check and pay balance prototype</a></p>
+
+    <p class="govuk-body">From the balance summary page, someone can opt to pay. While the header still read Welsh Revenue Authority, the page is hosted on GOV.UK Pay, whose API has been handed the reference number and amount to pay.</p> 
+
+    <video width="100%" controls autoplay loop id="writing-image" style="margin-bottom: 10px;">
+      <source src="/public/images/writing/post-7/hand-to-govuk-pay.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">The limitation of this option is building a public facing website where sensitive information is accessible. Also, there is still work to do to automatically calculate all balance, such as more complicated cases involving local councils or amendments. 
+    </p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
 
@@ -103,7 +119,7 @@
         </a>
       </div>
       <div class="govuk-pagination__next">
-        <a class="govuk-link govuk-pagination__link" href="./post-8" rel="next">
+        <a class="govuk-link govuk-pagination__link" href="./post-9" rel="next">
           <span class="govuk-pagination__link-title">
             Next<span class="govuk-visually-hidden"> post</span>
           </span>
@@ -112,7 +128,6 @@
           </svg>
         </a>
       </div>
-      -->
     </nav>
 
   </div>
