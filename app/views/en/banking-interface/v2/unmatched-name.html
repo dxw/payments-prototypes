@@ -1,0 +1,121 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Transactions
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-three-quarters">
+
+        <h2 class="govuk-heading-m">Bank transaction</h2>
+
+        <!--
+        <p id="confirmation-gov-wales">
+          Reference edited<br><br>
+          <span class="govuk-!-font-weight-regular">
+          Reference was changed and now matches <a href="./utrn-summary">a tax record</a><br>
+        </p>
+        -->
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #fff5ce; color: #323232; padding: 3px 7px 3px 7px;">
+                <nobr>Unmatched</nobr>
+              </span>
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">2807 6339 4803 <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Warren Law Ltd <a href="./edit-name" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  13:21 on 13 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £5,121.39
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Original transaction data
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">145</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b3979f6-0a74-4a91-8685-97d3bf1b8e83</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Bangor</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}

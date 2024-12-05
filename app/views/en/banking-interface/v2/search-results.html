@@ -1,0 +1,567 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 20px; margin-bottom: 0px;">Transactions
+  </a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <form action="./search-results" method="post" novalidate >      
+        <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+          <div class="govuk-input__wrapper govuk-password-input__wrapper">
+            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" spellcheck="false" autocomplete="current-password" autocapitalize="none" value="Jones">
+            <button type="submit" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" id="search-button" data-module="govuk-button" aria-controls="password-input" aria-label="Show password">
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">15,101 transactions</div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #0360a6; color: #fff; padding: 3px 7px 3px 7px;">
+                <nobr>Matched</nobr>
+              </span>
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#y">View tax record<span class="govuk-visually-hidden"></span></a>
+              </li>                         
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2807 6339 4803 <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  MR J B JONES <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  11:21 on 9 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £5,121.39
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
+            <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View original data 
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
+              <p style="color: #323232; font-size: 16px;">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">147</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Cardiff</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+  </p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #fff5ce; color: #323232; padding: 3px 7px 3px 7px;">
+                <nobr>Unmatched reference</nobr>
+              </span>
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action">
+              </li>                         
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  15 Maple Drive, SD12 6JH <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  HEATHER JONES <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  21:01 on 8 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £3,310.02
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
+            <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View original data 
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
+              <p style="color: #323232; font-size: 16px;">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">147</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Cardiff</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+
+            </div>
+          </details>
+        </div>
+      </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #0360a6; color: #fff; padding: 3px 7px 3px 7px;">
+                <nobr>Matched</nobr>
+              </span>
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#y">View tax record<span class="govuk-visually-hidden"></span></a>
+              </li>                         
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2807 6339 4803 <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  JONES AND PARTNERS LTD <span style="font-size: 16px; color: #666666;">edited</span> <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  10:46 on 5 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £6,313.21
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
+            <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View original data 
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
+              <p style="color: #323232; font-size: 16px;">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">147</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Cardiff</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+
+            </div>
+          </details>
+        </div>
+      </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #0360a6; color: #fff; padding: 3px 7px 3px 7px;">
+                <nobr>Matched</nobr>
+              </span>
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#y">View tax record<span class="govuk-visually-hidden"></span></a>
+              </li>                         
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2807 6339 4803 <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  MS D S JONES <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  14:81 on 29 April 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £5,121.39
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
+            <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View original data 
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
+              <p style="color: #323232; font-size: 16px;">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">147</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Cardiff</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+
+            </div>
+          </details>
+        </div>
+      </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              <span style="background: #0360a6; color: #fff; padding: 3px 7px 3px 7px;">
+                <nobr>Matched</nobr>
+              </span>
+            </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#y">View tax record<span class="govuk-visually-hidden"></span></a>
+              </li>                         
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reference
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2720 3245 2342 <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name on account
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  JONES HOTELS PLC <span style="font-size: 16px; color: #666666;">edited</span> <a href="#" style="text-align: right; float: right;">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Booking
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  18:21 on 25 April 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £23,121.39
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-footer"§>
+            <details class="govuk-details" style="margin-bottom: 0px; width: 100%;">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View original data 
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: 0px solid grey; padding-left: 0px; background-color: #f1f1f1; padding: 5px; border: 2px solid #666666;">
+              <p style="color: #323232; font-size: 16px;">
+<pre style="font-size: 16px;">
+  {
+    "id": <span id="json-value">147</span>,
+    "accountId": <span id="json-value">null</span>,
+    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "creditDebitIndicator": "<span id="json-value">Debit</span>",
+    "status": "<span id="json-value">Booked</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
+    "valueDateTime": <span id="json-value">null</span>,
+    "amount": {
+      "amount": <span id="json-value">5,121.39</span>,
+      "currency": "<span id="json-value">GBP</span>"
+    },
+    "balance": {
+      "amount": {
+        "amount": <span id="json-value">5,121.39</span>,
+        "currency": "<span id="json-value">GBP</span>"
+      },
+      "creditDebitIndicator": "<span id="json-value">Debit</span>",
+      "type": "<span id="json-value">Interim Booked</span>"
+    },
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Cardiff</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
+    "BankTransactionCode": {
+      "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
+      "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
+    },
+    "proprietaryBankTransactionCode": {
+      "code": "<span id="json-value">Transfer</span>",
+      "issuer": "<span id="json-value">Alpha bank</span>"
+    }
+  }
+</pre>
+
+            </div>
+          </details>
+        </div>
+      </div>
+
+
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">
+              Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+            &ctdot;
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+              3101
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+{% endblock %}
