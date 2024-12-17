@@ -12,8 +12,7 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row" style="font-style">
-
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
 
         <h2 class="govuk-heading-m">Bank transaction</h2>
@@ -21,14 +20,13 @@
         <div class="govuk-summary-card" id="summary-card">
           <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
             <h2 class="govuk-summary-card__title">
-              <span style="background: #fff5ce; color: #323232; padding: 3px 7px 3px 7px;">
-                <nobr>Unmatched amount</nobr>
+              <span style="background: #0360a6; color: #fff; padding: 3px 7px 3px 7px;">
+                <nobr>Matched</nobr>
               </span>
             </h2>
-            <ul class="govuk-summary-card__actions">          
-              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="./utrn-summary-amount">View balance<span class="govuk-visually-hidden"> UTRN</span></a>
-              </li>
-              </li>              
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action" id="summary-card__action"> <a class="govuk-link" href="#y">Check balance<span class="govuk-visually-hidden"></span></a>
+              </li>                         
             </ul>
           </div>
           <div class="govuk-summary-card__content">
@@ -38,7 +36,7 @@
                   Reference
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  2702 2332 1212 <a href="#" style="text-align: right; float: right;">Change</a>
+                  2807 6339 4803 <a href="#" style="text-align: right; float: right;">Change</a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -46,7 +44,7 @@
                   Name on account
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Kelvin Throng <a href="#" style="text-align: right; float: right;">Change</a>
+                    Warren Law Limited <span style="font-size: 16px; color: #666666;">edited</span> <a href="#" style="text-align: right; float: right;">Change</a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -54,7 +52,7 @@
                   Booking
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  13:03 on 13 May 2025
+                  13:21 on 13 May 2025
                 </dd>
               </div>
               <div class="govuk-summary-list__row">
@@ -62,9 +60,54 @@
                   Amount
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  £200.00 <span style="background: #ffe4e5; color: #323232; padding: 3px 7px 3px 7px; font-size: 16px;">
-                <nobr>-£4,002.82</nobr>
-              </span>
+                  £5,121.39
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card" id="summary-card">
+          <div class="govuk-summary-card__title-wrapper" id="summary-card-wrapper">
+            <h2 class="govuk-summary-card__title">
+              Name on account edited
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Previous
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <span style="background: #ffe4e5; color: #7e0a0e;">
+                    Warren Law L<span style="background: #fea8a9; color: #7e0a0e;">td</span>     
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Current
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <span style="background: #cdf7d4; color: #3b510d;">
+                      Warren Law L<span style="background: #67d47b;">imited</span>
+                  </span>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Time
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  16:21 on 13 May 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Edit by
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Alex Mullins
                 </dd>
               </div>
             </dl>
@@ -80,28 +123,28 @@
           <div class="govuk-summary-card__content">
 <pre style="font-size: 16px;">
   {
-    "id": <span id="json-value">147</span>,
+    "id": <span id="json-value">145</span>,
     "accountId": <span id="json-value">null</span>,
-    "transactionId": "<span id="json-value">0b5279f6-0a74-4a91-8685-97d3bf1b8e61</span>",
+    "transactionId": "<span id="json-value">0b3979f6-0a74-4a91-8685-97d3bf1b8e83</span>",
     "creditDebitIndicator": "<span id="json-value">Debit</span>",
     "status": "<span id="json-value">Booked</span>",
-    "bookingDateTime": "<span id="json-value">2024-05-13T13:03:00</span>",
+    "bookingDateTime": "<span id="json-value">2024-05-13T13:21:00</span>",
     "valueDateTime": <span id="json-value">null</span>,
     "amount": {
-      "amount": <span id="json-value">4196.12</span>,
+      "amount": <span id="json-value">5,121.39</span>,
       "currency": "<span id="json-value">GBP</span>"
     },
     "balance": {
       "amount": {
-        "amount": <span id="json-value">4196.12</span>,
+        "amount": <span id="json-value">5,121.39</span>,
         "currency": "<span id="json-value">GBP</span>"
       },
       "creditDebitIndicator": "<span id="json-value">Debit</span>",
       "type": "<span id="json-value">Interim Booked</span>"
     },
-    "#": "<span id="json-value">2702 1339 487</span>", // Transaction reference
-    "addressLine": "<span id="json-value">Cardiff</span>",
-    "merchantDetails": <span id="json-value">N B KANAA</span>,
+    "#": "<span id="json-value">2807 6339 4803</span>", // Transaction reference
+    "addressLine": "<span id="json-value">Bangor</span>",
+    "merchantDetails": <span id="json-value">Warren Law Ltd</span>,
     "BankTransactionCode": {
       "Code": "<span id="json-value">ReceivedCreditTransfer</span>",
       "SubCode": "<span id="json-value">DomesticCreditTransfer</span>"
