@@ -37,47 +37,34 @@
         </div>
       </div>
       <div id="card-actions">
-        <p style="margin-bottom: 0px;"><a href="/en/payslip/v1/download">Download</a>  <span id="action-divider"></span><a href="#">Print</a></p>
+        <p style="margin-bottom: 0px;"><a href="/en/payslip/v1/download">Download</a>  <span id="action-divider"></span><a href="/en/payslip/v1/download">Print</a></p>
       </div>
 
       <br>
 
       <h2 class="govuk-heading-m">Pay by bank transfer</h2>
 
-      <p style="text-align: left;">
+      <p>
         You can pay by bank transfer.
       </p>
 
-      <!-- format warning -->
-      <div style="background-color: #ffffff; border: 0px solid #000000; padding: 2mm 2mm 2mm 0mm;"> 
-
-        <table>
-            <tbody>
-              <tr>
-                <th style="padding-right: 5mm;">  
-                 <div style="position: relative; width: 8mm; height: 8mm; border-radius: 4mm; background-color: #000000; color: #000000; display: flex; justify-content: center; align-items: center;">
-                    <p style="color: #ffffff;">!</p>
-                </div>    
-                </th>
-                <td>
-                  <p>You must quote the UTRN as the payment reference with no letters or spaces first</p>
-                </td>
-              </tr>
-            </tbody>
-        </table>
-
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You must quote the UTRN as the payment reference with no letters or spaces first
+        </strong>
       </div>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>You must quote the UTRN as the payment reference with no letters or spaces first</li>
-        <li>Only pay for one transaction per payment</li>
-      </ul>
+      <p>
+        Only pay for one transaction per payment
+      </p>
 
       <h3 class="govuk-heading-s">Bank details</h3>
 
       <div style="display: flex;" >
         <div id="card-actions" style="flex: 1; margin-bottom: 0px; border-top: 2px solid #323232; border-right: 0px solid #000; background: #fff;">
-          <p style="margin-bottom: 0px;">Unique Transaction Reference Number<br>
+          <p style="margin-bottom: 0px;">Reference<br>
             <span class="utrn" style="font-weight: bold; font-size: 24px;">
               250743394889
             </span>
@@ -86,7 +73,7 @@
         <div id="card-actions" style="margin-bottom: 0px; border-top: 2px solid #323232;border-left: 0px solid #000; text-align: right; background: #fff;">
           <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
             <button type="button" class="copy govuk-link" data-copy=".utrn">
-              <span class="copy-label">Copy<span class="govuk-visually-hidden"> Unique Transaction Reference Number</span></span>
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> Reference</span></span>
             </button>
           </p>
         </div>
