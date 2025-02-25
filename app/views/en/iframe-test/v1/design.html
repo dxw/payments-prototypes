@@ -1,0 +1,45 @@
+{% extends "layouts/english-iframe.html" %}
+{% set alternateLink = "/cy/payslip/v1"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div id="report-card" style="background: #eeeeee; margin-top: 10px;">
+        <span class="govuk-caption-m">Payment due</span>
+        <h2 class="govuk-heading-l">
+            £11,385,425
+        </h2>
+        <p class="govuk-body">
+          Funds must be cleared by 
+         <span style="font-weight: bold;"> 5 June 2025</span>
+        </p>
+      </div>
+      <div id="card-actions" style="margin-bottom: 0px;">
+        <p style="margin-bottom: 0px;">Unique Transaction Reference Number<br>
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">2507 4339 4889</span>
+        </p>
+      </div>
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; border-right: 0px solid #000; margin-bottom: 0px; width: 50%;">
+          <p style="margin-bottom: 0px;">Name<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Kelvin Ryan</span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px;">
+          <p style="margin-bottom: 0px;">Agent case reference<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">923423</span>
+          </p>
+        </div>
+      </div>
+      <div id="card-actions">
+        <p style="margin-bottom: 0px;"><a href="#">Download</a>  <span id="action-divider"></span><a href="/en/payslip/v1">Print</a></p>
+      </div>
+
+    </div>
+  </div>
+
+
+{% endblock %}
