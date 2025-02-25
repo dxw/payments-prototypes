@@ -1,0 +1,126 @@
+{% extends "layouts/english-backoffice.html" %}
+{% set alternateLink = "/cy/dashboard"%}
+
+{% block pageTitle %}
+  Home - Provide accommodation in Wales
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-three-quarters">
+      
+      <h1 class="govuk-heading-l">Bank transactions</h1>
+
+      <div id="report-card">
+        <span class="govuk-caption-m">2018-current</span>
+        <h2 class="govuk-heading-m">
+            Debt outstanding for Land Transaction Tax
+        </h2>
+        <p class="govuk-body-l">
+          £11,385,425
+        </p>
+      </div>
+      <div id="card-actions">
+        <p style="margin-bottom: 0px;"><a href="#">Download</a>  <span id="action-divider"></span><a href="#">View</a></p>
+      </div>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">In the last 7 days</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Total</th>
+            <th scope="col" class="govuk-table__header">Transactions</th>
+            <th scope="col" class="govuk-table__header">F&O upload</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">17 April 2025</th>
+            <td class="govuk-table__cell">£261,085.16</td>
+            <td class="govuk-table__cell">59</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Not yet
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">16 April 2025</th>
+            <td class="govuk-table__cell">£231,085.16</td>
+            <td class="govuk-table__cell">51</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Not yet
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="./daily-upload">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">15 April 2025</th>
+            <td class="govuk-table__cell">£255,135.51</td>
+            <td class="govuk-table__cell">56</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                22 hours ago
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">14 April 2025</th>
+            <td class="govuk-table__cell">£41,085.16</td>
+            <td class="govuk-table__cell">11</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                1 day ago
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">13 April 2025</th>
+            <td class="govuk-table__cell">£11,085.16</td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                2 days ago
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">12 April 2025</th>
+            <td class="govuk-table__cell">£239,445.01</td>
+            <td class="govuk-table__cell">54</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                3 days ago
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">11 April 2025</th>
+            <td class="govuk-table__cell">£193,315.34</td>
+            <td class="govuk-table__cell">42</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                4 days ago
+              </strong>
+            </td>
+            <td class="govuk-table__cell"><a href="#">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><a href="#">View all batches</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
