@@ -1,0 +1,178 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/payslip/v1"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Payslip</h1>
+
+      <div id="report-card" style="background: #eeeeee;">
+        <span class="govuk-caption-m">Payment due</span>
+        <h2 class="govuk-heading-l">
+            £11,385,425
+        </h2>
+        <p class="govuk-body">
+          Funds must be cleared by 
+         <span style="font-weight: bold;"> 5 June 2025</span>
+        </p>
+      </div>
+      <div id="card-actions" style="margin-bottom: 0px;">
+        <p style="margin-bottom: 0px;">Unique Transaction Reference Number<br>
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">2507 4339 4889</span>
+        </p>
+      </div>
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; border-right: 0px solid #000; margin-bottom: 0px; width: 50%;">
+          <p style="margin-bottom: 0px;">Name<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Kelvin Ryan</span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px;">
+          <p style="margin-bottom: 0px;">Agent case reference<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">923423</span>
+          </p>
+        </div>
+      </div>
+      <div id="card-actions" style="background: #323232;">
+        <p style="margin-bottom: 0px;"><a href="/en/payslip/v1/download" style="color: #eeeeee;">Download</a>  <span id="action-divider" style="border-color: #eeeeee;"></span><a href="/en/payslip/v1/download" style="color: #eeeeee;">Print</a></p>
+      </div>
+
+      <br>
+
+      <h2 class="govuk-heading-m">Pay by bank transfer</h2>
+
+      <p>
+        You can pay by bank transfer.
+      </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You must quote the UTRN as the payment reference with no letters or spaces first
+        </strong>
+      </div>
+
+      <p>
+        Only pay for one transaction per payment
+      </p>
+
+      <h3 class="govuk-heading-s">Bank details</h3>
+
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; margin-bottom: 0px; border-top: 2px solid #323232; border-right: 0px solid #000; background: #fff;">
+          <p style="margin-bottom: 0px;">Reference<br>
+            <span class="utrn" style="font-weight: bold; font-size: 24px;">
+              250743394889
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px; border-top: 2px solid #323232;border-left: 0px solid #000; text-align: right; background: #fff;">
+          <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
+            <button type="button" class="copy govuk-link" data-copy=".utrn">
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> Reference</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; margin-bottom: 0px; border-right: 0px solid #000; background: #fff;">
+          <p style="margin-bottom: 0px;">Account name<br>
+            <span class="account-name" style="font-weight: bold; font-size: 24px;">
+              Welsh Revenue Authority Tax
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px; border-left: 0px solid #000; text-align: right; background: #fff;">
+          <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
+            <button type="button" class="copy govuk-link" data-copy=".account-name">
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> account name</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; margin-bottom: 0px; border-right: 0px solid #000; background: #fff;">
+          <p style="margin-bottom: 0px;">Sort code<br>
+            <span class="sort-code" style="font-weight: bold; font-size: 24px;">
+              60 70 80
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px; border-left: 0px solid #000; text-align: right; background: #fff;">
+          <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
+            <button type="button" class="copy govuk-link" data-copy=".sort-code">
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> sort code</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; margin-bottom: 0px; border-right: 0px solid #000; background: #fff;">
+          <p style="margin-bottom: 0px;">Account number<br>
+            <span class="account-number" style="font-weight: bold; font-size: 24px;">
+              10028838
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px; border-left: 0px solid #000; text-align: right; background: #fff;">
+          <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
+            <button type="button" class="copy govuk-link" data-copy=".account-number">
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> account number</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; border-right: 0px solid #000; background: #fff;">
+          <p style="margin-bottom: 0px;">Bank Name<br>
+            <span class="bank-name" style="font-weight: bold; font-size: 24px;">
+              NatWest
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="border-left: 0px solid #000; text-align: right; background: #fff;">
+          <p style="margin-bottom: 0px;"><span class="govuk-visually-hidden">Agent case reference</span><br>
+            <button type="button" class="copy govuk-link" data-copy=".bank-name">
+              <span class="copy-label">Copy<span class="govuk-visually-hidden"> bank name</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <!-- copy button -->
+      <script type="text/javascript">
+        document.querySelectorAll(".copy").forEach(copyButton => {
+            copyButton.addEventListener("click", () => {
+                const targetElement = document.querySelector(copyButton.dataset.copy);
+                const textToCopy = targetElement.textContent
+                    .replace(/\+/g, " ")
+                    .trim();
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const label = copyButton.querySelector(".copy-label");
+                    const originalText = label.textContent;
+                    copyButton.disabled = true;
+                    label.textContent = "Copied";
+                });
+            });
+        });
+      </script>
+
+      <h2 class="govuk-heading-m">Need help?</h2>
+      
+      <p class="govuk-body">More information on our website
+      <span class="govuk-!-font-weight-bold">https://gov.wales/pay-land-transaction-tax</span> or call
+      us on <span class="govuk-!-font-weight-bold">03000 254 000</span></p>
+
+    </div>
+  </div>
+
+
+{% endblock %}
