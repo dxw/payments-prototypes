@@ -1,0 +1,112 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/certificate-ltt/v1/"%}
+{% set pageName="Payments prototypes" %}
+
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 30px; margin-bottom: 0px;">Return to dashboard
+  </a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+      <h1 class="govuk-heading-l">Land Transaction Tax Certificate</h1>
+
+      <div id="report-card" style="background: #eeeeee;">
+        <p style="margin-bottom: 0px;">Unique Transaction Reference Number<br>
+          <span class="govuk-!-font-size-36 govuk-!-font-weight-bold">2507 4339 4889</span>
+        </p>
+      </div>
+      <div id="card-actions" style="margin-bottom: 0px;">
+        <p style="margin-bottom: 0px;">Certificate number<br>
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">2507 4339 4889-1-0</span>
+        </p>
+      </div>
+      <div id="card-actions" style="margin-bottom: 0px;">
+        <p style="margin-bottom: 0px;">Buyer / lessee<br>
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">
+            Nadiya Kanaa, Tony Kanaa
+          </span>
+        </p>
+      </div>
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; border-right: 0px solid #000; margin-bottom: 0px; width: 50%;">
+          <p style="margin-bottom: 0px;">Date of issue<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">9 October 2025</span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px;">
+          <p style="margin-bottom: 0px;">Effective date of transaction<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">7 October 2025</span>
+          </p>
+        </div>
+      </div>
+      <div id="card-actions" style="margin-bottom: 0px;">
+        <p style="margin-bottom: 0px;">Description of transaction<br>
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">Conveyance / transfer of a freehold</span>
+        </p>
+      </div>
+      <div style="display: flex;" >
+        <div id="card-actions" style="flex: 1; border-right: 0px solid #000; margin-bottom: 0px; width: 50%;">
+          <p style="margin-bottom: 0px;">Address<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">
+              11 Aber Street<br>
+              Grangetown<br>
+              Cardiff<br>
+              CF11 7AG
+            </span>
+          </p>
+        </div>
+        <div id="card-actions" style="margin-bottom: 0px;">
+          <p style="margin-bottom: 0px;">UPRN<br>
+            <span class="govuk-!-font-size-24 govuk-!-font-weight-bold">100100099797</span>
+          </p>
+        </div>
+      </div>
+      <div id="card-actions" style="background: #323232;">
+        <p style="margin-bottom: 0px;"><a href="/en/certificate-ltt/v1/download" style="color: #eeeeee;">Download</a>  <span id="action-divider" style="border-color: #eeeeee;"></span><a href="/en/certificate-ltt/v1/download" style="color: #eeeeee;">Print</a></p>
+      </div>
+
+      <p class="govuk-body govuk-!-font-size-16" style="margin-bottom: 0px;">This certificate is issued by WRA under section 65 of Land Transaction Tax and Anti-avoidance of <a href="#">Devolved Taxes (Wales) Act 2017</a> and evidences that a land transaction return has been delivered in respect of the above notifiable transaction.</p>
+
+  </div>
+
+</div>
+
+  {% block pageScripts %}
+    <script src="/public/javascripts/qrcode.js"></script>
+    <script>
+        const data =
+            `UTRN\: 4885 3608 0898
+Certificate number\: 4885 3608 0898-1-0
+Date of issue\: 9 10 2025
+Description of transaction\: transfer of a freehold
+Effective date\: 7 10 2025
+UPRN\: 100100099797
+Address\: 11 Aber Street, Grangetown, Cardiff, CF11 7AG
+Buyer lessee\: Nadiya Kanaa`
+        QRCode.toCanvas(
+            document.getElementById('qr-code-canvas'),
+            data, {width: 150},
+            function (error) {
+                if (error) console.error(error)
+                console.log('success!');
+            })
+    </script>
+  {% endblock %}
+
+  {% endblock %}
