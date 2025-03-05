@@ -509,14 +509,15 @@
     <script src="/public/javascripts/qrcode.js"></script>
     <script>
         const data =
-            `UTRN\: 4885 3608 0898
-Certificate number\: 4885 3608 0898-1-0
+            `UTRN\: 2507 4339 4889
+Certificate number\: 2507 4339 4889-1-0
 Date of issue\: 9 10 2025
-Description of transaction\: transfer of a freehold
 Effective date\: 7 10 2025
+Buyer / lessee\: Nadiya Kanaa, Tony Kanaa
+Seller\: C Church
+Description of transaction\: Conveyance / transfer of a freehold
 UPRN\: 100100099797
-Address\: 11 Aber Street, Grangetown, Cardiff, CF11 7AG
-Buyer lessee\: Rory Scott`
+Address\: 11 Aber Street, Grangetown, Cardiff, CF11 7AG`
         QRCode.toCanvas(
             document.getElementById('qr-code-canvas'),
             data, {width: 150},
