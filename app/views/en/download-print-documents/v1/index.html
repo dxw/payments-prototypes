@@ -1,0 +1,63 @@
+{% extends "layouts/public/english-login.html" %}
+{% set alternateLink = "/cy/certificate-ltt/v1/"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <div id="report-card" style="background: #eeeeee; border-width: 0px;">
+          <p style="margin-bottom: 0px;">LTT return<br>
+        </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 30px; margin-bottom: 30px;">Return to dashboard
+      </a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+      <h3 class="govuk-heading-m">Certificate: Land Transaction Tax</h3>
+
+      <p>Proof a return for Lands Transaction Tax has been filed. Provide to HM Land Registry to update property ownership record.
+
+      <ul class="govuk-list">
+        <li>
+          <a href="javascript:history.go(-1)" class="govuk-link">Downlonad certificate
+          </a>
+        </li>
+        <li>
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print certificate
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+      <h3 class="govuk-heading-m">Payslip: Land Transaction Tax</h3>
+
+      <p>Bank details to pay Land Transaction.</p>
+
+      <ul class="govuk-list">
+        <li>
+          <a href="/en/payslip-ltt/v2/download" class="govuk-link">Downlonad payslip
+          </a>
+        </li>
+        <li>
+          <a href="/en/payslip-ltt/v2/download" class="govuk-link">Print payslip
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+{% endblock %}
