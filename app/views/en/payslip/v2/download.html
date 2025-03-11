@@ -88,11 +88,12 @@
   #utrn {
     width: auto; 
     padding: 15px 15px 15px 15px; 
-    background-color: #fff; 
+    background-color: #000000; 
     border-top: 2px solid #000000; 
     border-left: 2px solid #000000; 
     border-right: 2px solid #000000; 
     text-align: left;
+    color: #fff;
   }
 
 </style>
@@ -425,10 +426,10 @@
         Payslip
       </h1>
 
-      <div id="utrn">
-        <p style="margin-bottom: 0; margin-top: 0px; color: #1f1f1f;">
+      <div id="utrn" style="background: #fff;">
+        <p style="margin-bottom: 0; margin-top: 0px; color: #000;">
           Unique Transaction Reference Number (UTRN)<br>        
-          <span style="font-size: 36px; font-weight: 700;">
+          <span style="font-size: 24px; font-weight: 700;">
             2507 4339 4889
           </span>
         </p>
@@ -437,18 +438,18 @@
         <div id="card-actions" style="flex: 50%; border-top: 2px solid #000; border-right: 0px solid #000; margin-bottom: 0px;">
           <p style="margin-bottom: 0px;">         
             Payment due<br>        
-            <span style="font-size: 36px; font-weight: 700;">
-              £11,385.45
+            <span style="font-size:19px; font-weight: 700;">
+              £14,582.00
             </span>
           </p>
         </div>
         <div id="card-actions" style="flex: 50%; margin-bottom: 0px; border-top: 2px solid #000;">
           <p style="margin-bottom: 0px;">      
             Funds must be cleared by<br>        
-            <span style="font-size: 24px; font-weight: 700;">
+            <span style="font-size: 19px; font-weight: 700;">
               5 July 2025
             </span><br><br>
-            BACS Payment must be sent 4 working days before due date
+            BACS payment must be sent 4 working days before due date
           </p>
         </div>
       </div>
@@ -456,23 +457,29 @@
         <div id="card-actions" style="flex: 50%; border-right: 0px solid #000; margin-bottom: 0px;">
           <p style="margin-bottom: 0px;">         
             Name<br>        
-            <span style="font-size: 24px; font-weight: 700;">
-              Kelvin Ryan
+            <span style="font-size: 19px; font-weight: 700;">
+              Joe Bloggs
             </span>
           </p>
         </div>
         <div id="card-actions" style="flex: 50%; margin-bottom: 0px;">
           <p style="margin-bottom: 0px;">      
-            Agent case number<br>        
-            <span style="font-size: 24px; font-weight: 700;">
+            Your reference<br>        
+            <span style="font-size: 19px; font-weight: 700;">
               923423
             </span>
           </p>
         </div>
       </div>
 
-      <br>
       <h2>Pay by bank transfer</h2>
+
+      <ul class="govuk-list govuk-list--bullet" style="padding-left:  14px;">
+        <li>You must use the 12 digit UTRN as your payment reference</li>
+        <li>Do not include any letters or spaces</li>
+        <li>Payments with any reference other than the UTRN will not be accepted</li>
+        <li>Only pay for one transaction per payment</li>
+      </ul>
 
       <table>
           <tbody>
@@ -483,18 +490,18 @@
               </div>    
               </th>
               <td>
-                <p>You must quote the UTRN as the payment reference with no letters or spaces first, otherwise your payment will be delayed and could result in fines.</p>
+                <p>Your payment may be delayed if the reference does not match</p>
               </td>
             </tr>
           </tbody>
-      </table>
+      </table>  
 
       <br>
 
       <div style="width: auto; padding: 15px 15px 15px 15px; background-color: #fff; border: 2px solid #000000; text-align: left;">
         <p style="margin-bottom: 0; margin-top: 0px; color: #1f1f1f;">
           Payment reference (UTRN)<br>        
-          <span style="font-size: 36px; font-weight: 700;">
+          <span style="font-size: 24px; font-weight: 700;">
             250743394889
           </span>
         </p>
@@ -502,22 +509,22 @@
       <div style="width: auto; padding: 15px 15px 15px 15px; background-color: #fff; border-top: 0px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000; border-bottom: 2px solid #000000; text-align: left;">
         <p style="margin-bottom: 0; margin-top: 0px; color: #1f1f1f;">
           Account name<br>        
-          <span style="font-size: 24px; font-weight: 700;">
+          <span style="font-size: 19px; font-weight: 700;">
             Welsh Revenue Authority Tax
           </span>
         </p>
       </div>
       <div style="display: flex;" >
         <div id="card-actions" style="flex: 50%; border-right: 0px solid #000; margin-bottom: 0px;">
-          <p style="margin-bottom: 0px;">Sort code / Didoli<br>        
-            <span style="font-size: 24px; font-weight: 700;">
+          <p style="margin-bottom: 0px;">Sort code<br>        
+            <span style="font-size: 19px; font-weight: 700;">
               60 70 80
             </span>
           </p>
         </div>
         <div id="card-actions" style="flex: 50%; margin-bottom: 0px;">
           <p style="margin-bottom: 0px;">Account number<br>        
-            <span style="font-size: 24px; font-weight: 700;">
+            <span style="font-size: 19px; font-weight: 700;">
               10028838
             </span>
           </p>
