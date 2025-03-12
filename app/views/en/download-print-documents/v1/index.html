@@ -2,12 +2,6 @@
 {% set alternateLink = "/cy/certificate-ltt/v1/"%}
 {% set pageName="Payments prototypes" %}
 
-{% block beforeContent %}
-  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 40px; margin-bottom: 0px;">Return to dashboard
-  </a>
-{% endblock %}
-
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -28,51 +22,57 @@
 
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-half">
 
       <ul class="govuk-list">
         <li>
-          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Downlonad Return
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print your LTT return
           </a>
         </li>
         <li>
-          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print return 
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print your LTT certificate 
+          </a>
+        </li>
+        <li>
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print your payment slip 
           </a>
         </li>
       </ul>
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-half">
 
       <ul class="govuk-list">
+        <!--
         <li>
-          <a href="/en/payslip/v2/download" class="govuk-link">Downlonad payslip
+          <a href="#" class="govuk-link">Download your LTT return
+          </a>
+        </li>
+        -->
+        <li>
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Download your LTT certificate 
           </a>
         </li>
         <li>
-          <a href="/en/payslip/v2/download" class="govuk-link">Print payslip
+          <a href="/en/payslip/v2/download" class="govuk-link">Download your payment slip 
           </a>
         </li>
       </ul>
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
+  </div>
 
-      <ul class="govuk-list">
-        <li>
-          <a href="/en/payslip/v2/download" class="govuk-link">Downlonad payslip
-          </a>
-        </li>
-        <li>
-          <a href="/en/payslip/v2/download" class="govuk-link">Print payslip
-          </a>
-        </li>
-      </ul>
+  <div class="govuk-grid-row">
 
+    <div class="govuk-grid-column-one-half">
+
+      <p>
+        <a href="#" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 40px; margin-bottom: 0px;">Return to dashboard
+        </a>
+      </p>
     </div>
-
   </div>
 
 {% endblock %}
