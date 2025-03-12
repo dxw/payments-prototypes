@@ -2,52 +2,61 @@
 {% set alternateLink = "/cy/certificate-ltt/v1/"%}
 {% set pageName="Payments prototypes" %}
 
+{% block beforeContent %}
+  <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 40px; margin-bottom: 0px;">Return to dashboard
+  </a>
+{% endblock %}
+
+
 {% block content %}
 
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
-
-        <div id="report-card" style="background: #eeeeee; border-width: 0px;">
-          <p style="margin-bottom: 0px;">LTT return<br>
-        </div>
-    </div>
-
     <div class="govuk-grid-column-two-thirds">
 
-      <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales" style="margin-top: 30px; margin-bottom: 30px;">Return to dashboard
-      </a>
+      <p class="govuk-body" style="font-weight: 700;">If you are filing this return on behalf of a buyer who has approved the effective date of transaction</p>
+      
+      <p>I, agent for the buyer(s), confirm that I have authority to deal with all matters relating to this transaction on behalf of my client(s). I have given the buyer(s) a copy of the Welsh Revenue Authority privacy notice. The buyer(s) has / have declared that the information contained in this return is correct and complete to the best of the knowledge and belief of the buyer(s) and that the buyer(s) has / have authorised me to submit the return electronically on behalf of the buyer(s).</p>
 
-      <div class="govuk-button-group">
-        <a href="#" class="govuk-button govuk-button--secondary" id="secondary-button-gov-wales">Print tax return</a>
-      </div>
+      <br>
 
     </div>
 
-    <div class="govuk-grid-column-one-half">
+  </div>
 
-      <h3 class="govuk-heading-m">Certificate</h3>
+  <div class="govuk-grid-row">
 
-      <p>Proof a return for Lands Transaction Tax has been filed.
+    <div class="govuk-grid-column-one-third">
 
       <ul class="govuk-list">
         <li>
-          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Downlonad certificate
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Downlonad Return
           </a>
         </li>
         <li>
-          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print certificate 
+          <a href="/en/certificate-ltt/v2/download" class="govuk-link">Print return 
           </a>
         </li>
       </ul>
 
     </div>
 
-    <div class="govuk-grid-column-one-half">
+    <div class="govuk-grid-column-one-third">
 
-      <h3 class="govuk-heading-m">Payslip</h3>
+      <ul class="govuk-list">
+        <li>
+          <a href="/en/payslip/v2/download" class="govuk-link">Downlonad payslip
+          </a>
+        </li>
+        <li>
+          <a href="/en/payslip/v2/download" class="govuk-link">Print payslip
+          </a>
+        </li>
+      </ul>
 
-      <p>Bank details to pay Land Transaction Tax.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
 
       <ul class="govuk-list">
         <li>
