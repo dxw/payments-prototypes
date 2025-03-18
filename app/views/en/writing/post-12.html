@@ -1,0 +1,119 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Payment slip and LTT certificate</h1>
+
+    <p class="govuk-body">In February and March 2025 we focused design work on payment slips and LTT certificates.</p>
+
+    <p class="govuk-body">The two documents have different functions:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The payment slip is essentially an invoice to pay LTT. Showing the amount owed, when it must be paid by and the bank details</li>
+      <li>The LTT certificate is given to the Land Registry in order to update the record of who owns a property. Without the certificate, they won’t update the record. It is generated when someone completes their LTT  tax return.</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">What problem does this fix?</h2>
+
+    <p class="govuk-body">The payments team goal is people pay on time and don’t fall into with WRA. Some people when paying their LTT bill by bank transfer, they put the wrong reference number. Meaning the payment can’t be matched to a balance. Which means the payment goes down as delayed. Worse still, people won’t know their balance is not settled.</p>
+
+    <p class="govuk-body">People either put the wrong number or the right number, but in the wrong format. On the formatting, there is an obvious technical solution, that the backend accepts and matches reference numbers with spaces.</p>
+
+    <p class="govuk-body">So the team planned to redesign the payment slip, to reduce the error of entering the wrong reference or format.</p>
+
+    <h2 class="govuk-heading-m">Payment slip designed for matching</h2>
+
+    <p class="govuk-body">The current design looks like this, with a lot of text cramped into one screen. Both Welsh and English. </p>
+
+    <img src="/public/images/writing/post-12/current-payslip.png" id="writing-image">
+
+    <p class="govuk-body">The <a href="/en/payslip/v2/download">new payment slip design</a>:
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>has both a Welsh and English version. Rather than a single document</li>
+      <li>The reference number is bigger than all other information, to [hopefully] reduce the chance of matching errors</li>
+      <li>Is black on white, to make the design more readable and print compatible</li>
+    </ul>
+
+    <img src="/public/images/writing/post-12/new-payslip.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">LTT certificate consistent design with payment slip</h2>
+
+    <p class="govuk-body">While redesigning the LTT certificate won’t help reduce unmatched payments, as we were designing the payment slip, we wanted to make the two documents consistent. </p>
+
+    <p class="govuk-body">Also the certificate currently has no graphic hierarchy. Meaning it's hard to know what is the most important bit to look at. Also, it doesn’t look official, despite it being a legal document.</p>
+
+    <img src="/public/images/writing/post-12/current-certificate.png" id="writing-image">
+
+    <p class="govuk-body">The <a href="/en/certificate-ltt/v2/download-no-qr-code">new certificate design</a>:
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>has both a Welsh and English version. Rather than a single document</li>
+      <li>Is black on white, to make the design more readable and print compatible</li>
+      <li>Consistent designed with the proposed new payment slip</li>
+    </ul>
+
+    <img src="/public/images/writing/post-12/new-certificate.png" id="writing-image">
+
+    <p class="govuk-body"><a href="/en/certificate-ltt/v2/download-with-qr-code">One version has a machine readable version</a> with data embedded in a QR code. Assuming this would make life easier for the Land Registry and conveyances third-party software to process and store the certificates. Also it could be used to verify the document is real. In would turn out in user research neither Land Registry or conveyancers were saw use in the certificate being machine readable or verifiable.</p>
+
+    <img src="/public/images/writing/post-12/new-certificate-qr-code.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Downloads page</h2>
+
+    <p class="govuk-body">Lastly, the team tweaked the page where the two documents are currently downloaded or printed from - the page at the end of filing a tax return.</p>
+
+    <p class="govuk-body">Currently there are lots of different buttons and links.</p>
+
+    <img src="/public/images/writing/post-12/current-download.png" id="writing-image">
+
+    <p class="govuk-body">The <a href="/en/download-print-documents/v1">new design just makes everything a link</a>, which is easier to read.</p>
+
+    <img src="/public/images/writing/post-12/new-download.png" id="writing-image">
+
+    <h2 class="govuk-heading-m">Next steps</h2>
+
+    <p class="govuk-body">There is another round of testing to come to see how the design need iterating before deciding what the team asks Kainos to implement, who look after the tax return service.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="./post-11" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <!--
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./sprint-4-part-2" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+      -->
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
