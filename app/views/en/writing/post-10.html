@@ -1,0 +1,104 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Banking API for human eyes</h1>
+
+    <p class="govuk-body">Both the check balance app and debt prevention letter are made possible with the NatWest Bankline API. It enables software the team builds to automatically check if someone has paid some or all of their tax bill. It’s essential for any payment tools, be them for WRA staff or external users. 
+
+    <p class="govuk-body">Currently the banking API happens entirely in the backend. To view the data now, someone would need to open the terminal to see the raw software running. </p>
+
+    <p class="govuk-body">So the team asked what a human interface include?</p>
+
+    <h2 class="govuk-heading-m">View and search bank transactions</h2>
+
+    <p class="govuk-body">Quite obvious, but being able to clearly view bank transactions, rather than downloading a spreadsheet, which is how it’s currently done.
+
+    <p class="govuk-body">So first we imagine a homepage, with most recent bank transactions. Divided by matched and unmatched. More about unmatched transactions in the next section. </p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-10/home-page.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">To accompany this, we had a search feature, with pages of esults. </p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-10/search.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    
+    <p class="govuk-body">Unmatched bank transactions are a cause of tax debt. As mentioned with redesigning the payment slip, when someone pays the WRA, if the bank reference can’t be matched to a balance, the system assumes they haven’t paid. Which in turn can and does lead to missed deadlines, fines and interest to pay. </p>
+
+    <p class="govuk-body">Currently bank transaction details are uploaded by spreadsheet to WRA accountancy system, Finance & Operations [F&O]. This includes transactions with the wrong reference, which won’t get matched correctly. Also, given F&O is a Microsoft system, its difficult to amend data once its in there. </p>
+
+    <p class="govuk-body">So an idea the team had was to make a before step, where unmatched transactions can be highlighted and corrected, before being pushed to F&O.</p>
+
+    <h2 class="govuk-heading-m">Highlight transaction</h2>
+
+    <p class="govuk-body">Simply, the homepage idea has transactions group by unmatched, matched or all.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-10/highlight.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p class="govuk-body">Assuming unmatched transactions are the most important, they sit first. The table shows what is stopping the transaction being matched. Whether that's the reference, account name or amount.</p>
+
+    <p class="govuk-body">In the prototype, someone can click into the unmatched transaction, and view the original data in detail. This makes sense as someone can edit some parts and you might want to audit.</p>
+
+    <h2 class="govuk-heading-m">Edit transaction to match it</h2>
+
+    <p class="govuk-body">An obvious feature to couple with highlight unmatched transactions, is the ability to edit information to match it to a balance. In the examples, someone can both edit an incorrect reference or incorrect account name. With the transaction then matched to a balance.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-10/edit-reference.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-10/edit-name.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="./post-9" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./post-11" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
