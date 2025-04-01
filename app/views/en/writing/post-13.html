@@ -1,0 +1,97 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+    <h1 class="govuk-heading-l">Upload bank transaction details</h1>
+    
+    <p class="govuk-body">Currently bank transaction details are downloaded as a spreadsheet from NatWest and uploaded by hand to WRA’s accountancy system, Finance and Operations. Also just known as F&O.</p>
+
+    <p class="govuk-body">As mentioned in a <a href="./post-10">previous post</a>, the using the NatWest’s Bankline API means various back office processes at WRA can go from being manual to automatic.</p>
+
+    <p class="govuk-body">So with the banking API, bank transaction details can be uploaded automatically. Not only saving time, but creating opportunities for better checking and matching of transactions details before they are uploaded to F&O. The reason details wouldn’t be uploaded automatically, is once data is in F&O, it is very difficult to edit, due to technical constraints of it being a Microsoft system.</p>
+
+    <h2 class="govuk-heading-m">View only</h2>
+
+    <p class="govuk-body">This first option is the simplest to build. Not intervention possible, <a href="/en/banking-interface/v2/view/dashboard">just view transaction details</a> before they are automatically uploaded to F&O after a set period.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-13/view-only.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Manual upload</h2>
+
+    <p class="govuk-body">The next option has a little more control, where staff can view and <a href="/en/banking-interface/v2/upload/dashboard">choose to upload transactions</a> early before they are automatically.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-13/manual-upload.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Match manually</h2>
+
+    <p class="govuk-body">As shown with the <a href="/en/writing/post-10">banking API designs</a>, people could <a href="/en/banking-interface/v2/amend/daily-upload">edit certain details</a> on transactions so that they matched to a balance. Correcting unmatched transactions before uploading to F&O will likely result in fewer delayed payments due to balance appearing unpaid as a payment wasn’t matched to it.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-13/amend.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>. 
+
+    <h2 class="govuk-heading-m">Suggest matching edits</h2>
+
+    <p class="govuk-body">The fourth option is semi-automated. Where unmatched transactions <a href="/en/banking-interface/v2/suggest/dashboard">have suggestions</a> for how to edit them so they can be matched to a balance. Then they can be uploaded to F&O.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-13/suggestion.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2 class="govuk-heading-m">Auto matched</h2>
+
+    <p class="govuk-body">The final option has fully automated matching. Where, for example, the ‘Talu matching algorithm’ has <a href="/en/banking-interface/v2/auto/dashboard">taken liberty to automatically edit</a> an account name so it can be matched to a balance.</p>
+
+    <video width="100%" controls autoplay loop id="writing-image">
+      <source src="/public/images/writing/post-13/auto.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="./post-12" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./post-14" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}

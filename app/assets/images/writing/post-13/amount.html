@@ -1,0 +1,67 @@
+{% extends "layouts/public/english-account.html" %}
+{% set alternateLink = "/cy/levy/email"%}
+{% set pageName="Payments prototypes" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" style="font-style">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group" id="form-background-gov-wales">
+
+        <a href="javascript:history.go(-1)" class="govuk-back-link" id="back-link-gov-wales">Back</a>
+
+        <form action="./reason" method="post" id="myForm">
+
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="cost">
+              What is the amended total tax for this transaction?
+            </label>
+          </h1>
+
+          <table id="call-out-table-gov-wales" style="background: #fff; border-left: 10px solid #0360a6;">
+            <tr>
+              <td style="padding-bottom: 10px; width: 50%;">Land Transaction Tax:</td>
+              <td style="padding-bottom: 10px" id="table-cell">£4,193.07</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Paid on:</td>
+              <td style="padding-bottom: 10px" id="table-cell">16 July 2025
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Purchase address:</td>
+              <td style="padding-bottom: 10px" id="table-cell">14 Harper Mews<br>
+                  Swandiff<br>
+                  SD16 4LF</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 10px; vertical-align: top;">Unique Tax Reference Number:</td>
+              <td style="padding-bottom: 10px" id="table-cell">2702 1339 4877
+            </tr>
+          </table>
+
+          <br>
+
+          <div class="govuk-form-group">
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+            </div>
+          </div>
+
+          <br>
+
+          <button class="govuk-button" data-module="govuk-button" id="continue-button-gov-wales">
+            Continue
+          </button>
+          
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}
