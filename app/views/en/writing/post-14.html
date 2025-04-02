@@ -1,0 +1,64 @@
+{% extends "layouts/english-index.html" %}
+{% set alternateLink = "/cy/index"%}
+
+{% block pageTitle %}
+  Payment prototypes
+{% endblock %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Writing about these prototypes</span>
+
+    <h1 class="govuk-heading-l">Renew API connection</h1>
+
+    <p class="govuk-body">A small design is the page for WRA’s finance department to renew the API connection to NatWest.</p>
+
+    <p class="govuk-body">This is a security and governance feature, as API connections should be regularly reviewed.</p>
+
+    <p class="govuk-body">Not much design work on this, so its just a hand drawn sketch based on conversations with the finance teams. It's an interesting challenge, designing a screen that will likely only used every six months.</p>
+
+    <p class="govuk-body">The design consists of a:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>status of when the access will expire</li>
+      <li>button to renew the access</li>
+      <li>history of access being renew and by whom in the team</li>
+      <li>notification to reminder the finance team to renew the connection</li>
+    </ul>
+
+    <img src="/public/images/writing/post-13/api-connection.png" id="writing-image">
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin-bottom: 25px;">
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="./post-13" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="./post-15" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> post</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+{% endblock %}
